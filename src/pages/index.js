@@ -7,6 +7,7 @@ import SectionTopics from '../components/sectiontopics'
 import HeroText from '../components/HeroText'
 import Zitat from '../components/Zitat'
 import CallToAction from '../components/CallToAction'
+import Wisdom from '../components/Wisdom'
 import { HolzarchitekturIcon } from '../components/icons'
 
 export default ({ data }) => (
@@ -48,6 +49,10 @@ export default ({ data }) => (
     />
     <Hero sizes={data.hero2Image.childImageSharp.sizes} />
     <CallToAction title="Kontakt" icon={HolzarchitekturIcon} />
+    <Wisdom
+      backgroundImage={data.kirschblueten.childImageSharp.sizes}
+      author="Joachim Jungreithmayr"
+    />
   </Layout>
 )
 
@@ -60,49 +65,56 @@ export const query = graphql`
     }
     heroImage: file(relativePath: { eq: "jh_jungreithmayr_061.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 1200) {
+        sizes(maxWidth: 1280) {
           ...GatsbyImageSharpSizes
         }
       }
     }
     hero2Image: file(relativePath: { eq: "jh_jungreithmayr_020.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 1200) {
+        sizes(maxWidth: 1280) {
           ...GatsbyImageSharpSizes
         }
       }
     }
     sliderImage1: file(relativePath: { eq: "jh_jungreithmayr_081.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 1200) {
+        sizes(maxWidth: 1280) {
           ...GatsbyImageSharpSizes
         }
       }
     }
     sliderImage2: file(relativePath: { eq: "jh_jungreithmayr_022.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 1200) {
+        sizes(maxWidth: 1280) {
           ...GatsbyImageSharpSizes
         }
       }
     }
     sliderImage3: file(relativePath: { eq: "jh_jungreithmayr_023.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 1200) {
+        sizes(maxWidth: 1280) {
           ...GatsbyImageSharpSizes
         }
       }
     }
     sliderImage4: file(relativePath: { eq: "jh_jungreithmayr_079.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 1200) {
+        sizes(maxWidth: 1280) {
           ...GatsbyImageSharpSizes
         }
       }
     }
     joImage: file(relativePath: { eq: "jh_jungreithmayr_096.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 400) {
+        sizes(maxWidth: 480) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+    kirschblueten: file(relativePath: { eq: "kirschblueten.jpg" }) {
+      childImageSharp {
+        sizes(maxWidth: 1280) {
           ...GatsbyImageSharpSizes
         }
       }
