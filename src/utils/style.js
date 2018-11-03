@@ -52,10 +52,10 @@ export function pseudo({ display, pos, content }) {
     `
 }
 
-export function responsiveRatio(x, y, pseudo) {
+export function responsiveRatio(x, y, ispseudo) {
   const padding = (y / x) * 100
 
-  if (pseudo === true) {
+  if (ispseudo === true) {
     return `
         &:before {
             ${pseudo({ pos: 'relative' })}

@@ -11,6 +11,10 @@ const Wrapper = styled.div`
   max-width: 480px;
 `
 
+const Title = styled.strong`
+  margin-top: ${Typography.rhythm(1)};
+`
+
 const Text = styled.p`
   text-align: center;
 `
@@ -20,7 +24,7 @@ const TopicHeader = ({ icon, title, text }) => {
   return (
     <Wrapper>
       <Icon />
-      <strong>{title}</strong>
+      <Title>{title}</Title>
       <Text>{text}</Text>
     </Wrapper>
   )
