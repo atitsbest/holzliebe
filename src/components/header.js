@@ -32,12 +32,13 @@ const Logo = styled.img`
 
   ${media.tablet`
     max-width: 14rem;
-    margin-bottom: ${Typography.rhythm(0.5)};
+    width: 80vw;
+    margin: 0 ${Typography.rhythm(0.5)} ${Typography.rhythm(0.5)};
   `};
 `
 
 const Nav = styled.nav`
-  ${media.mobile`display: none;`};
+  ${media.tablet`display: none;`};
   display: flex;
   margin: 0 0 0 auto;
   ul {

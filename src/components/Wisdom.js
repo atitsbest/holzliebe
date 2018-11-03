@@ -7,6 +7,7 @@ import Typography from '../utils/typography'
 
 const Wrapper = styled.div`
   position: relative;
+  margin-bottom: ${Typography.rhythm(0.25)};
 `
 
 const Content = styled.div`
