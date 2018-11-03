@@ -13,6 +13,7 @@ const Wrapper = styled.div`
 
 const Image = styled.img`
   width: 100%;
+  margin: 0;
 `
 
 export const Icon = ({ src, alt, backgroundColor, size }) => (

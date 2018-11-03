@@ -6,6 +6,8 @@ import ImageSlider from '../components/ImageSlider'
 import SectionTopics from '../components/sectiontopics'
 import HeroText from '../components/HeroText'
 import Zitat from '../components/Zitat'
+import CallToAction from '../components/CallToAction'
+import { HolzarchitekturIcon } from '../components/icons'
 
 export default ({ data }) => (
   <Layout>
@@ -45,6 +47,7 @@ export default ({ data }) => (
       subtext2="5. Generation"
     />
     <Hero sizes={data.hero2Image.childImageSharp.sizes} />
+    <CallToAction title="Kontakt" icon={HolzarchitekturIcon} />
   </Layout>
 )
 
