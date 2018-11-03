@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import Theme from '../utils/theme'
 import Typography from '../utils/typography'
+import { media } from '../utils/style'
 
 const Wrapper = styled.div`
   position: relative;
@@ -22,6 +23,10 @@ const Motto = styled.h1`
   font-weight: 700;
   opacity: 0.25;
   padding: ${Typography.rhythm(1)} ${Typography.rhythm(1)};
+
+  ${media.mobile`
+    display: none;
+  `};
 `
 
 const Inner = styled.div`
@@ -30,11 +35,12 @@ const Inner = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 ${Typography.rhythm(1)};
 `
 
 const Image = styled(Img)`
   max-width: 400px;
-  width: 50%;
+  width: 60%;
   margin-bottom: ${Typography.rhythm(1)};
 `
 
