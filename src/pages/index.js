@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import Hero from '../components/hero'
 import ImageSlider from '../components/ImageSlider'
 import SectionTopics from '../components/sectiontopics'
+import HeroText from "../components/HeroText"
 
 export default ({ data }) => (
   <Layout>
@@ -17,6 +18,8 @@ export default ({ data }) => (
         data.sliderImage4.childImageSharp.sizes,
       ]}
     />
+    <HeroText text={<span>MEHR ALS RAUM:<br/>LEBENSRAUM</span>} subtext={<span>Mehr als ein Werkstoff.<br/>Mehr als ein Möbel.<br/> Mehr als ein Haus.</span>} />
+    <Hero sizes={data.hero2Image.childImageSharp.sizes} />
   </Layout>
 )
 
@@ -34,7 +37,14 @@ export const query = graphql`
         }
       }
     }
-    sliderImage1: file(relativePath: { eq: "jh_jungreithmayr_020.jpg" }) {
+    hero2Image: file(relativePath: { eq: "jh_jungreithmayr_020.jpg" }) {
+      childImageSharp {
+        sizes(maxWidth: 1200) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+    sliderImage1: file(relativePath: { eq: "jh_jungreithmayr_081.jpg" }) {
       childImageSharp {
         sizes(maxWidth: 1200) {
           ...GatsbyImageSharpSizes

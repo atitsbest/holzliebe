@@ -4,16 +4,19 @@ import { Section } from './section'
 import { RaumplanungIcon, TischleierIcon } from './icons'
 import { HolzarchitekturIcon } from './icons/HolzarchitekturIcon'
 import Typography from '../utils/typography'
+import { media } from '../utils/style'
 
 const Wrapper = styled(Section)`
   padding-top: 30px;
   padding-bottom: 30px;
   display: flex;
+  margin-bottom: ${Typography.rhythm(.33)};
 
   > ul {
     margin: 0;
     padding: 0;
     display: flex;
+    ${media.tablet`flex-direction: column;`};
 
     > li {
       padding: 10px 20px;

@@ -2,6 +2,7 @@ import React from 'react'
 import Slider from 'react-slick'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
+import Typography from "../utils/typography"
 import './slick.css'
 import './slick-theme.css'
 import image_next from '../images/slider_next.gif'
@@ -21,16 +22,20 @@ export default class ImageSlider extends React.Component {
   }
   render() {
     return (
-      <Slider {...this.settings}>
+      <StyledSlider {...this.settings}>
         {this.props.images.map((sizes, idx) => (
           <div key={idx}>
             <Img sizes={sizes} />
           </div>
         ))}
-      </Slider>
+      </StyledSlider>
     )
   }
 }
+
+const StyledSlider = styled(Slider)`
+  margin-bottom: ${Typography.rhythm(1.5)};
+`;
 
 const ArrowImage = styled.img`
   width: 50px;

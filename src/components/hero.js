@@ -1,6 +1,8 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
+import { media } from '../utils/style'
+import Typography from "../utils/typography"
 import originell from '../images/originell.png'
 
 const Wrapper = styled.div`
@@ -8,6 +10,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-bottom: ${Typography.rhythm(.33)};
 
   & .gatsby-image-wrapper {
     width: 100%;
@@ -16,7 +19,12 @@ const Wrapper = styled.div`
 
 const Overlay = styled.img`
   position: absolute;
+  width: 50%;
   max-width: 400px;
+
+  ${media.mobile`
+    max-width: 200px;
+  `};
 `
 const Hero = ({ sizes }) => {
   return (

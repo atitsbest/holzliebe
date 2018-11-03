@@ -10,10 +10,14 @@ const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  flex-wrap: wrap;
   margin-bottom: 0;
-  margin-top: ${Typography.rhythm(2)};
+  margin-top: ${Typography.rhythm(1.5)};
 
-  ${media.tablet`flex-direction: column`};
+  ${media.tablet`
+    flex-direction: column;
+    margin-top: ${Typography.rhythm(1)};
+  `};
 `
 
 const TitleLink = styled(Link)`
@@ -23,12 +27,19 @@ const TitleLink = styled(Link)`
 
 const Logo = styled.img`
   max-width: 22rem;
+  width: 30vw;
   margin: 0;
+
+  ${media.tablet`
+    max-width: 14rem;
+    margin-bottom: ${Typography.rhythm(0.5)};
+  `};
 `
 
 const Nav = styled.nav`
-  ${media.phone`display: none;`};
+  ${media.mobile`display: none;`};
   display: flex;
+  margin: 0 0 0 auto;
   ul {
     display: flex;
     list-style-type: none;

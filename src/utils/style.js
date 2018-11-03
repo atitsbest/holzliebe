@@ -2,10 +2,10 @@ import { css } from 'styled-components'
 import holz_bg from '../images/holz_bg.gif'
 
 const sizes = {
-  giant: 1170,
-  desktop: 992,
+  giant: 1280,
+  desktop: 980,
   tablet: 768,
-  phone: 376,
+  mobile: 480,
 }
 
 // iterate through the sizes and create a media template
