@@ -1,7 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
-import { responsiveRatio } from '../utils/style'
 import originell from '../images/originell.png'
 
 const Wrapper = styled.div`
