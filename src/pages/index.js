@@ -9,6 +9,7 @@ import Zitat from '../components/Zitat'
 import CallToAction from '../components/CallToAction'
 import Wisdom from '../components/Wisdom'
 import Team from '../components/Team'
+import Article from '../components/Article'
 import { HolzarchitekturIcon } from '../components/icons'
 
 export default ({ data }) => (
@@ -55,6 +56,16 @@ export default ({ data }) => (
       author="Joachim Jungreithmayr"
     />
     <Team />
+    <Article
+      image={data.history.childImageSharp.sizes}
+      headline={
+        <span>
+          Seit 5<br /> Generationen
+        </span>
+      }
+      intro="Das Jungreithmayr-Holzhaus: - etur sitas mo etur, cullabor lum. Icia atquatis atioresciat apic tem quia volorec."
+      body="Nihillessi debisti asperio berfers perrumque audam, officaturio. Giae aborum reriant. Elessum accabor erspell uptaque et, officab orepedi as de lab ipicit, ut etur, optatibea num volore, solorro omnis quid ut a quo volupta tquias dolorum nem earum fuga. Hillabo rersperior archilit, ut aruptae. Nemposae voluptaquas aut quam venimol uptatquam erunt a non corempedi cor aut quiatem quia ne plaut eumquam nobitat. Ducium nis necest, offictius quat. Rum aliquiae omnis qui re nessumque arum at liberro blaborest ut autem con nime aut del est, sit, volorei cipsus eosam. , quam estis dolorisi ipit autem corendae corerumque sint."
+    />
   </Layout>
 )
 
@@ -117,6 +128,13 @@ export const query = graphql`
     kirschblueten: file(relativePath: { eq: "kirschblueten.jpg" }) {
       childImageSharp {
         sizes(maxWidth: 1280) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+    history: file(relativePath: { eq: "history.jpg" }) {
+      childImageSharp {
+        sizes(maxWidth: 480) {
           ...GatsbyImageSharpSizes
         }
       }

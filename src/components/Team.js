@@ -33,7 +33,7 @@ const Frame = styled.div`
 const Header = styled.h1`
   text-transform: uppercase;
   max-width: 7em;
-  padding: ${Typography.rhythm(1)};
+  padding: ${Typography.rhythm(1)} 1.5rem;
   padding-bottom: 0;
 `
 
