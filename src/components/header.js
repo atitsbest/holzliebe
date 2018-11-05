@@ -33,7 +33,7 @@ const Logo = styled.img`
   ${media.tablet`
     max-width: 14rem;
     width: 80vw;
-    margin: 0 ${Typography.rhythm(0.5)} ${Typography.rhythm(0.5)};
+    margin: 0 1rem ${Typography.rhythm(0.5)};
   `};
 `
 
@@ -44,9 +44,13 @@ const Nav = styled.nav`
   ul {
     display: flex;
     list-style-type: none;
-    margin: 0 -${Typography.rhythm(1)} ${Typography.rhythm(1)} 0;
+    margin: 0 0 ${Typography.rhythm(1)} 0;
     > li {
       margin: ${Typography.rhythm(1)} ${Typography.rhythm(1.5)} 0 0;
+
+      &:last-child {
+        margin-right: 0.5rem;
+      }
 
       a,
       a:hover,
