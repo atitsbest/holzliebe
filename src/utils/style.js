@@ -2,19 +2,19 @@ import { css } from 'styled-components'
 import holz_bg from '../images/holz_bg.gif'
 
 const sizes = {
-  giant: 1280,
-  desktop: 980,
-  tablet: 768,
-  mobile: 480,
+  giant: 120,
+  desktop: 90,
+  tablet: 64,
+  mobile: 48,
 }
 
 // iterate through the sizes and create a media template
 export const media = Object.keys(sizes).reduce((accumulator, label) => {
   // use em in breakpoints to work properly cross-browser and support users
   // changing their browsers font-size: https://zellwk.com/blog/media-query-units/
-  const emSize = sizes[label] / 16
+  const emSize = sizes[label]
   accumulator[label] = (...args) => css`
-    @media (max-width: ${emSize}em) {
+    @media (max-width: ${emSize}rem) {
       ${css(...args)};
     }
   `

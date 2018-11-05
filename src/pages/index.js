@@ -8,6 +8,7 @@ import HeroText from '../components/HeroText'
 import Zitat from '../components/Zitat'
 import CallToAction from '../components/CallToAction'
 import Wisdom from '../components/Wisdom'
+import Team from '../components/Team'
 import { HolzarchitekturIcon } from '../components/icons'
 
 export default ({ data }) => (
@@ -53,6 +54,7 @@ export default ({ data }) => (
       backgroundImage={data.kirschblueten.childImageSharp.sizes}
       author="Joachim Jungreithmayr"
     />
+    <Team />
   </Layout>
 )
 

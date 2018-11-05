@@ -66,17 +66,17 @@ const Footer = () => (
       </p>
       <ul>
         <li>
-          <a href="">Newsletter</a>
+          <a href="/">Newsletter</a>
         </li>
         <li>
-          <a href="">Impressum</a>
+          <a href="/">Impressum</a>
         </li>
         <li>
-          <a href="">Konakt</a>
+          <a href="/">Konakt</a>
         </li>
       </ul>
 
-      <a href="" class="facebook">
+      <a href="/" class="facebook">
         <Image src={facebook_icon} />
       </a>
     </Inner>
