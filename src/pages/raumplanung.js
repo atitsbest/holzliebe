@@ -3,7 +3,8 @@ import { graphql } from 'gatsby'
 import Hero from '../components/hero'
 import TopicHeader from '../components/topicheader'
 import Layout from '../components/layout'
-import { RaumplanungIcon } from '../components/icons'
+import CallToAction from '../components/CallToAction'
+import { RaumplanungIcon, HolzarchitekturIcon } from '../components/icons'
 
 const NotFoundPage = ({ data }) => (
   <Layout>
@@ -13,6 +14,7 @@ const NotFoundPage = ({ data }) => (
       title="Raumplanung"
       text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung ist mehr, als ein Möbel ins Eck zu stellen. "
     />
+    <CallToAction title="Kontakt" icon={HolzarchitekturIcon} />
   </Layout>
 )
 

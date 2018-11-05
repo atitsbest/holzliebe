@@ -6,11 +6,11 @@ import { HolzarchitekturIcon } from './icons/HolzarchitekturIcon'
 import Typography from '../utils/typography'
 import { media } from '../utils/style'
 
-const Wrapper = styled(Section)`
+const Wrapper = styled.div`
   padding-top: 30px;
   padding-bottom: 30px;
   display: flex;
-  margin-bottom: ${Typography.rhythm(.33)};
+  margin-bottom: ${Typography.rhythm(0.33)};
 
   > ul {
     margin: 0;

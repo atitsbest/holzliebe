@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Typography from '../utils/typography'
 import { media } from '../utils/style'
 import Layout from '../components/layout'
+import { Section } from '../components/section'
 import Hero from '../components/hero'
 import ImageSlider from '../components/ImageSlider'
 import SectionTopics from '../components/sectiontopics'
@@ -20,7 +21,9 @@ import BackgroundImage from '../components/BackgroundImage'
 export default ({ data }) => (
   <Layout>
     <Hero sizes={data.heroImage.childImageSharp.sizes} />
-    <SectionTopics />
+    <Section>
+      <SectionTopics />
+    </Section>
     <ImageSlider
       images={[
         data.sliderImage1.childImageSharp.sizes,

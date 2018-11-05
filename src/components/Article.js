@@ -21,6 +21,7 @@ const Wrapper = styled(Section)`
     background-size: cover;
     background-position: center;
     display: block;
+    margin: 0;
 
     ${media.mobile`
       flex: 1 1 auto;
