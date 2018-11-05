@@ -1,5 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import styled from 'styled-components'
+import Typography from '../utils/typography'
+import { media } from '../utils/style'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
 import ImageSlider from '../components/ImageSlider'
@@ -11,6 +14,8 @@ import Wisdom from '../components/Wisdom'
 import Team from '../components/Team'
 import History from '../components/History'
 import { HolzarchitekturIcon } from '../components/icons'
+import LabeledImage from '../components/LabeledImage'
+import BackgroundImage from '../components/BackgroundImage'
 
 export default ({ data }) => (
   <Layout>
@@ -41,6 +46,44 @@ export default ({ data }) => (
         </span>
       }
     />
+    <Grid>
+      <Half>
+        <LabeledImage
+          image={data.raumplanung.childImageSharp.sizes}
+          label="Raumplanung"
+        />
+      </Half>
+      <Quarter>
+        <BackgroundImage sizes={data.raumplanung.childImageSharp.sizes} />
+      </Quarter>
+      <Quarter>
+        <BackgroundImage sizes={data.raumplanung.childImageSharp.sizes} />
+      </Quarter>
+      <Half>
+        <LabeledImage
+          image={data.tischlerei.childImageSharp.sizes}
+          label="Tischlerei"
+        />
+      </Half>
+      <Half>
+        <BackgroundImage
+          sizes={data.raumplanung.childImageSharp.sizes}
+          style={{ height: '300px' }}
+        />
+      </Half>
+      <Half>
+        <LabeledImage
+          image={data.architektur.childImageSharp.sizes}
+          label="Architektur"
+        />
+      </Half>
+      <Quarter>
+        <BackgroundImage sizes={data.raumplanung.childImageSharp.sizes} />
+      </Quarter>
+      <Quarter>
+        <BackgroundImage sizes={data.raumplanung.childImageSharp.sizes} />
+      </Quarter>
+    </Grid>
     <Zitat
       motto="Holz, Raum, Lebens-raum"
       image={data.joImage.childImageSharp.sizes}
@@ -130,5 +173,50 @@ export const query = graphql`
         }
       }
     }
+    raumplanung: file(relativePath: { eq: "jh_jungreithmayr_020.jpg" }) {
+      childImageSharp {
+        sizes(maxWidth: 600) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+    tischlerei: file(relativePath: { eq: "jh_jungreithmayr_146.jpg" }) {
+      childImageSharp {
+        sizes(maxWidth: 600) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+    architektur: file(relativePath: { eq: "jh_jungreithmayr_004.jpg" }) {
+      childImageSharp {
+        sizes(maxWidth: 600) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
   }
+`
+
+const Grid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.25rem -0.25rem ${Typography.rhythm(0.125)};
+`
+
+const Half = styled.div`
+  flex: 0 1 calc(50% - 0.5rem);
+  margin: 0.25rem;
+
+  ${media.mobile`
+    flex: 0 1 calc(100% - .5rem);
+  `};
+`
+
+const Quarter = styled.div`
+  flex: 0 1 calc(25% - 0.5rem);
+  margin: 0.25rem;
+
+  ${media.mobile`
+    flex: 0 1 calc(50% - .5rem);
+  `};
 `
