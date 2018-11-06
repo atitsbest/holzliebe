@@ -1,16 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import BackgroundImage from "./BackgroundImage"
+import Typography from "../utils/typography"
 
 const Wrapper = styled.div`
-  position: relative;
   display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 300px;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
 `
 
-const Image = styled(Img)`
+const Inner = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   width: 100%;
   height: 100%;
 `
@@ -20,13 +25,21 @@ const Label = styled.h2`
   text-transform: uppercase;
   background: #fff;
   padding: 0.1rem 1rem;
+  margin: 0;
   font-weight: 300;
 `
+const Text = styled.p`
+  margin: ${Typography.rhythm(.5)} 0;
+  font-size: .9rem;
+`
 
-const LabeledImage = ({ image, label }) => (
+const LabeledImage = ({ image, label, text }) => (
   <Wrapper>
-    <Image sizes={image} alt={label} />
+<Inner>
+  <BackgroundImage sizes={image} alt={label} />
     <Label>{label}</Label>
+    </Inner>
+    {text && <Text>{text}</Text>}
   </Wrapper>
 )
 

@@ -29,7 +29,7 @@ const Hero = ({ sizes, label }) => {
   return (
     <Wrapper>
       <Img sizes={{ ...sizes, aspectRatio: 16 / 9 }} />
-      <Overlay src={label} alt="Originell" />
+      {label && <Overlay src={label} alt="Originell" />}
     </Wrapper>
   )
 }

@@ -72,7 +72,6 @@ export default ({ data }) => (
       <Half>
         <BackgroundImage
           sizes={data.raumplanung.childImageSharp.sizes}
-          style={{ height: '300px' }}
         />
       </Half>
       <Half>
