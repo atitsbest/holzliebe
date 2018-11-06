@@ -59,6 +59,7 @@ const Nav = styled.nav`
         color: #000;
         text-decoration: none;
         white-space: nowrap;
+        transitions: all 500ms;
       }
     }
   }

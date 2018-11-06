@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import Typography from '../utils/typography'
-import { media } from '../utils/style'
 
 const Wrapper = styled.div`
   position: relative;

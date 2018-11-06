@@ -5,10 +5,11 @@ import TopicHeader from '../components/topicheader'
 import Layout from '../components/layout'
 import CallToAction from '../components/CallToAction'
 import { RaumplanungIcon, HolzarchitekturIcon } from '../components/icons'
+import originell from '../images/originell.png'
 
 const NotFoundPage = ({ data }) => (
   <Layout>
-    <Hero sizes={data.heroImage.childImageSharp.sizes} />
+    <Hero sizes={data.heroImage.childImageSharp.sizes} label={originell} />
     <TopicHeader
       icon={RaumplanungIcon}
       title="Raumplanung"

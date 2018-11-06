@@ -17,10 +17,11 @@ import History from '../components/History'
 import { HolzarchitekturIcon } from '../components/icons'
 import LabeledImage from '../components/LabeledImage'
 import BackgroundImage from '../components/BackgroundImage'
+import wohlfuehlen from '../images/wohlfuehlen.png'
 
 export default ({ data }) => (
   <Layout>
-    <Hero sizes={data.heroImage.childImageSharp.sizes} />
+    <Hero sizes={data.heroImage.childImageSharp.sizes} label={wohlfuehlen} />
     <Section>
       <SectionTopics />
     </Section>

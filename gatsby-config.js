@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/2018',
   siteMetadata: {
     title: 'Jungreithmayr',
   },
@@ -25,7 +26,8 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-offline',
+    //'gatsby-plugin-offline',
+    'gatsby-plugin-styled-components',
     {
       resolve: `gatsby-plugin-typography`,
       options: {

@@ -15,6 +15,8 @@
     "gatsby-plugin-typography": "^2.2.0",
     "gatsby-source-filesystem": "^2.0.4",
     "gatsby-transformer-sharp": "^2.1.4",
+    "lodash": "^4.17.11",
+    "lodash.camelcase": "^4.3.0",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",

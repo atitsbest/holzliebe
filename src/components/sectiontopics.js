@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Section } from './section'
 import { RaumplanungIcon, TischleierIcon } from './icons'
 import { HolzarchitekturIcon } from './icons/HolzarchitekturIcon'
 import Typography from '../utils/typography'
