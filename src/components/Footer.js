@@ -58,7 +58,7 @@ const Image = styled.img`
 const Footer = () => (
   <Wrapper>
     <Inner>
-      <p class="address">
+      <p className="address">
         {' '}
         Tischlerstraße 6<br /> A-4062 Thening
         <br /> Tel. 0 (043) 7221 630 16
@@ -76,7 +76,7 @@ const Footer = () => (
         </li>
       </ul>
 
-      <a href="/" class="facebook">
+      <a href="/" className="facebook">
         <Image src={facebook_icon} />
       </a>
     </Inner>

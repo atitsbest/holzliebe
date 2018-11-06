@@ -3,6 +3,8 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { media } from '../utils/style'
 import Typography from '../utils/typography'
+import Theme from '../utils/theme'
+import Hamburger from 'react-hamburger-menu'
 
 import logo from '../images/logo.gif'
 
@@ -11,12 +13,11 @@ const Wrapper = styled.header`
   justify-content: space-between;
   align-items: baseline;
   flex-wrap: wrap;
-  margin-bottom: 0;
-  margin-top: ${Typography.rhythm(1.5)};
+  margin: ${Typography.rhythm(1.5)} 0 ${Typography.rhythm(0.5)};
 
   ${media.tablet`
-    flex-direction: column;
     margin-top: ${Typography.rhythm(1)};
+    align-items: flex-start;
   `};
 `
 
@@ -33,14 +34,15 @@ const Logo = styled.img`
   ${media.tablet`
     max-width: 14rem;
     width: 80vw;
-    margin: 0 1rem ${Typography.rhythm(0.5)};
+    margin: 0 1rem;
   `};
 `
 
 const Nav = styled.nav`
-  ${media.tablet`display: none;`};
+  transitions: all 500ms;
   display: flex;
   margin: 0 0 0 auto;
+
   ul {
     display: flex;
     list-style-type: none;
@@ -59,10 +61,50 @@ const Nav = styled.nav`
         color: #000;
         text-decoration: none;
         white-space: nowrap;
-        transitions: all 500ms;
       }
     }
   }
+
+  ${media.tablet`display: none;`};
+
+  ${media.mobile`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: ${Theme.colors.secondaryBg};
+    display: ${p => (p.isOpen ? 'block' : 'none')};
+    opacity: .95;
+    z-index: 10;
+
+    ul {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      margin: ${Typography.rhythm(2)} 0 0;
+      padding: 0;
+
+      li {
+        font-size: 1.5em;
+        margin-right: 0;
+        color: #fff;
+      }
+    }
+  `};
+`
+
+const HamburgerWrapper = styled.div`
+  padding: 7px 5px;
+  border: 0.15rem solid #333;
+  margin: 0 1rem;
+  z-index: 11;
+  display: none;
+
+  ${media.mobile`
+    display: block;
+  `};
 `
 
 const activeLinkStyle = {
@@ -70,36 +112,52 @@ const activeLinkStyle = {
   textTransform: 'uppercase',
 }
 
-const Header = ({ siteTitle }) => (
-  <Wrapper>
-    <TitleLink to="/">
-      <Logo src={logo} alt="logo" />
-    </TitleLink>
-    <Nav>
-      <ul>
-        <li>
-          <Link to="/raumplanung" activeStyle={activeLinkStyle}>
-            raumplanung.
-          </Link>
-        </li>
-        <li>
-          <Link to="/tischlerei" activeStyle={activeLinkStyle}>
-            qualitätstischlerei.
-          </Link>
-        </li>
-        <li>
-          <Link to="/holzarchitektur" activeStyle={activeLinkStyle}>
-            holzarchitektur.
-          </Link>
-        </li>
-        <li>
-          <Link to="/about" activeStyle={activeLinkStyle}>
-            über uns.
-          </Link>
-        </li>
-      </ul>
-    </Nav>
-  </Wrapper>
-)
+class Header extends React.Component {
+  state = {
+    isOpen: false,
+  }
+
+  render() {
+    return (
+      <Wrapper>
+        <TitleLink to="/">
+          <Logo src={logo} alt="logo" />
+        </TitleLink>
+        <Nav isOpen={this.state.isOpen}>
+          <ul>
+            <li>
+              <Link to="/raumplanung" activeStyle={activeLinkStyle}>
+                raumplanung.
+              </Link>
+            </li>
+            <li>
+              <Link to="/tischlerei" activeStyle={activeLinkStyle}>
+                qualitätstischlerei.
+              </Link>
+            </li>
+            <li>
+              <Link to="/holzarchitektur" activeStyle={activeLinkStyle}>
+                holzarchitektur.
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" activeStyle={activeLinkStyle}>
+                über uns.
+              </Link>
+            </li>
+          </ul>
+        </Nav>
+        <HamburgerWrapper>
+          <Hamburger
+            isOpen={this.state.isOpen}
+            menuClicked={() => this.setState({ isOpen: !this.state.isOpen })}
+            width={18}
+            height={13}
+          />
+        </HamburgerWrapper>
+      </Wrapper>
+    )
+  }
+}
 
 export default Header
