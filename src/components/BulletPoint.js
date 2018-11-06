@@ -1,13 +1,15 @@
 import React from "react"
+import Img from "gatsby-image"
 import styled from "styled-components"
 import Typography from "../utils/typography"
 import Theme from "../utils/theme"
 import { media } from "../utils/style"
 import { Grid, Half, Quarter } from "../components/Grid"
 
-const BulletPoint = ({motto, number, title, text, odd}) => <Wrapper odd={odd}>
+const BulletPoint = ({motto, number, title, text, image, odd}) => <Wrapper odd={odd}>
     <Quarter><Motto>{motto}</Motto></Quarter>
     <NumberWrapper>
+        {image && <Img sizes={image} alt="title" style={{width:"100%", height:"100%"}} />}
         <Number>{number}</Number>
     </NumberWrapper>
     <TextWrapper>
@@ -23,11 +25,11 @@ const Wrapper = styled(Grid)`
 
 const Motto = styled.h2`
   position: absolute;
-    text-transform: uppercase;
+  text-transform: uppercase;
   width: 6em;
   font-weight: 700;
   color: #A8B9B9;
-  padding: 0 1rem;
+  margin: 0 1rem;
 
   ${media.mobile`
     display: none;
@@ -38,6 +40,7 @@ const NumberWrapper = styled(Quarter)`
     background-color: #A8B9B9;
     display: flex;
     align-items: flex-end;
+    position: relative;
 
     &:before {
         content: '';
@@ -57,14 +60,15 @@ const Number = styled.h1`
     margin: 0;
     line-height: 1em;
     font-size: 8em;
+    position: absolute;
 `
 
 const Title = styled.strong`
-    margin-left: 1rem;
+    margin: 0 1rem;
 `
 
 const Text = styled.p`
-    margin-left: 1rem;
+    margin: 0 1rem;
 `
 
 export default BulletPoint;
