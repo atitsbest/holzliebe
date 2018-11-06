@@ -28,7 +28,7 @@ export default ({ data }) => (
         <Img sizes={{...data.halfHero2Image.childImageSharp.sizes, aspectRatio: 21/11}} />
       </Half>
     </Grid>
-     
+
     <Hero sizes={{...data.hero2Image.childImageSharp.sizes, aspectRatio: 16/9}} />
     <CallToAction title="Besichtigen" icon={HolzarchitekturIcon} />
     <Grid>
@@ -40,37 +40,37 @@ export default ({ data }) => (
       </Half>
     </Grid>
     <BulletPoint
-      odd 
+      odd
       motto="Raum Möbel Archi-tektur"
-      number="01" 
+      number="01"
       image={{...data.bullet1.childImageSharp.sizes, aspectRatio: 1}}
-      title="Holzarchitektur" 
+      title="Holzarchitektur"
       text="Wir planen und bauen elegante Massivholzhäuser mit unnachahmlicher Wohnatmosphäre. Raf- finierte Innovationen und architektonisches Gespür machen es möglich."
       />
-    <BulletPoint 
+    <BulletPoint
       image={{...data.bullet2.childImageSharp.sizes, aspectRatio: 1}}
-      number="02" 
-      title="Holzarchitektur" 
+      number="02"
+      title="Holzarchitektur"
       text="Wir planen und bauen elegante Massivholzhäuser mit unnachahmlicher Wohnatmosphäre. Raf- finierte Innovationen und architektonisches Gespür machen es möglich."
       />
-    <BulletPoint 
+    <BulletPoint
       odd
       image={{...data.bullet3.childImageSharp.sizes, aspectRatio: 1}}
-      number="04" 
-      title="Holzarchitektur" 
+      number="04"
+      title="Holzarchitektur"
       text="Wir planen und bauen elegante Massivholzhäuser mit unnachahmlicher Wohnatmosphäre. Raf- finierte Innovationen und architektonisches Gespür machen es möglich."
       />
-    <BulletPoint 
+    <BulletPoint
       image={{...data.bullet4.childImageSharp.sizes, aspectRatio: 1}}
-      number="03" 
-      title="Holzarchitektur" 
+      number="03"
+      title="Holzarchitektur"
       text="Wir planen und bauen elegante Massivholzhäuser mit unnachahmlicher Wohnatmosphäre. Raf- finierte Innovationen und architektonisches Gespür machen es möglich."
       />
-    <BulletPoint 
+    <BulletPoint
       odd
       image={{...data.bullet5.childImageSharp.sizes, aspectRatio: 1}}
-      number="05" 
-      title="Holzarchitektur" 
+      number="05"
+      title="Holzarchitektur"
       text="Wir planen und bauen elegante Massivholzhäuser mit unnachahmlicher Wohnatmosphäre. Raf- finierte Innovationen und architektonisches Gespür machen es möglich."
       />
       <br/>
