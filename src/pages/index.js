@@ -51,38 +51,38 @@ export default ({ data }) => (
     <Grid>
       <Half>
         <LabeledImage
-          image={data.raumplanung.childImageSharp.sizes}
+          image={{...data.raumplanung.childImageSharp.sizes, aspectRatio: 21/11}}
           label="Raumplanung"
         />
       </Half>
       <Quarter>
-        <BackgroundImage sizes={data.raumplanung.childImageSharp.sizes} />
+        <BackgroundImage sizes={data.raumplanung1.childImageSharp.sizes} />
       </Quarter>
       <Quarter>
-        <BackgroundImage sizes={data.raumplanung.childImageSharp.sizes} />
+        <BackgroundImage sizes={data.raumplanung2.childImageSharp.sizes} />
       </Quarter>
       <Half>
         <LabeledImage
-          image={data.tischlerei.childImageSharp.sizes}
+          image={{...data.tischlerei.childImageSharp.sizes, aspectRatio: 21/11}}
           label="Tischlerei"
         />
       </Half>
       <Half>
         <BackgroundImage
-          sizes={data.raumplanung.childImageSharp.sizes}
+          sizes={{...data.tischlerei1.childImageSharp.sizes, aspectRatio: 21/11}}
         />
       </Half>
       <Half>
         <LabeledImage
-          image={data.architektur.childImageSharp.sizes}
+          image={{...data.architektur.childImageSharp.sizes, aspectRatio: 21/11}}
           label="Architektur"
         />
       </Half>
       <Quarter>
-        <BackgroundImage sizes={data.raumplanung.childImageSharp.sizes} />
+        <BackgroundImage sizes={{...data.architektur1.childImageSharp.sizes, aspectRatio: 10.5/11}} />
       </Quarter>
       <Quarter>
-        <BackgroundImage sizes={data.raumplanung.childImageSharp.sizes} />
+        <BackgroundImage sizes={{...data.architektur2.childImageSharp.sizes, aspectRatio: 10.5/11}} />
       </Quarter>
     </Grid>
     <Zitat
@@ -181,7 +181,28 @@ export const query = graphql`
         }
       }
     }
+    raumplanung1: file(relativePath: { eq: "jh_jungreithmayr_055.jpg" }) {
+      childImageSharp {
+        sizes(maxWidth: 480) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+    raumplanung2: file(relativePath: { eq: "raumplanung_plan.jpg" }) {
+      childImageSharp {
+        sizes(maxWidth: 480) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
     tischlerei: file(relativePath: { eq: "jh_jungreithmayr_146.jpg" }) {
+      childImageSharp {
+        sizes(maxWidth: 600) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+    tischlerei1: file(relativePath: { eq: "jh_jungreithmayr_181.jpg" }) {
       childImageSharp {
         sizes(maxWidth: 600) {
           ...GatsbyImageSharpSizes
@@ -191,6 +212,20 @@ export const query = graphql`
     architektur: file(relativePath: { eq: "jh_jungreithmayr_004.jpg" }) {
       childImageSharp {
         sizes(maxWidth: 600) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+    architektur1: file(relativePath: { eq: "jh_jungreithmayr_061.jpg" }) {
+      childImageSharp {
+        sizes(maxWidth: 480) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+    architektur2: file(relativePath: { eq: "jh_jungreithmayr_082.jpg" }) {
+      childImageSharp {
+        sizes(maxWidth: 480) {
           ...GatsbyImageSharpSizes
         }
       }
