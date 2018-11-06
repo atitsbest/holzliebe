@@ -1,8 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import styled from 'styled-components'
-import Typography from '../utils/typography'
-import { media } from '../utils/style'
 import Layout from '../components/layout'
 import { Section } from '../components/section'
 import Hero from '../components/hero'
@@ -17,6 +14,7 @@ import History from '../components/History'
 import { HolzarchitekturIcon } from '../components/icons'
 import LabeledImage from '../components/LabeledImage'
 import BackgroundImage from '../components/BackgroundImage'
+import { Grid, Half, Quarter } from "../components/Grid"
 import wohlfuehlen from '../images/wohlfuehlen.png'
 
 export default ({ data }) => (
@@ -200,26 +198,4 @@ export const query = graphql`
   }
 `
 
-const Grid = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin: -0.25rem -0.25rem ${Typography.rhythm(0.125)};
-`
 
-const Half = styled.div`
-  flex: 0 1 calc(50% - 0.5rem);
-  margin: 0.25rem;
-
-  ${media.mobile`
-    flex: 0 1 calc(100% - .5rem);
-  `};
-`
-
-const Quarter = styled.div`
-  flex: 0 1 calc(25% - 0.5rem);
-  margin: 0.25rem;
-
-  ${media.mobile`
-    flex: 0 1 calc(50% - .5rem);
-  `};
-`
