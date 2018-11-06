@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import BackgroundImage from "./BackgroundImage"
-import Typography from "../utils/typography"
+import BackgroundImage from './BackgroundImage'
+import Typography from '../utils/typography'
+import Theme from '../utils/theme'
 
 const Wrapper = styled.div`
   display: flex;
@@ -29,15 +30,17 @@ const Label = styled.h2`
   font-weight: 300;
 `
 const Text = styled.p`
-  margin: ${Typography.rhythm(.5)} 0;
-  font-size: .9rem;
+  margin: ${Typography.rhythm(0.5)} 0;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: ${Theme.colors.text};
 `
 
 const LabeledImage = ({ image, label, text }) => (
   <Wrapper>
-<Inner>
-  <BackgroundImage sizes={image} alt={label} />
-    <Label>{label}</Label>
+    <Inner>
+      <BackgroundImage sizes={image} alt={label} />
+      <Label>{label}</Label>
     </Inner>
     {text && <Text>{text}</Text>}
   </Wrapper>

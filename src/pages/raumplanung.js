@@ -1,6 +1,6 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-import styled from "styled-components"
+import { graphql, Link } from 'gatsby'
+import styled from 'styled-components'
 import Hero from '../components/hero'
 import TopicHeader from '../components/topicheader'
 import Layout from '../components/layout'
@@ -21,58 +21,100 @@ const NotFoundPage = ({ data }) => (
     />
     <ImageGrid>
       <Frame>
-        <LabeledImage 
-          image={{...data.schlafen.childImageSharp.sizes, aspectRatio: 4/3}} 
-          label="Schlafen." 
-          text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung." />
+        <Link to="/impressionen">
+          <LabeledImage
+            image={{
+              ...data.schlafen.childImageSharp.sizes,
+              aspectRatio: 4 / 3,
+            }}
+            label="Schlafen."
+            text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung."
+          />
+        </Link>
       </Frame>
       <Frame>
-          <LabeledImage 
-          image={{...data.wohnen.childImageSharp.sizes, aspectRatio: 4/3}} 
-          label="Wohnen." 
-          text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung." />
+        <Link to="/impressionen">
+          <LabeledImage
+            image={{ ...data.wohnen.childImageSharp.sizes, aspectRatio: 4 / 3 }}
+            label="Wohnen."
+            text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung."
+          />
+        </Link>
       </Frame>
       <Frame>
-        <LabeledImage 
-          image={{...data.kochen.childImageSharp.sizes, aspectRatio: 4/3}} 
-          label="Kochen." 
-          text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung." />
+        <Link to="/impressionen">
+          <LabeledImage
+            image={{ ...data.kochen.childImageSharp.sizes, aspectRatio: 4 / 3 }}
+            label="Kochen."
+            text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung."
+          />
+        </Link>
       </Frame>
       <Frame>
-        <LabeledImage 
-          image={{...data.buero.childImageSharp.sizes, aspectRatio: 4/3}} 
-          label="Büro." 
-          text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung." />
+        <Link to="/impressionen">
+          <LabeledImage
+            image={{ ...data.buero.childImageSharp.sizes, aspectRatio: 4 / 3 }}
+            label="Büro."
+            text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung."
+          />
+        </Link>
       </Frame>
       <Frame>
-        <LabeledImage 
-          image={{...data.badezimmer.childImageSharp.sizes, aspectRatio: 4/3}} 
-          label="Badezimmer." 
-          text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung." />
+        <Link to="/impressionen">
+          <LabeledImage
+            image={{
+              ...data.badezimmer.childImageSharp.sizes,
+              aspectRatio: 4 / 3,
+            }}
+            label="Badezimmer."
+            text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung."
+          />
+        </Link>
       </Frame>
       <Frame>
-        <LabeledImage 
-          image={{...data.garderobe.childImageSharp.sizes, aspectRatio: 4/3}} 
-          label="Garderobe." 
-          text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung." />
+        <Link to="/impressionen">
+          <LabeledImage
+            image={{
+              ...data.garderobe.childImageSharp.sizes,
+              aspectRatio: 4 / 3,
+            }}
+            label="Garderobe."
+            text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung."
+          />
+        </Link>
       </Frame>
       <Frame>
-        <LabeledImage 
-          image={{...data.freiraum.childImageSharp.sizes, aspectRatio: 4/3}} 
-          label="Freiraum." 
-          text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung." />
+        <Link to="/impressionen">
+          <LabeledImage
+            image={{
+              ...data.freiraum.childImageSharp.sizes,
+              aspectRatio: 4 / 3,
+            }}
+            label="Freiraum."
+            text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung."
+          />
+        </Link>
       </Frame>
       <Frame>
-        <LabeledImage 
-          image={{...data.sauna.childImageSharp.sizes, aspectRatio: 4/3}} 
-          label="Sauna." 
-          text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung." />
+        <Link to="/impressionen">
+          <LabeledImage
+            image={{ ...data.sauna.childImageSharp.sizes, aspectRatio: 4 / 3 }}
+            label="Sauna."
+            text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung."
+          />
+        </Link>
       </Frame>
       <Frame>
-        <LabeledImage 
-          image={{...data.accessoires.childImageSharp.sizes, aspectRatio: 4/3}} 
-          label="Accessoires." 
-          text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung." />
+        <Link to="/impressionen">
+          <LabeledImage
+            image={{
+              ...data.accessoires.childImageSharp.sizes,
+              aspectRatio: 4 / 3,
+            }}
+            label="Accessoires."
+            text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung."
+          />
+        </Link>
       </Frame>
     </ImageGrid>
     <Hero sizes={data.hero2Image.childImageSharp.sizes} />
@@ -177,14 +219,18 @@ export const query = graphql`
 `
 const ImageGrid = styled.div`
   display: flex;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
   margin: 0 -0.25rem;
-`;
+`
 
 const Frame = styled.div`
   flex: 1 0 33.33%;
   max-width: 33.33%;
   padding: 0 0.25rem ${Typography.rhythm(1)} 0.25rem;
+
+  a {
+    text-decoration: none;
+  }
 
   ${media.tablet`
     flex: 1 0 50%;

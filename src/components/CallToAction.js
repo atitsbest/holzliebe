@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 import Theme from '../utils/theme'
 import Typography from '../utils/typography'
@@ -11,7 +12,7 @@ const Wrapper = styled(Section)`
   align-items: center;
 `
 
-const Button = styled.div`
+const Button = styled(Link)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,6 +24,7 @@ const Button = styled.div`
   width: 50%;
   border-radius: 2px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
 `
 
 const Title = styled.h2`
@@ -31,12 +33,12 @@ const Title = styled.h2`
   margin: ${Typography.rhythm(0.5)} 0 ${Typography.rhythm(0.25)};
 `
 
-const CallToAction = ({ icon, title }) => {
+const CallToAction = ({ icon, title, url }) => {
   const Icon = icon
 
   return (
     <Wrapper>
-      <Button>
+      <Button to={url || '/'}>
         <Icon backgroundColor="rgba(0,0,0,.10)" size={50} />
         <Title>{title}</Title>
       </Button>
