@@ -127,22 +127,22 @@ class Header extends React.Component {
           <ul>
             <li>
               <Link to="/raumplanung" activeStyle={activeLinkStyle}>
-                raumplanung.
+                Raumplanung.
               </Link>
             </li>
             <li>
               <Link to="/tischlerei" activeStyle={activeLinkStyle}>
-                qualitätstischlerei.
+                Qualitätstischlerei.
               </Link>
             </li>
             <li>
               <Link to="/holzarchitektur" activeStyle={activeLinkStyle}>
-                holzarchitektur.
+                Holzarchitektur.
               </Link>
             </li>
             <li>
               <Link to="/about" activeStyle={activeLinkStyle}>
-                über uns.
+                Über uns.
               </Link>
             </li>
           </ul>
