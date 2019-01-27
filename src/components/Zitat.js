@@ -67,7 +67,11 @@ const Zitat = ({ motto, text1, subtext1, text2, subtext2, image }) => (
   <Wrapper>
     <Inner>
       <Motto>{motto}</Motto>
-      <Image sizes={image} alt={motto} />
+      <Image
+        sizes={image}
+        alt={motto}
+        style={{ mixBlendMode: 'multiply', background: '#CAD3CE' }}
+      />
       <Text1>{text1}</Text1>
       <Subtext1>{subtext1}</Subtext1>
       <Text2>{text2}</Text2>
