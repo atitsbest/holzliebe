@@ -29,7 +29,7 @@ const NotFoundPage = ({ data }) => (
               aspectRatio: 4 / 3,
             }}
             label="Schlafen."
-            text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung."
+            text="Wozu Raumplanung in einem Raum, in dem man die Augen schließt? Weil für einen guten Schlaf eine besonders gute Atmosphäre hilfreich ist. Das kann man planen!"
           />
         </Link>
       </Frame>
@@ -38,7 +38,7 @@ const NotFoundPage = ({ data }) => (
           <LabeledImage
             image={{ ...data.wohnen.childImageSharp.sizes, aspectRatio: 4 / 3 }}
             label="Wohnen."
-            text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung."
+            text="Was auch immer im Trend liegt: Vergessen Sie es! Denn Wohnen ist dann gut, wenn es genau zu Ihnen passt. Das machen wir!"
           />
         </Link>
       </Frame>
@@ -47,7 +47,7 @@ const NotFoundPage = ({ data }) => (
           <LabeledImage
             image={{ ...data.kochen.childImageSharp.sizes, aspectRatio: 4 / 3 }}
             label="Kochen."
-            text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung."
+            text="Wir kochen nicht. Aber wir wissen, was es braucht, damit Sie es mit Freude tun können. Das ist Erfahrung!"
           />
         </Link>
       </Frame>
@@ -56,7 +56,7 @@ const NotFoundPage = ({ data }) => (
           <LabeledImage
             image={{ ...data.buero.childImageSharp.sizes, aspectRatio: 4 / 3 }}
             label="Büro."
-            text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung."
+            text="Der Erfolg Ihrer Arbeit liegt nicht am Design Ihres Schreibtischs. Aber wir können Design, Funktion und Umsetzung so perfekt kombinieren, dass die Menschen es glauben werden. Das ist Erfolg!"
           />
         </Link>
       </Frame>
@@ -68,7 +68,7 @@ const NotFoundPage = ({ data }) => (
               aspectRatio: 4 / 3,
             }}
             label="Badezimmer."
-            text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung."
+            text="Wer glaubt, dass sich Holz und Wasser nicht vertragen, vergisst, dass Holz in der Natur „erfunden“ wurde. Diese Qualität wissen wir richtig einzusetzen. Das wird Sie überraschen!"
           />
         </Link>
       </Frame>
@@ -80,7 +80,7 @@ const NotFoundPage = ({ data }) => (
               aspectRatio: 4 / 3,
             }}
             label="Garderobe."
-            text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung."
+            text="Nur ein Stauraum für ein paar Mäntel? Manchmal ja. Aber manchmal der erste Eindruck von Ihrem Lebensraum. Wie das Vorwort zu einem guten Buch: Weglegen oder Weiterlesen?"
           />
         </Link>
       </Frame>
@@ -92,7 +92,7 @@ const NotFoundPage = ({ data }) => (
               aspectRatio: 4 / 3,
             }}
             label="Freiraum."
-            text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung."
+            text="Viele Menschen gestalten den Raum im freien mit Beton. Weil es so „praktisch“ ist. Wir gestalten auch mit Holz. Weil es so angenehm ist. Das macht frei!"
           />
         </Link>
       </Frame>
@@ -101,7 +101,7 @@ const NotFoundPage = ({ data }) => (
           <LabeledImage
             image={{ ...data.sauna.childImageSharp.sizes, aspectRatio: 4 / 3 }}
             label="Sauna."
-            text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung."
+            text="Eine Sauna aus Holz zu bauen ist nicht überraschend. Eine schöne Sauna aus Holz zu bauen wird Sie überraschen. Bereit für den Design-Aufguss?"
           />
         </Link>
       </Frame>
@@ -113,7 +113,7 @@ const NotFoundPage = ({ data }) => (
               aspectRatio: 4 / 3,
             }}
             label="Accessoires."
-            text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung."
+            text="Ob Küchenfunktionen oder Verarbeitungsdetails. Wenn es keine gute Lösung gibt am Markt, dann erfinden wir eine. Das ist Liebe zum Detail!"
           />
         </Link>
       </Frame>
@@ -121,7 +121,7 @@ const NotFoundPage = ({ data }) => (
     <Hero sizes={data.hero2Image.childImageSharp.sizes} />
     <TopicHeader
       title="Raumplanung"
-      text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung ist mehr, als ein Möbel ins Eck zu stellen. "
+      text="Ein guter Plan beginnt nicht am Papier. Auch nicht im Kopf. Sondern beim Zuhören. Nur so kann ihr Wohntraum in Erfüllung gehen. Das ist nicht Traumdeutung, sondern Gespür, Leidenschaft und ganz viel Erfahrung."
     />
     <CallToAction title="Kontakt" icon={HolzarchitekturIcon} />
     <Hero sizes={data.hero3Image.childImageSharp.sizes} />
