@@ -74,37 +74,30 @@ export default ({ data }) => (
     </Grid>
     <BulletPoint
       odd
-      motto="Raum Möbel Archi-tektur"
+      motto={['Massiv', 'Holz', 'Architektur']}
       number="01"
       image={{ ...data.bullet1.childImageSharp.sizes, aspectRatio: 1 }}
-      title="Holzarchitektur"
-      text="Wir planen und bauen elegante Massivholzhäuser mit unnachahmlicher Wohnatmosphäre. Raf- finierte Innovationen und architektonisches Gespür machen es möglich."
+      title="Pures Holz"
+      text="Eine Wand aus Holz: Höchste Stabilität, perfekte Dämmwerte, elegante Konstruktion. Unsere Planungen reizen die enormen Werkstoffvorteile aus und ermöglichen eine unvergleichliche konstruktive Befreitheit: Keine Kältebrücken, dadurch schlankes Architekturdesign, extrem hohe Belastbarkeit, hohe Spannweiten und Auskragungen möglich."
     />
     <BulletPoint
       image={{ ...data.bullet2.childImageSharp.sizes, aspectRatio: 1 }}
       number="02"
-      title="Holzarchitektur"
-      text="Wir planen und bauen elegante Massivholzhäuser mit unnachahmlicher Wohnatmosphäre. Raf- finierte Innovationen und architektonisches Gespür machen es möglich."
+      title="Wohlfühlatmosphäre"
+      text="„Ich habe mir nicht gedacht, dass so viel Holz so schön ist“, ist der häufigste Satz, den wir von BesucherInnen hören. Bei elegantem Design ist die Atmosphäre im Holzhaus freundlich, beruhigend, wohltuend und nachweislich gesund. Dennoch kann jede Wand gemalt oder verkleidet werden. Ganz nach Geschmack."
     />
     <BulletPoint
       odd
       image={{ ...data.bullet3.childImageSharp.sizes, aspectRatio: 1 }}
-      number="04"
-      title="Holzarchitektur"
-      text="Wir planen und bauen elegante Massivholzhäuser mit unnachahmlicher Wohnatmosphäre. Raf- finierte Innovationen und architektonisches Gespür machen es möglich."
+      number="03"
+      title="Leichte Bearbeitbarkeit"
+      text="Alle Leitungen können unaufwändig eingefräst werden, sie sind nachträglich einfach veränder- und erweiterbar, Bohren und Schrauben ohne Mauerdübel vereinfacht alle Montagen."
     />
     <BulletPoint
       image={{ ...data.bullet4.childImageSharp.sizes, aspectRatio: 1 }}
-      number="03"
-      title="Holzarchitektur"
-      text="Wir planen und bauen elegante Massivholzhäuser mit unnachahmlicher Wohnatmosphäre. Raf- finierte Innovationen und architektonisches Gespür machen es möglich."
-    />
-    <BulletPoint
-      odd
-      image={{ ...data.bullet5.childImageSharp.sizes, aspectRatio: 1 }}
-      number="05"
-      title="Holzarchitektur"
-      text="Wir planen und bauen elegante Massivholzhäuser mit unnachahmlicher Wohnatmosphäre. Raf- finierte Innovationen und architektonisches Gespür machen es möglich."
+      number="04"
+      title="Silber und Gold"
+      text="Die Holzwände können auch außenseitig ganz pur und unbehandelt bleiben. Denn die Natur sorgt mit dem silbrigen Verwitterungsprozess an der Oberfläche für eine natürliche Schutzschicht, sodass das Regenwasser nie tiefer in die Wand eindringen kann. So sorgt der natürliche Werkstoff selbst für eine perfekte Lösung."
     />
     <br />
   </Layout>
@@ -166,14 +159,14 @@ export const query = graphql`
         }
       }
     }
-    bullet2: file(relativePath: { eq: "jh_jungreithmayr_024.jpg" }) {
+    bullet2: file(relativePath: { eq: "jh_jungreithmayr_077.jpg" }) {
       childImageSharp {
         sizes(maxWidth: 480) {
           ...GatsbyImageSharpSizes
         }
       }
     }
-    bullet3: file(relativePath: { eq: "jh_jungreithmayr_018.jpg" }) {
+    bullet3: file(relativePath: { eq: "jh_jungreithmayr_072.jpg" }) {
       childImageSharp {
         sizes(maxWidth: 480) {
           ...GatsbyImageSharpSizes

@@ -19,7 +19,7 @@ const Motto = styled.h1`
   top: 0;
   left: 0;
   text-transform: uppercase;
-  width: 8em;
+  width: 9em;
   font-weight: 700;
   opacity: 0.25;
   padding: ${Typography.rhythm(1)} ${Typography.rhythm(1)};
@@ -66,7 +66,14 @@ const Subtext2 = styled.p`
 const Zitat = ({ motto, text1, subtext1, text2, subtext2, image }) => (
   <Wrapper>
     <Inner>
-      <Motto>{motto}</Motto>
+      <Motto>
+        {motto.map(m => (
+          <React.Fragment>
+            {m}
+            <br />
+          </React.Fragment>
+        ))}
+      </Motto>
       <Image
         sizes={image}
         alt={motto}

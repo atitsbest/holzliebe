@@ -38,7 +38,7 @@ export default ({ data }) => (
       </Half>
     </Grid>
     <Zitat
-      motto="Baum, Holz, Werkstück Möbel"
+      motto={['Baum,', 'Holz,', 'Werkstück,', 'Möbel']}
       image={data.hobel.childImageSharp.sizes}
       text1="ULLECABO RRUMQUI CUS AD QUE VERUMQUIAE EA"
       subtext1="Die meisten Menschen erkennen die Qualität eines Möbels an seiner großartigen Ausstrahlung, obwohl sie die nicht benennen können. Deshalb haben unsere Tischlermeister nicht einfach handwerkliches Geschick. Sondern sie wissen, wie man die Ausstrahlung von Holz zur Entfaltung bringt. Mit Wissen, Können UND Spüren"
@@ -50,7 +50,7 @@ export default ({ data }) => (
     />
     <BulletPoint
       odd
-      motto="Darauf sind wir stolz"
+      motto={['Darauf sind', 'wir stolz']}
       number="01"
       title="Maserungstreue"
       text="Sie macht aus einer Holzfront eine stolze Holzfront. Wir suchen Holzrohlinge persönlich aus und fügen sie zu einem schönen Bild zusammen. So „malen“ Tischler."
