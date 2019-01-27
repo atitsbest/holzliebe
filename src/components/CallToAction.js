@@ -32,8 +32,14 @@ const Title = styled.h2`
   color: #fff;
   margin: ${Typography.rhythm(0.5)} 0 ${Typography.rhythm(0.25)};
 `
+const Text = styled.p`
+  padding-top: ${Typography.rhythm(2)};
+  max-width: 80%;
+  text-align: center;
+  margin-bottom: 0;
+`
 
-const CallToAction = ({ icon, title, url }) => {
+const CallToAction = ({ icon, title, url, text }) => {
   const Icon = icon
 
   return (
@@ -42,6 +48,16 @@ const CallToAction = ({ icon, title, url }) => {
         <Icon backgroundColor="rgba(0,0,0,.10)" size={50} />
         <Title>{title}</Title>
       </Button>
+      {text && (
+        <Text>
+          {text.map(t => (
+            <React.Fragment>
+              {t}
+              <br />
+            </React.Fragment>
+          ))}
+        </Text>
+      )}
     </Wrapper>
   )
 }

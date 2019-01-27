@@ -18,7 +18,7 @@ export default ({ data }) => (
     <TopicHeader
       icon={HolzarchitekturIcon}
       title="Holzarchitektur"
-      text="Welches Holz passt zu Ihnen? Welches Design zu Ihrem Raum? Wel- che Funktion zu Ihren Bedürfnissen? Qualitätstischlerei bedeutet, für Sie diese Fragen zu lösen."
+      text="Wir planen und bauen elegante Massivholzhäuser mit unnachahmlicher Wohnatmosphäre. Raffinierte Innovationen und architektonisches Gespür machen es möglich."
     />
     <Grid>
       <Half>
@@ -46,6 +46,13 @@ export default ({ data }) => (
       title="Besichtigen"
       icon={HolzarchitekturIcon}
       url="/impressionen"
+      text={[
+        'Fotos sind gut.',
+        'Die Qualität von Holzarchitektur kann man aber nur im Raum erspüren.',
+        'Deshalb laden wir Sie herzlich zu einem persönlichen Besuch zu uns nach Thening ein.',
+        'Warnung: Das wird Sie begeistern!',
+        'Terminvereinbarung bitte per E-Mail, oder bei Joachim Jungreithmayr unter 07221 63016',
+      ]}
     />
     <Grid>
       <Half>
