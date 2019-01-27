@@ -23,8 +23,8 @@ const History = () => (
             Seit 5<br /> Generationen
           </span>
         }
-        intro="Das Jungreithmayr-Holzhaus: - etur sitas mo etur, cullabor lum. Icia atquatis atioresciat apic tem quia volorec."
-        body="Nihillessi debisti asperio berfers perrumque audam, officaturio. Giae aborum reriant. Elessum accabor erspell uptaque et, officab orepedi as de lab ipicit, ut etur, optatibea num volore, solorro omnis quid ut a quo volupta tquias dolorum nem earum fuga. Hillabo rersperior archilit, ut aruptae. Nemposae voluptaquas aut quam venimol uptatquam erunt a non corempedi cor aut quiatem quia ne plaut eumquam nobitat. Ducium nis necest, offictius quat. Rum aliquiae omnis qui re nessumque arum at liberro blaborest ut autem con nime aut del est, sit, volorei cipsus eosam. , quam estis dolorisi ipit autem corendae corerumque sint."
+        intro="Das ist Johann Angermayr. Er hat bereits 1890 die Tischlerei in Thening gegründet. Das ist bald 130 Jahre aus."
+        body="Am selben Standort wie jetzt baute er Werkstatt und Gebäude, die es zum Teil noch heute gibt. Vieles hat sich verändert seither und Vieles ist mit Fortschritt und Know How wohl auch leichter geworden. Aber das handwerkliche Geschick für diesen außergewöhnlichen Werkstoff Holz und die Wertschätzung für den Kunden und Auftraggeber hat es schon damals gegeben. Das habe ich bei meinem Vater Wilfried erlebt, und der hat es bei seinem Vater Walter erlebt, und der hat es bei seinem Vater Adam erlebt, und der hat es von seinem Schwiegervater Johann gelernt. Deshalb glaube ich sogar, dass wir heute schönere und bessere Möbel bauen können als vor 5 Generationen, weil wir mehr wissen über die Verarbeitung und die Präzision höher geworden ist. Davon ist in jeder Generation etwas dazu gekommen und hat daran gearbeitet. Bis heute. Dafür bin ich dankbar."
       />
     )}
   />

@@ -69,10 +69,13 @@ const Footer = () => (
           <a href="/">Newsletter</a>
         </li>
         <li>
-          <a href="/">Impressum</a>
+          <a href="/impressum">Impressum</a>
         </li>
         <li>
-          <a href="/">Konakt</a>
+          <a href="/datenschutz">Datenschutz</a>
+        </li>
+        <li>
+          <a href="/kontakt">Kontakt</a>
         </li>
       </ul>
 
