@@ -50,8 +50,8 @@ const Wisdom = ({ backgroundImage, author }) => (
     <Content>
       <Author>{author}</Author>
       <Quote>
-        "KIRSCHHOLZ IST MEIN BLINDTEXT ASPERIO BER- FERS PERRUMQUE AU- DAM,
-        OFFICATURIO."
+        "Man sagt, dass auch Kirschholz die Herzfrequenz senkt. Bei mit ist es
+        umgekehrt: Ich finde es aufregend!"
       </Quote>
     </Content>
   </Wrapper>
