@@ -10,6 +10,16 @@ const Wrapper = styled.div`
   width: 100%;
   align-items: flex-start;
   justify-content: center;
+
+  img {
+    transition: all 0.4s ease-in-out !important;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.25);
+    }
+  }
 `
 
 const Inner = styled.div`
@@ -28,6 +38,7 @@ const Label = styled.h2`
   padding: 0.1rem 1rem;
   margin: 0;
   font-weight: 300;
+  color: ${Theme.colors.text};
 `
 const Text = styled.p`
   margin: ${Typography.rhythm(0.5)} 0;

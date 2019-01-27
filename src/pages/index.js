@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import { Section } from '../components/section'
 import Hero from '../components/hero'
@@ -14,7 +14,7 @@ import History from '../components/History'
 import { HolzarchitekturIcon } from '../components/icons'
 import LabeledImage from '../components/LabeledImage'
 import BackgroundImage from '../components/BackgroundImage'
-import { Grid, Half, Quarter } from "../components/Grid"
+import { Grid, Half, Quarter } from '../components/Grid'
 import wohlfuehlen from '../images/wohlfuehlen.png'
 
 export default ({ data }) => (
@@ -50,10 +50,15 @@ export default ({ data }) => (
     />
     <Grid>
       <Half>
-        <LabeledImage
-          image={{...data.raumplanung.childImageSharp.sizes, aspectRatio: 21/11}}
-          label="Raumplanung"
-        />
+        <Link to="/raumplanung">
+          <LabeledImage
+            image={{
+              ...data.raumplanung.childImageSharp.sizes,
+              aspectRatio: 21 / 11,
+            }}
+            label="Raumplanung"
+          />
+        </Link>
       </Half>
       <Quarter>
         <BackgroundImage sizes={data.raumplanung1.childImageSharp.sizes} />
@@ -62,27 +67,50 @@ export default ({ data }) => (
         <BackgroundImage sizes={data.raumplanung2.childImageSharp.sizes} />
       </Quarter>
       <Half>
-        <LabeledImage
-          image={{...data.tischlerei.childImageSharp.sizes, aspectRatio: 21/11}}
-          label="Tischlerei"
-        />
+        <Link to="/tischlerei">
+          <LabeledImage
+            image={{
+              ...data.tischlerei.childImageSharp.sizes,
+              aspectRatio: 21 / 11,
+            }}
+            label="Tischlerei"
+          />
+        </Link>
       </Half>
       <Half>
         <BackgroundImage
-          sizes={{...data.tischlerei1.childImageSharp.sizes, aspectRatio: 21/11}}
+          sizes={{
+            ...data.tischlerei1.childImageSharp.sizes,
+            aspectRatio: 21 / 11,
+          }}
         />
       </Half>
       <Half>
-        <LabeledImage
-          image={{...data.architektur.childImageSharp.sizes, aspectRatio: 21/11}}
-          label="Architektur"
-        />
+        <Link to="/holzarchitektur">
+          <LabeledImage
+            image={{
+              ...data.architektur.childImageSharp.sizes,
+              aspectRatio: 21 / 11,
+            }}
+            label="Architektur"
+          />
+        </Link>
       </Half>
       <Quarter>
-        <BackgroundImage sizes={{...data.architektur1.childImageSharp.sizes, aspectRatio: 10.5/11}} />
+        <BackgroundImage
+          sizes={{
+            ...data.architektur1.childImageSharp.sizes,
+            aspectRatio: 10.5 / 11,
+          }}
+        />
       </Quarter>
       <Quarter>
-        <BackgroundImage sizes={{...data.architektur2.childImageSharp.sizes, aspectRatio: 10.5/11}} />
+        <BackgroundImage
+          sizes={{
+            ...data.architektur2.childImageSharp.sizes,
+            aspectRatio: 10.5 / 11,
+          }}
+        />
       </Quarter>
     </Grid>
     <Zitat
@@ -232,5 +260,3 @@ export const query = graphql`
     }
   }
 `
-
-
