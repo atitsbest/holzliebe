@@ -9,6 +9,7 @@ import LabeledImage from '../components/LabeledImage'
 import { RaumplanungIcon, HolzarchitekturIcon } from '../components/icons'
 import originell from '../images/originell.png'
 import Typography from '../utils/typography'
+import Theme from '../utils/theme'
 import { media } from '../utils/style'
 
 const NotFoundPage = ({ data }) => (
@@ -230,6 +231,7 @@ const Frame = styled.div`
 
   a {
     text-decoration: none;
+    color: ${Theme.colors.text};
   }
 
   ${media.tablet`

@@ -87,13 +87,13 @@ const Frame = styled.div`
   padding: 0 0.2rem ${Typography.rhythm(0.25)} 0.2rem;
 
   ${media.tablet`
-    flex: 1 0 50%;
-    max-width: 50%;
+    flex: 1 0 33.33%;
+    max-width: 33.33%;
   `};
 
   ${media.mobile`
-    flex: 1 0 100%;
-    max-width: 100%;
+    flex: 1 0 50%;
+    max-width: 50%;
   `};
 `
 
