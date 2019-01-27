@@ -38,10 +38,10 @@ export default ({ data }) => (
       </Half>
     </Grid>
     <Zitat
-      motto="Holz Tischleri Text Lorem"
+      motto="Baum, Holz, Werkstück Möbel"
       image={data.hobel.childImageSharp.sizes}
       text1="ULLECABO RRUMQUI CUS AD QUE VERUMQUIAE EA"
-      subtext1="dolut por aborem accum que net, et audam vent venist, cusam etur sitas mo etur, cullabor magnis re laut et optatur sequam, sedis aspidit et fuga. Musam, con nobis et ea nis- simaiorum hilles molestisitae excest aliquid uciisquis dolup- tur!"
+      subtext1="Die meisten Menschen erkennen die Qualität eines Möbels an seiner großartigen Ausstrahlung, obwohl sie die nicht benennen können. Deshalb haben unsere Tischlermeister nicht einfach handwerkliches Geschick. Sondern sie wissen, wie man die Ausstrahlung von Holz zur Entfaltung bringt. Mit Wissen, Können UND Spüren"
       text2="Joachim Jungreithmayr"
       subtext2="Geschäftsführer"
     />
@@ -52,30 +52,28 @@ export default ({ data }) => (
       odd
       motto="Darauf sind wir stolz"
       number="01"
-      title="Holzarchitektur"
-      text="Wir planen und bauen elegante Massivholzhäuser mit unnachahmlicher Wohnatmosphäre. Raf- finierte Innovationen und architektonisches Gespür machen es möglich."
+      title="Maserungstreue"
+      text="Sie macht aus einer Holzfront eine stolze Holzfront. Wir suchen Holzrohlinge persönlich aus und fügen sie zu einem schönen Bild zusammen. So „malen“ Tischler."
+      image={{ ...data.bullet1.childImageSharp.sizes, aspectRatio: 1 }}
     />
     <BulletPoint
       number="02"
-      title="Holzarchitektur"
-      text="Wir planen und bauen elegante Massivholzhäuser mit unnachahmlicher Wohnatmosphäre. Raf- finierte Innovationen und architektonisches Gespür machen es möglich."
+      title="Funktionsdetails"
+      text="Wir planen und bauen elegante Massivholzhäuser mit unnachahmlicher Wohnatmosphäre. Raf- finierte Innovationen und architektonisches Gespür machen es möglich.Wenn es keine gute Lösung gibt am Markt, dann erfinden wir eine. Dennoch sind wir keine „Erfinder“. Das österreichische Wort dafür ist „Tüftler“. Bei Lösungen im Detail sind wir „Holz-Tüftler“"
+      image={{ ...data.bullet2.childImageSharp.sizes, aspectRatio: 1 }}
     />
     <BulletPoint
       odd
-      number="04"
-      title="Holzarchitektur"
-      text="Wir planen und bauen elegante Massivholzhäuser mit unnachahmlicher Wohnatmosphäre. Raf- finierte Innovationen und architektonisches Gespür machen es möglich."
-    />
-    <BulletPoint
       number="03"
-      title="Holzarchitektur"
-      text="Wir planen und bauen elegante Massivholzhäuser mit unnachahmlicher Wohnatmosphäre. Raf- finierte Innovationen und architektonisches Gespür machen es möglich."
+      title="Pure Qualität"
+      text="Pures Wasser ist kristallklar. Purer Fruchtsaft intensiv und unverfälscht. Pures Design geradlinig und dem Auge wohltuend, oft überraschend einfach. Pure Qualität ist alles zusammen: klar, intensiv, unverfälscht und wohltuend."
+      image={{ ...data.bullet3.childImageSharp.sizes, aspectRatio: 1 }}
     />
     <BulletPoint
-      odd
-      number="05"
-      title="Holzarchitektur"
-      text="Wir planen und bauen elegante Massivholzhäuser mit unnachahmlicher Wohnatmosphäre. Raf- finierte Innovationen und architektonisches Gespür machen es möglich."
+      number="04"
+      title="Koordination"
+      text="Das Zusammenspiel von allen nötigen Gewerken, wie Schlosser, Glaserer, Fliesenleger, Elektriker, auch Künstler und Baumeister und vieles mehr gehört geplant und organisiert. Auch das ist Qualität."
+      image={{ ...data.bullet4.childImageSharp.sizes, aspectRatio: 1 }}
     />
     <History />
   </Layout>
@@ -109,7 +107,7 @@ export const query = graphql`
         }
       }
     }
-    halfHero2Image: file(relativePath: { eq: "jh_jungreithmayr_181.jpg" }) {
+    halfHero2Image: file(relativePath: { eq: "jh_jungreithmayr_161.jpg" }) {
       childImageSharp {
         sizes(maxWidth: 640) {
           ...GatsbyImageSharpSizes
@@ -119,6 +117,34 @@ export const query = graphql`
     hobel: file(relativePath: { eq: "hobel.jpg" }) {
       childImageSharp {
         sizes(maxWidth: 480) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+    bullet1: file(relativePath: { eq: "stolz.jpg" }) {
+      childImageSharp {
+        sizes(maxWidth: 640) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+    bullet2: file(relativePath: { eq: "stolz2.jpg" }) {
+      childImageSharp {
+        sizes(maxWidth: 640) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+    bullet3: file(relativePath: { eq: "stolz3.jpg" }) {
+      childImageSharp {
+        sizes(maxWidth: 640) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+    bullet4: file(relativePath: { eq: "stolz4.jpg" }) {
+      childImageSharp {
+        sizes(maxWidth: 640) {
           ...GatsbyImageSharpSizes
         }
       }

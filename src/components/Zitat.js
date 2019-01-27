@@ -19,7 +19,7 @@ const Motto = styled.h1`
   top: 0;
   left: 0;
   text-transform: uppercase;
-  width: 7em;
+  width: 8em;
   font-weight: 700;
   opacity: 0.25;
   padding: ${Typography.rhythm(1)} ${Typography.rhythm(1)};
