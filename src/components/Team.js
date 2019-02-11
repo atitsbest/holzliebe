@@ -41,42 +41,75 @@ const Team = () => (
   <StaticQuery
     query={graphql`
       query Team {
-        person1: file(relativePath: { eq: "jh_jungreithmayr_096.jpg" }) {
+        person1: file(
+          relativePath: { eq: "mitarbeiter/jh_jungreithmayr_096.jpg" }
+        ) {
           childImageSharp {
             sizes(maxWidth: 480) {
               ...GatsbyImageSharpSizes
             }
           }
         }
-        person2: file(relativePath: { eq: "jh_jungreithmayr_145.jpg" }) {
+        person2: file(relativePath: { eq: "mitarbeiter/johannesstadler.jpg" }) {
           childImageSharp {
             sizes(maxWidth: 480) {
               ...GatsbyImageSharpSizes
             }
           }
         }
-        person3: file(relativePath: { eq: "jh_jungreithmayr_150.jpg" }) {
+        person3: file(
+          relativePath: { eq: "mitarbeiter/jh_jungreithmayr_150.jpg" }
+        ) {
           childImageSharp {
             sizes(maxWidth: 480) {
               ...GatsbyImageSharpSizes
             }
           }
         }
-        person4: file(relativePath: { eq: "jh_jungreithmayr_154.jpg" }) {
+        person4: file(
+          relativePath: { eq: "mitarbeiter/rolandheitzendorfer.jpg" }
+        ) {
           childImageSharp {
             sizes(maxWidth: 480) {
               ...GatsbyImageSharpSizes
             }
           }
         }
-        person5: file(relativePath: { eq: "jh_jungreithmayr_163.jpg" }) {
+        person5: file(
+          relativePath: { eq: "mitarbeiter/jh_jungreithmayr_163.jpg" }
+        ) {
           childImageSharp {
             sizes(maxWidth: 480) {
               ...GatsbyImageSharpSizes
             }
           }
         }
-        person6: file(relativePath: { eq: "jh_jungreithmayr_165.jpg" }) {
+        person6: file(
+          relativePath: { eq: "mitarbeiter/bernhardronacher.jpg" }
+        ) {
+          childImageSharp {
+            sizes(maxWidth: 480) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
+        person9: file(
+          relativePath: { eq: "mitarbeiter/markusschmidthaler.jpg" }
+        ) {
+          childImageSharp {
+            sizes(maxWidth: 480) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
+        person7: file(relativePath: { eq: "mitarbeiter/mariusmunteanu.jpg" }) {
+          childImageSharp {
+            sizes(maxWidth: 480) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
+        person8: file(relativePath: { eq: "mitarbeiter/sebastianduda.jpg" }) {
           childImageSharp {
             sizes(maxWidth: 480) {
               ...GatsbyImageSharpSizes
@@ -99,36 +132,57 @@ const Team = () => (
           <Frame>
             <Mitarbeiter
               image={data.person2.childImageSharp.sizes}
-              name="Joachim Jungreithmayr"
+              name="Johannes Stadler"
               position="Tischlermeister"
             />
           </Frame>
           <Frame>
             <Mitarbeiter
               image={data.person3.childImageSharp.sizes}
-              name="Vorname Nachname"
-              position="Tischlermeister"
+              name="Markus Harratzmüller"
+              position="Jungtischlergeselle"
             />
           </Frame>
           <Frame>
             <Mitarbeiter
               image={data.person4.childImageSharp.sizes}
-              name="Vorname Nachname"
+              name="Roland Heitzendorfer"
               position="Tischlermeister"
             />
           </Frame>
           <Frame>
             <Mitarbeiter
               image={data.person5.childImageSharp.sizes}
-              name="Vorname Nachname"
+              name="Markus Eder"
               position="Tischlermeister"
             />
           </Frame>
           <Frame>
             <Mitarbeiter
               image={data.person6.childImageSharp.sizes}
-              name="Vorname Nachname"
-              position="Tischlermeister"
+              name="Bernhard Ronacher"
+              position="Tischlergeselle"
+            />
+          </Frame>
+          <Frame>
+            <Mitarbeiter
+              image={data.person9.childImageSharp.sizes}
+              name="Markus Schmidthaler"
+              position="Tischlergeselle"
+            />
+          </Frame>
+          <Frame>
+            <Mitarbeiter
+              image={data.person7.childImageSharp.sizes}
+              name="Marius Munteanu"
+              position="Lehrling"
+            />
+          </Frame>
+          <Frame>
+            <Mitarbeiter
+              image={data.person8.childImageSharp.sizes}
+              name="Sebastian Duda"
+              position="Lehrling"
             />
           </Frame>
         </Inner>
