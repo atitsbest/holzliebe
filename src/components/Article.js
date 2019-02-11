@@ -17,7 +17,7 @@ const Wrapper = styled(Section)`
 
   .biopic {
     flex: 1 1 100px;
-    height: 350px;
+    max-height: 410px;
     background-size: cover;
     background-position: center;
     display: block;
@@ -34,7 +34,7 @@ const Wrapper = styled(Section)`
     margin: 0 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
 
     h1 {
       text-transform: uppercase;
