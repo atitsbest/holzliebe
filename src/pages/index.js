@@ -117,7 +117,7 @@ export default ({ data }) => (
       motto={['Holz,', 'Raum,', 'Lebens-', 'raum']}
       image={data.joImage.childImageSharp.sizes}
       text1="HOLZ, SEE, STADT, THENING."
-      subtext1="Den Duft von Holz habe ich hier schon als Kind erlebt. Den Duft des Hallstättersees als Jugendlicher in der Holz-HTL. Den Duft der Stadt beim Architekturstudium in Graz.Alles zusammen verschmilzt zu einem besonderen „Parfum“: Mehr als eine Tischlerei."
+      subtext1="Den Duft von Holz habe ich hier schon als Kind erlebt. Den Duft des Hallstättersees als Jugendlicher in der Holz-HTL. Den Duft der Stadt beim Architekturstudium in Graz.Alles zusammen verschmilzt zu einem besonderen „Parfum“: Mehr als eine Tischlerei."
       text2="Joachim Jungreithmayr"
       subtext2="5. Generation"
     />

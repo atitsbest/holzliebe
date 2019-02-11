@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import styled from 'styled-components'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
 import ImageSlider from '../components/ImageSlider'
@@ -13,7 +14,15 @@ import wohlfuehlen from '../images/wohlfuehlen.png'
 
 export default ({ data }) => (
   <Layout>
-    <Hero sizes={data.heroImage.childImageSharp.sizes} label={wohlfuehlen} />
+    <VideoContainer>
+      <EmbededVideo
+        src="https://www.youtube-nocookie.com/embed/bCeBSIXRKCI"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      />
+    </VideoContainer>
+    {/*<Hero sizes={data.heroImage.childImageSharp.sizes} label={wohlfuehlen} />*/}
     <Article
       image={data.joImage.childImageSharp.sizes}
       headline={
@@ -90,4 +99,19 @@ export const query = graphql`
       }
     }
   }
+`
+
+const VideoContainer = styled.div`
+  position: relative;
+  padding: 0 10% 56.25% 10%;
+  height: 0;
+  overflow: hidden;
+`
+
+const EmbededVideo = styled.iframe`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 `
