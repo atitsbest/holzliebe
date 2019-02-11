@@ -41,7 +41,7 @@ export default ({ data }) => (
       motto={['Baum,', 'Holz,', 'Werkstück,', 'Möbel']}
       image={data.hobel.childImageSharp.sizes}
       text1="ULLECABO RRUMQUI CUS AD QUE VERUMQUIAE EA"
-      subtext1="Die meisten Menschen erkennen die Qualität eines Möbels an seiner großartigen Ausstrahlung, obwohl sie die nicht benennen können. Deshalb haben unsere Tischlermeister nicht einfach handwerkliches Geschick. Sondern sie wissen, wie man die Ausstrahlung von Holz zur Entfaltung bringt. Mit Wissen, Können UND Spüren"
+      subtext1="Die meisten Menschen erkennen die Qualität eines Möbels an seiner großartigen Ausstrahlung, obwohl sie die nicht benennen können. Deshalb haben unsere Tischlermeister nicht einfach handwerkliches Geschick. Sondern sie wissen, wie man die Ausstrahlung von Holz zur Entfaltung bringt. Mit Wissen, Können UND Spüren."
       text2="Joachim Jungreithmayr"
       subtext2="Geschäftsführer"
     />
