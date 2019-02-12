@@ -4,7 +4,6 @@ import Layout from '../components/layout'
 const Datenschutz = () => (
   <Layout>
     <h1>Datenschutzerklärung</h1>
-    <h3 id="dsg-general-intro" />
     <p>
       Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck
       der Verarbeitung von personenbezogenen Daten (nachfolgend kurz „Daten“) im
@@ -17,9 +16,8 @@ const Datenschutz = () => (
       Datenschutzgrundverordnung (DSGVO).
       <br />
     </p>
-    <h3 id="dsg-general-controller">Verantwortlicher</h3>
     <p>
-      <span class="tsmcontroller">
+      <span>
         Tischlerei Jungreithmayr
         <br />
         <br />
@@ -29,7 +27,6 @@ const Datenschutz = () => (
         Tel.:0043 7221 63 0 16
         <br />
         Fax.:0043 7221 63 0 61
-        <br />
         <br />
         tischler@thening.at
       </span>
@@ -57,7 +54,6 @@ const Datenschutz = () => (
       <br />- Sicherheitsmaßnahmen.
       <br />- Reichweitenmessung/Marketing
       <br />
-      <span class="tsmcom" />
     </p>
     <h3 id="dsg-general-terms">Verwendete Begrifflichkeiten </h3>
     <p>
@@ -350,7 +346,7 @@ const Datenschutz = () => (
     <h3 id="dsg-hostingprovider">Hosting und E-Mail-Versand</h3>
     <p />
     <p>
-      <span class="ts-muster-content">
+      <span>
         Die von uns in Anspruch genommenen Hosting-Leistungen dienen der
         Zurverfügungstellung der folgenden Leistungen: Infrastruktur- und
         Plattformdienstleistungen, Rechenkapazität, Speicherplatz und
@@ -371,7 +367,7 @@ const Datenschutz = () => (
     <h3 id="dsg-logfiles">Erhebung von Zugriffsdaten und Logfiles</h3>
     <p />
     <p>
-      <span class="ts-muster-content">
+      <span>
         Wir, bzw. unser Hostinganbieter, erhebt auf Grundlage unserer
         berechtigten Interessen im Sinne des Art. 6 Abs. 1 lit. f. DSGVO Daten
         über jeden Zugriff auf den Server, auf dem sich dieser Dienst befindet
@@ -393,7 +389,7 @@ const Datenschutz = () => (
     <h3 id="dsg-ga-googleanalytics">Google Analytics</h3>
     <p />
     <p>
-      <span class="ts-muster-content">
+      <span>
         Wir setzen Google Analytics, einen Webanalysedienst der Google Ireland
         Limited, Gordon House, Barrow Street, Dublin 4, Irland („Google“) ein.
         Google verwendet Cookies. Die durch das Cookie erzeugten Informationen
@@ -473,7 +469,7 @@ const Datenschutz = () => (
     <h3 id="dsg-tracking-adwords">Google AdWords und Conversion-Messung</h3>
     <p />
     <p>
-      <span class="ts-muster-content">
+      <span>
         Wir nutzen die Dienste der Google Ireland Limited, Gordon House, Barrow
         Street, Dublin 4, Irland, („Google“).
         <br />
@@ -565,7 +561,7 @@ const Datenschutz = () => (
     <h3 id="dsg-socialmedia">Onlinepräsenzen in sozialen Medien</h3>
     <p />
     <p>
-      <span class="ts-muster-content">
+      <span>
         Wir unterhalten Onlinepräsenzen innerhalb sozialer Netzwerke und
         Plattformen, um mit den dort aktiven Kunden, Interessenten und Nutzern
         kommunizieren und sie dort über unsere Leistungen informieren zu können.
@@ -745,7 +741,7 @@ const Datenschutz = () => (
     </h3>
     <p />
     <p>
-      <span class="ts-muster-content">
+      <span>
         Wir setzen innerhalb unseres Onlineangebotes auf Grundlage unserer
         berechtigten Interessen (d.h. Interesse an der Analyse, Optimierung und
         wirtschaftlichem Betrieb unseres Onlineangebotes im Sinne des Art. 6
@@ -774,7 +770,7 @@ const Datenschutz = () => (
     <h3 id="dsg-thirdparty-youtube">Youtube</h3>
     <p />
     <p>
-      <span class="ts-muster-content">
+      <span>
         Wir binden die Videos der Plattform “YouTube” des Anbieters Google
         Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland, ein.
         Datenschutzerklärung:{' '}
@@ -792,7 +788,7 @@ const Datenschutz = () => (
     <h3 id="dsg-thirdparty-googlefonts">Google Fonts</h3>
     <p />
     <p>
-      <span class="ts-muster-content">
+      <span>
         Wir binden die Schriftarten ("Google Fonts") des Anbieters Google
         Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland, ein.
         Nach Angaben von Google werden die Daten der Nutzer allein zu Zwecken
@@ -812,7 +808,7 @@ const Datenschutz = () => (
     <h3 id="dsg-thirdparty-instagram">Instagram</h3>
     <p />
     <p>
-      <span class="ts-muster-content">
+      <span>
         Innerhalb unseres Onlineangebotes können Funktionen und Inhalte des
         Dienstes Instagram, angeboten durch die Instagram Inc., 1601 Willow
         Road, Menlo Park, CA, 94025, USA, eingebunden werden. Hierzu können z.B.
@@ -828,12 +824,7 @@ const Datenschutz = () => (
         .{' '}
       </span>
     </p>
-    <a
-      href="https://datenschutz-generator.de"
-      class="dsg1-6"
-      rel="nofollow"
-      target="_blank"
-    >
+    <a href="https://datenschutz-generator.de" rel="nofollow" target="_blank">
       Erstellt mit Datenschutz-Generator.de von RA Dr. Thomas Schwenke
     </a>
     <br />
