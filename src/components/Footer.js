@@ -65,9 +65,9 @@ const Footer = () => (
         <br /> tischler@thening.at
       </p>
       <ul>
-        <li>
+        {/*<li>
           <a href="/">Newsletter</a>
-        </li>
+        </li>*/}
         <li>
           <a href="/impressum">Impressum</a>
         </li>
@@ -75,7 +75,7 @@ const Footer = () => (
           <a href="/datenschutz">Datenschutz</a>
         </li>
         <li>
-          <a href="/kontakt">Kontakt</a>
+          <a href="mailto:tischler@thening.at">Kontakt</a>
         </li>
       </ul>
 

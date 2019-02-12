@@ -12,42 +12,62 @@ import Article from '../components/Article'
 import { HolzarchitekturIcon } from '../components/icons'
 import wohlfuehlen from '../images/wohlfuehlen.png'
 
-export default ({ data }) => (
-  <Layout>
-    <VideoContainer>
-      <EmbededVideo
-        src="https://www.youtube-nocookie.com/embed/bCeBSIXRKCI"
-        frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      />
-    </VideoContainer>
-    {/*<Hero sizes={data.heroImage.childImageSharp.sizes} label={wohlfuehlen} />*/}
-    <Article
-      image={data.joImage.childImageSharp.sizes}
-      headline={
-        <span>
-          Joachim <br />
-          Jungreithmayr
-        </span>
-      }
-      intro="Was haben Graz, Thening und Hallstatt gemeinsam?"
-      body="Es sind meine wichtigsten Ausbildungsstätten, vom elterlichen Betrieb über die HTL für Möbelbau bis hin zum Architekturstudium. Diese Vielseitigkeit von der handwerklichen Selbstverständlichkeit bis zur raffinierten Planungskompetenz weiß ich heute sehr zu schätzen und macht mir an meinem Beruf am meisten Freude. Fordern Sie mich heraus! Die Lösungen werden uns beiden gefallen"
-    />
-    <ImageSlider
-      images={[
-        data.sliderImage1.childImageSharp.sizes,
-        data.sliderImage2.childImageSharp.sizes,
-        data.sliderImage3.childImageSharp.sizes,
-        data.sliderImage4.childImageSharp.sizes,
-      ]}
-    />
-    <History />
-    <Team />
-    <CallToAction title="Kontakt" icon={HolzarchitekturIcon} />
-    <SectionTopics />
-  </Layout>
-)
+export default class About extends React.Component {
+  state = {
+    showVideo: false,
+  }
+  render() {
+    const { data } = this.props
+    return (
+      <Layout>
+        {this.state.showVideo ? (
+          <VideoContainer>
+            <EmbededVideo
+              src="https://www.youtube-nocookie.com/embed/bCeBSIXRKCI?color=white&modestbranding=1&rel=0&feature=oembed&showinfo=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            />
+          </VideoContainer>
+        ) : (
+          <div onClick={() => this.setState({ showVideo: true })}>
+            <Hero
+              sizes={data.heroImage.childImageSharp.sizes}
+              label={wohlfuehlen}
+            />
+          </div>
+        )}
+        <Article
+          image={data.joImage.childImageSharp.sizes}
+          headline={
+            <span>
+              Joachim <br />
+              Jungreithmayr
+            </span>
+          }
+          intro="Was haben Graz, Thening und Hallstatt gemeinsam?"
+          body="Es sind meine wichtigsten Ausbildungsstätten, vom elterlichen Betrieb über die HTL für Möbelbau bis hin zum Architekturstudium. Diese Vielseitigkeit von der handwerklichen Selbstverständlichkeit bis zur raffinierten Planungskompetenz weiß ich heute sehr zu schätzen und macht mir an meinem Beruf am meisten Freude. Fordern Sie mich heraus! Die Lösungen werden uns beiden gefallen"
+        />
+        <ImageSlider
+          images={[
+            data.sliderImage1.childImageSharp.sizes,
+            data.sliderImage2.childImageSharp.sizes,
+            data.sliderImage3.childImageSharp.sizes,
+            data.sliderImage4.childImageSharp.sizes,
+          ]}
+        />
+        <History />
+        <Team />
+        <CallToAction
+          title="Kontakt"
+          icon={HolzarchitekturIcon}
+          url="mailto:tischler@thening.at"
+        />
+        <SectionTopics />
+      </Layout>
+    )
+  }
+}
 
 export const query = graphql`
   query aboutQuery {

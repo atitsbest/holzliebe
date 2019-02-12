@@ -138,9 +138,9 @@ const Team = () => (
           </Frame>
           <Frame>
             <Mitarbeiter
-              image={data.person3.childImageSharp.sizes}
-              name="Markus Harratzmüller"
-              position="Jungtischlergeselle"
+              image={data.person9.childImageSharp.sizes}
+              name="Markus Schmidthaler"
+              position="Tischlergeselle"
             />
           </Frame>
           <Frame>
@@ -166,9 +166,9 @@ const Team = () => (
           </Frame>
           <Frame>
             <Mitarbeiter
-              image={data.person9.childImageSharp.sizes}
-              name="Markus Schmidthaler"
-              position="Tischlergeselle"
+              image={data.person3.childImageSharp.sizes}
+              name="Markus Harratzmüller"
+              position="Jungtischlergeselle"
             />
           </Frame>
           <Frame>
