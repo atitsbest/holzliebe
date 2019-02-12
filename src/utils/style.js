@@ -2,8 +2,8 @@ import { css } from 'styled-components'
 import holz_bg from '../images/holz_bg.gif'
 
 const sizes = {
-  giant: 120,
-  desktop: 90,
+  giant: 90,
+  desktop: 75,
   tablet: 60,
   mobile: 48,
 }

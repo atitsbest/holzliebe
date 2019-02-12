@@ -65,9 +65,9 @@ const Nav = styled.nav`
     }
   }
 
-  ${media.tablet`display: none;`};
+  ${media.desktop`display: none;`};
 
-  ${media.tablet`
+  ${media.desktop`
     position: fixed;
     top: 0;
     left: 0;
@@ -102,7 +102,7 @@ const HamburgerWrapper = styled.div`
   z-index: 11;
   display: none;
 
-  ${media.tablet`
+  ${media.desktop`
     display: block;
   `};
 `
