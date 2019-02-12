@@ -10,7 +10,7 @@ import Team from '../components/Team'
 import History from '../components/History'
 import Article from '../components/Article'
 import { HolzarchitekturIcon } from '../components/icons'
-import wohlfuehlen from '../images/wohlfuehlen.png'
+import play from '../images/play.png'
 
 export default class About extends React.Component {
   state = {
@@ -31,10 +31,7 @@ export default class About extends React.Component {
           </VideoContainer>
         ) : (
           <HeroContainer onClick={() => this.setState({ showVideo: true })}>
-            <Hero
-              sizes={data.heroImage.childImageSharp.sizes}
-              label={wohlfuehlen}
-            />
+            <Hero sizes={data.heroImage.childImageSharp.sizes} label={play} />
           </HeroContainer>
         )}
         <Article
