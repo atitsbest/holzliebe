@@ -23,19 +23,19 @@ export default class About extends React.Component {
         {this.state.showVideo ? (
           <VideoContainer>
             <EmbededVideo
-              src="https://www.youtube-nocookie.com/embed/bCeBSIXRKCI?color=white&modestbranding=1&rel=0&feature=oembed&showinfo=0"
+              src="https://www.youtube-nocookie.com/embed/bCeBSIXRKCI?color=white&modestbranding=1&rel=0&feature=oembed&showinfo=0&autoplay=1"
               frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             />
           </VideoContainer>
         ) : (
-          <div onClick={() => this.setState({ showVideo: true })}>
+          <HeroContainer onClick={() => this.setState({ showVideo: true })}>
             <Hero
               sizes={data.heroImage.childImageSharp.sizes}
               label={wohlfuehlen}
             />
-          </div>
+          </HeroContainer>
         )}
         <Article
           image={data.joImage.childImageSharp.sizes}
@@ -126,6 +126,7 @@ const VideoContainer = styled.div`
   padding: 0 10% 56.25% 10%;
   height: 0;
   overflow: hidden;
+  background: #f1f1f1;
 `
 
 const EmbededVideo = styled.iframe`
@@ -134,4 +135,8 @@ const EmbededVideo = styled.iframe`
   left: 0;
   width: 100%;
   height: 100%;
+`
+
+const HeroContainer = styled.div`
+  cursor: pointer;
 `

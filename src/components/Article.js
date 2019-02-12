@@ -64,7 +64,11 @@ const Wrapper = styled(Section)`
 
 const Article = ({ image, headline, intro, body }) => (
   <Wrapper>
-    <Img className="biopic" sizes={{ ...image, aspectRatio: 9 / 16 }} />
+    <Img
+      className="biopic"
+      sizes={{ ...image, aspectRatio: 9 / 16 }}
+      imgStyle={{ objectPosition: 'center top' }}
+    />
     <div>
       <h1>{headline}</h1>
       <p>
