@@ -28,7 +28,7 @@ export const query = graphql`
       }
     }
     allImages: allFile(
-      filter: { absolutePath: { regex: "/jh_jungreithmayr_/" } }
+      filter: { absolutePath: { regex: "/impressionen/.*/" } }
     ) {
       edges {
         node {
