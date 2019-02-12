@@ -67,7 +67,7 @@ const Nav = styled.nav`
 
   ${media.tablet`display: none;`};
 
-  ${media.mobile`
+  ${media.tablet`
     position: fixed;
     top: 0;
     left: 0;
@@ -102,7 +102,7 @@ const HamburgerWrapper = styled.div`
   z-index: 11;
   display: none;
 
-  ${media.mobile`
+  ${media.tablet`
     display: block;
   `};
 `
