@@ -50,7 +50,7 @@ const Wisdom = ({ backgroundImage, author }) => (
     <Content>
       <Author>{author}</Author>
       <Quote>
-        "Man sagt, dass auch Kirschholz die Herzfrequenz senkt. Bei mit ist es
+        "Man sagt, dass auch Kirschholz die Herzfrequenz senkt. Bei mir ist es
         umgekehrt: Ich finde es aufregend!"
       </Quote>
     </Content>
