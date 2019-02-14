@@ -20,7 +20,7 @@ export const query = graphql`
         title
       }
     }
-    heroImage: file(relativePath: { eq: "jh_jungreithmayr_004.jpg" }) {
+    heroImage: file(relativePath: { eq: "jh_jungreithmayr_005.jpg" }) {
       childImageSharp {
         sizes(maxWidth: 1280) {
           ...GatsbyImageSharpSizes
