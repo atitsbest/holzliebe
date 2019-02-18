@@ -10,6 +10,10 @@ const Wrapper = styled.div`
   margin-bottom: ${Typography.rhythm(0.25)};
 `
 
+const Background = styled(Img)`
+  min-height: ${Typography.rhythm(7)};
+`
+
 const Content = styled.div`
   position: absolute;
   left: 0;
@@ -46,7 +50,7 @@ const Quote = styled.h1`
 
 const Wisdom = ({ backgroundImage, author }) => (
   <Wrapper>
-    <Img sizes={backgroundImage} />
+    <Background sizes={{ ...backgroundImage, aspectRation: 16 / 9 }} />
     <Content>
       <Author>{author}</Author>
       <Quote>
