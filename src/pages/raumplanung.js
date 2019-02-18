@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Hero from '../components/hero'
 import TopicHeader from '../components/topicheader'
 import Layout from '../components/layout'
-import CallToAction from '../components/CallToAction'
+import CallToContact from '../components/CallToContact'
 import LabeledImage from '../components/LabeledImage'
 import { RaumplanungIcon, HolzarchitekturIcon } from '../components/icons'
 import originell from '../images/originell.png'
@@ -123,11 +123,7 @@ const NotFoundPage = ({ data }) => (
       title="Raumplanung"
       text="Ein guter Plan beginnt nicht am Papier. Auch nicht im Kopf. Sondern beim Zuhören. Nur so kann Ihr Wohntraum in Erfüllung gehen. Das ist nicht Traumdeutung, sondern Gespür, Leidenschaft und ganz viel Erfahrung."
     />
-    <CallToAction
-      title="Kontakt"
-      icon={HolzarchitekturIcon}
-      url="mailto:tischler@thening.at"
-    />
+    <CallToContact title="Kontakt" icon={HolzarchitekturIcon} />
     <Hero sizes={data.hero3Image.childImageSharp.sizes} />
   </Layout>
 )

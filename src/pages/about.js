@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 import Hero from '../components/hero'
 import ImageSlider from '../components/ImageSlider'
 import SectionTopics from '../components/sectiontopics'
-import CallToAction from '../components/CallToAction'
+import CallToContact from '../components/CallToContact'
 import Team from '../components/Team'
 import History from '../components/History'
 import Article from '../components/Article'
@@ -55,11 +55,7 @@ export default class About extends React.Component {
         />
         <History />
         <Team />
-        <CallToAction
-          title="Kontakt"
-          icon={HolzarchitekturIcon}
-          url="mailto:tischler@thening.at"
-        />
+        <CallToContact title="Kontakt" icon={HolzarchitekturIcon} />
         <SectionTopics />
       </Layout>
     )

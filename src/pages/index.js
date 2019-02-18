@@ -7,7 +7,7 @@ import ImageSlider from '../components/ImageSlider'
 import SectionTopics from '../components/sectiontopics'
 import HeroText from '../components/HeroText'
 import Zitat from '../components/Zitat'
-import CallToAction from '../components/CallToAction'
+import CallToContact from '../components/CallToContact'
 import Wisdom from '../components/Wisdom'
 import Team from '../components/Team'
 import History from '../components/History'
@@ -122,11 +122,7 @@ export default ({ data }) => (
       subtext2="5. Generation"
     />
     <Hero sizes={data.hero2Image.childImageSharp.sizes} />
-    <CallToAction
-      title="Kontakt"
-      icon={HolzarchitekturIcon}
-      url="mailto:tischler@thening.at"
-    />
+    <CallToContact title="Kontakt" icon={HolzarchitekturIcon} />
     <Wisdom
       backgroundImage={data.kirschblueten.childImageSharp.sizes}
       author="Joachim Jungreithmayr"
