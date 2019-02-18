@@ -435,6 +435,7 @@ const Datenschutz = () => (
           Link verfügbare Browser-Plugin herunterladen und installieren:&nbsp;
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="http://tools.google.com/dlpage/gaoptout?hl=de"
           >
             http://tools.google.com/dlpage/gaoptout?hl=de
@@ -455,6 +456,7 @@ const Datenschutz = () => (
           hierdurch zusichert, das europäische Datenschutzrecht einzuhalten (
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active"
           >
             https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active
@@ -465,13 +467,18 @@ const Datenschutz = () => (
           Weitere Informationen zur Datennutzung durch Google, Einstellungs- und
           Widerspruchsmöglichkeiten, erfahren Sie in der Datenschutzerklärung
           von Google (
-          <a target="_blank" href="https://policies.google.com/privacy">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://policies.google.com/privacy"
+          >
             https://policies.google.com/privacy
           </a>
           ) sowie in den Einstellungen für die Darstellung von
           Werbeeinblendungen durch Google{' '}
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://adssettings.google.com/authenticated"
           >
             (https://adssettings.google.com/authenticated
@@ -556,6 +563,7 @@ const Datenschutz = () => (
           hierdurch zusichert, das europäische Datenschutzrecht einzuhalten (
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active"
           >
             https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active
@@ -568,6 +576,7 @@ const Datenschutz = () => (
           von Google (
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://policies.google.com/technologies/ads"
           >
             https://policies.google.com/technologies/ads
@@ -576,6 +585,7 @@ const Datenschutz = () => (
           Werbeeinblendungen durch Google{' '}
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://adssettings.google.com/authenticated"
           >
             (https://adssettings.google.com/authenticated
@@ -643,32 +653,47 @@ const Datenschutz = () => (
           einer{' '}
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://www.facebook.com/legal/terms/page_controller_addendum"
           >
             Vereinbarung über gemeinsame Verarbeitung personenbezogener Daten
           </a>{' '}
           - Datenschutzerklärung:{' '}
-          <a target="_blank" href="https://www.facebook.com/about/privacy/">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.facebook.com/about/privacy/"
+          >
             https://www.facebook.com/about/privacy/
           </a>
           , speziell für Seiten:{' '}
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://www.facebook.com/legal/terms/information_about_page_insights_data"
           >
             https://www.facebook.com/legal/terms/information_about_page_insights_data
           </a>{' '}
           , Opt-Out:{' '}
-          <a target="_blank" href="https://www.facebook.com/settings?tab=ads">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.facebook.com/settings?tab=ads"
+          >
             https://www.facebook.com/settings?tab=ads
           </a>{' '}
           und{' '}
-          <a target="_blank" href="http://www.youronlinechoices.com">
-            http://www.youronlinechoices.com
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="http://www.youronlinechoices.com"
+          >
+            rel="noopener noreferrer" http://www.youronlinechoices.com
           </a>
           , Privacy Shield:{' '}
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&amp;status=Active"
           >
             https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&amp;status=Active
@@ -676,12 +701,17 @@ const Datenschutz = () => (
           .<br />
           <br />- Google/ YouTube (Google Ireland Limited, Gordon House, Barrow
           Street, Dublin 4, Irland) – Datenschutzerklärung: &nbsp;
-          <a target="_blank" href="https://policies.google.com/privacy">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://policies.google.com/privacy"
+          >
             https://policies.google.com/privacy
           </a>
           , Opt-Out:{' '}
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://adssettings.google.com/authenticated"
           >
             https://adssettings.google.com/authenticated
@@ -689,6 +719,7 @@ const Datenschutz = () => (
           , Privacy Shield:{' '}
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active"
           >
             https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&amp;status=Active
@@ -696,22 +727,35 @@ const Datenschutz = () => (
           .<br />
           <br />- Instagram (Instagram Inc., 1601 Willow Road, Menlo Park, CA,
           94025, USA) – Datenschutzerklärung/ Opt-Out:{' '}
-          <a target="_blank" href="http://instagram.com/about/legal/privacy/">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="http://instagram.com/about/legal/privacy/"
+          >
             http://instagram.com/about/legal/privacy/
           </a>
           .<br />
           <br />- Twitter (Twitter Inc., 1355 Market Street, Suite 900, San
           Francisco, CA 94103, USA) - Datenschutzerklärung:{' '}
-          <a target="_blank" href="https://twitter.com/de/privacy">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://twitter.com/de/privacy"
+          >
             https://twitter.com/de/privacy
           </a>
           , Opt-Out:{' '}
-          <a target="_blank" href="https://twitter.com/personalization">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://twitter.com/personalization"
+          >
             https://twitter.com/personalization
           </a>
           , Privacy Shield:{' '}
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://www.privacyshield.gov/participant?id=a2zt0000000TORzAAO&amp;status=Active"
           >
             https://www.privacyshield.gov/participant?id=a2zt0000000TORzAAO&amp;status=Active
@@ -721,6 +765,7 @@ const Datenschutz = () => (
           94301, USA) – Datenschutzerklärung/ Opt-Out:{' '}
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://about.pinterest.com/de/privacy-policy"
           >
             https://about.pinterest.com/de/privacy-policy
@@ -730,6 +775,7 @@ const Datenschutz = () => (
           Dublin 2, Irland) - Datenschutzerklärung{' '}
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://www.linkedin.com/legal/privacy-policy"
           >
             https://www.linkedin.com/legal/privacy-policy
@@ -737,6 +783,7 @@ const Datenschutz = () => (
           , Opt-Out:{' '}
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out"
           >
             https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out
@@ -744,6 +791,7 @@ const Datenschutz = () => (
           , Privacy Shield:&nbsp;
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://www.privacyshield.gov/participant?id=a2zt0000000L0UZAA0&amp;status=Active"
           >
             https://www.privacyshield.gov/participant?id=a2zt0000000L0UZAA0&amp;status=Active
@@ -753,6 +801,7 @@ const Datenschutz = () => (
           Deutschland) - Datenschutzerklärung/ Opt-Out:{' '}
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://privacy.xing.com/de/datenschutzerklaerung"
           >
             https://privacy.xing.com/de/datenschutzerklaerung
@@ -760,13 +809,21 @@ const Datenschutz = () => (
           .<br />
           <br />- Wakalet (Wakelet Limited, 76 Quay Street, Manchester, M3 4PR,
           United Kingdom) - Datenschutzerklärung/ Opt-Out:{' '}
-          <a target="_blank" href="https://wakelet.com/privacy.html">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://wakelet.com/privacy.html"
+          >
             https://wakelet.com/privacy.html
           </a>
           .<br />
           <br />- Soundcloud (SoundCloud Limited, Rheinsberger Str. 76/77, 10115
           Berlin, Deutschland) - Datenschutzerklärung/ Opt-Out:{' '}
-          <a target="_blank" href="https://soundcloud.com/pages/privacy">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://soundcloud.com/pages/privacy"
+          >
             https://soundcloud.com/pages/privacy
           </a>
           .
@@ -813,12 +870,17 @@ const Datenschutz = () => (
           Wir binden die Videos der Plattform “YouTube” des Anbieters Google
           Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland, ein.
           Datenschutzerklärung:{' '}
-          <a target="_blank" href="https://www.google.com/policies/privacy/">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.google.com/policies/privacy/"
+          >
             https://www.google.com/policies/privacy/
           </a>
           , Opt-Out:{' '}
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="https://adssettings.google.com/authenticated"
           >
             https://adssettings.google.com/authenticated
@@ -840,7 +902,11 @@ const Datenschutz = () => (
           Schriftarten, deren einheitlicher Darstellung sowie Berücksichtigung
           möglicher lizenzrechtlicher Restriktionen für deren Einbindung.
           Datenschutzerklärung:{' '}
-          <a target="_blank" href="https://www.google.com/policies/privacy/">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.google.com/policies/privacy/"
+          >
             https://www.google.com/policies/privacy/
           </a>
           .
@@ -860,13 +926,21 @@ const Datenschutz = () => (
           Instagram sind, kann Instagram den Aufruf der o.g. Inhalte und
           Funktionen den dortigen Profilen der Nutzer zuordnen.
           Datenschutzerklärung von Instagram:{' '}
-          <a target="_blank" href="http://instagram.com/about/legal/privacy/">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="http://instagram.com/about/legal/privacy/"
+          >
             http://instagram.com/about/legal/privacy/
           </a>
           .{' '}
         </span>
       </p>
-      <a href="https://datenschutz-generator.de" rel="nofollow" target="_blank">
+      <a
+        href="https://datenschutz-generator.de"
+        rel="noopener noreferrer nofollow"
+        target="_blank"
+      >
         Erstellt mit Datenschutz-Generator.de von RA Dr. Thomas Schwenke
       </a>
       <br />

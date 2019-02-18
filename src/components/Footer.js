@@ -1,5 +1,6 @@
 import React from 'react'
-import facebook_icon from '../images/Facebook-icon_negativ.svg'
+import { Link } from 'gatsby'
+// import facebook_icon from '../images/Facebook-icon_negativ.svg'
 import styled from 'styled-components'
 import Typography from '../utils/typography'
 import { media } from '../utils/style'
@@ -50,10 +51,11 @@ const Inner = styled.div`
   `};
 `
 
-const Image = styled.img`
+/*const Image = styled.img`
   margin-bottom: ${Typography.rhythm(0.5)};
   width: 48px;
 `
+*/
 
 const Footer = () => (
   <Wrapper>
