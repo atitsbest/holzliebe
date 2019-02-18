@@ -67,8 +67,8 @@ const Zitat = ({ motto, text1, subtext1, text2, subtext2, image }) => (
   <Wrapper>
     <Inner>
       <Motto>
-        {motto.map(m => (
-          <React.Fragment>
+        {motto.map((m, idx) => (
+          <React.Fragment key={idx}>
             {m}
             <br />
           </React.Fragment>
@@ -76,7 +76,7 @@ const Zitat = ({ motto, text1, subtext1, text2, subtext2, image }) => (
       </Motto>
       <Image
         sizes={image}
-        alt={motto}
+        alt={text1}
         style={{ mixBlendMode: 'multiply', background: '#CAD3CE' }}
       />
       <Text1>{text1}</Text1>
