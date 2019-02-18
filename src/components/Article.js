@@ -36,6 +36,10 @@ const Wrapper = styled(Section)`
     flex-direction: column;
     justify-content: flex-end;
 
+    ${media.mobile`
+      margin: 0;
+    `};
+
     h1 {
       text-transform: uppercase;
       margin-bottom: ${Typography.rhythm(1)};
