@@ -59,7 +59,7 @@ export default ({ data }) => (
     <BulletPoint
       number="02"
       title="Funktionsdetails"
-      text="Wir planen und bauen elegante Massivholzhäuser mit unnachahmlicher Wohnatmosphäre. Raf- finierte Innovationen und architektonisches Gespür machen es möglich.Wenn es keine gute Lösung gibt am Markt, dann erfinden wir eine. Dennoch sind wir keine „Erfinder“. Das österreichische Wort dafür ist „Tüftler“. Bei Lösungen im Detail sind wir „Holz-Tüftler“"
+      text="Wir planen und bauen elegante Massivholzhäuser mit unnachahmlicher Wohnatmosphäre. Raffinierte Innovationen und architektonisches Gespür machen es möglich. Wenn es keine gute Lösung gibt am Markt, dann erfinden wir eine. Dennoch sind wir keine „Erfinder“. Das österreichische Wort dafür ist „Tüftler“. Bei Lösungen im Detail sind wir „Holz-Tüftler“"
       image={{ ...data.bullet2.childImageSharp.sizes, aspectRatio: 1 }}
     />
     <BulletPoint

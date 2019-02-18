@@ -69,19 +69,20 @@ const Footer = () => (
           <a href="/">Newsletter</a>
         </li>*/}
         <li>
-          <a href="/impressum">Impressum</a>
+          <Link to="/impressum">Impressum</Link>
         </li>
         <li>
-          <a href="/datenschutz">Datenschutz</a>
+          <Link to="/datenschutz">Datenschutz</Link>
         </li>
         <li>
           <a href="mailto:tischler@thening.at">Kontakt</a>
         </li>
       </ul>
-
+      {/*
       <a href="/" className="facebook">
         <Image src={facebook_icon} />
       </a>
+*/}
     </Inner>
   </Wrapper>
 )

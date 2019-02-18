@@ -92,7 +92,7 @@ const NotFoundPage = ({ data }) => (
               aspectRatio: 4 / 3,
             }}
             label="Freiraum."
-            text="Viele Menschen gestalten den Raum im freien mit Beton. Weil es so „praktisch“ ist. Wir gestalten auch mit Holz. Weil es so angenehm ist. Das macht frei!"
+            text="Viele Menschen gestalten den Raum im Freien mit Beton. Weil es so „praktisch“ ist. Wir gestalten auch mit Holz. Weil es so angenehm ist. Das macht frei!"
           />
         </Link>
       </Frame>
@@ -121,9 +121,13 @@ const NotFoundPage = ({ data }) => (
     <Hero sizes={data.hero2Image.childImageSharp.sizes} />
     <TopicHeader
       title="Raumplanung"
-      text="Ein guter Plan beginnt nicht am Papier. Auch nicht im Kopf. Sondern beim Zuhören. Nur so kann ihr Wohntraum in Erfüllung gehen. Das ist nicht Traumdeutung, sondern Gespür, Leidenschaft und ganz viel Erfahrung."
+      text="Ein guter Plan beginnt nicht am Papier. Auch nicht im Kopf. Sondern beim Zuhören. Nur so kann Ihr Wohntraum in Erfüllung gehen. Das ist nicht Traumdeutung, sondern Gespür, Leidenschaft und ganz viel Erfahrung."
     />
-    <CallToAction title="Kontakt" icon={HolzarchitekturIcon} />
+    <CallToAction
+      title="Kontakt"
+      icon={HolzarchitekturIcon}
+      url="mailto:tischler@thening.at"
+    />
     <Hero sizes={data.hero3Image.childImageSharp.sizes} />
   </Layout>
 )
