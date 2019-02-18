@@ -188,7 +188,7 @@ export const query = graphql`
         }
       }
     }
-    garderobe: file(relativePath: { eq: "raumplanung_plan.jpg" }) {
+    garderobe: file(relativePath: { eq: "raumplanung_garderobe.jpg" }) {
       childImageSharp {
         sizes(maxWidth: 480) {
           ...GatsbyImageSharpSizes
@@ -202,7 +202,7 @@ export const query = graphql`
         }
       }
     }
-    sauna: file(relativePath: { eq: "raumplanung_plan.jpg" }) {
+    sauna: file(relativePath: { eq: "raumplanung_sauna.jpg" }) {
       childImageSharp {
         sizes(maxWidth: 480) {
           ...GatsbyImageSharpSizes
