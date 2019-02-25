@@ -62,7 +62,7 @@ const SectionTopics = () => {
             <Title>Raumplanung</Title>
             <p>
               Am Anfang ist der Raum. Er soll schön werden, er soll bestens
-              funktionieren! Unsere Raumplanun ist mehr, als ein Möbel ins Eck
+              funktionieren! Unsere Raumplanung ist mehr, als ein Möbel ins Eck
               zu stellen.
             </p>
           </Link>
