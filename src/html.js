@@ -46,7 +46,7 @@ export default class HTML extends React.Component {
               position: 'bottom-left',
               content: {
                 message:
-                  'Wir nutzen Cookies, um Ihre Erfahrung mit PayPal zu verbessern. Manche Cookies sind notwendig, damit unsere Website funktioniert.',
+                  'Wir nutzen Cookies, um Ihre Erfahrung auf dieser Webseite zu verbessern. Manche Cookies sind notwendig, damit unsere Website funktioniert.',
                 dismiss: 'Verstanden',
                 link: 'Mehr erfahren',
               },

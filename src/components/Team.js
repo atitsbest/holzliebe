@@ -57,15 +57,6 @@ const Team = () => (
             }
           }
         }
-        person3: file(
-          relativePath: { eq: "mitarbeiter/jh_jungreithmayr_150.jpg" }
-        ) {
-          childImageSharp {
-            sizes(maxWidth: 480) {
-              ...GatsbyImageSharpSizes
-            }
-          }
-        }
         person4: file(
           relativePath: { eq: "mitarbeiter/rolandheitzendorfer.jpg" }
         ) {
@@ -155,13 +146,6 @@ const Team = () => (
               image={data.person6.childImageSharp.sizes}
               name="Bernhard Ronacher"
               position="Tischlergeselle"
-            />
-          </Frame>
-          <Frame>
-            <Mitarbeiter
-              image={data.person3.childImageSharp.sizes}
-              name="Markus Harratzmüller"
-              position="Jungtischlergeselle"
             />
           </Frame>
           <Frame>
