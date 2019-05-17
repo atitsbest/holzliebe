@@ -9,7 +9,11 @@ import impressionen from '../images/impressionen.png'
 export default ({ data }) => (
   <Layout>
     <Hero sizes={data.heroImage.childImageSharp.sizes} label={impressionen} />
-    <Gallery photos={data.allImages.edges} />
+    <Gallery
+      photos={data.allImages.edges.sort(
+        (a, b) => a.node.modifiedTime < b.node.modifiedTime
+      )}
+    />
   </Layout>
 )
 
@@ -32,6 +36,7 @@ export const query = graphql`
     ) {
       edges {
         node {
+          modifiedTime
           childImageSharp {
             fluid(maxWidth: 1280) {
               src
