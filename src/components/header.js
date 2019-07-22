@@ -10,10 +10,10 @@ import logo from '../images/logo.gif'
 
 const Wrapper = styled.header`
   display: flex;
+  margin: ${Typography.rhythm(1.5)} 0 ${Typography.rhythm(0.5)};
   justify-content: space-between;
   align-items: baseline;
   flex-wrap: wrap;
-  margin: ${Typography.rhythm(1.5)} 0 ${Typography.rhythm(0.5)};
 
   ${media.tablet`
     margin-top: ${Typography.rhythm(1)};
