@@ -2,6 +2,8 @@ module.exports = {
   pathPrefix: '/2019',
   siteMetadata: {
     title: 'Jungreithmayr',
+    description:
+      'Tischlerei - Massivholzhaus - Architektur - OÖ Linz Land Thening - Jungreithmayr. tischlereiarchitektur.at. MEHR ALS RAUM: LEBENSRAUM - Raumplanung, Qualitätstischlerei, Holzarchitektur',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
