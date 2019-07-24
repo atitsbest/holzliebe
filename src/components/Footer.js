@@ -63,7 +63,7 @@ const Footer = () => (
       <p className="address">
         {' '}
         Tischlerstraße 6<br /> A-4062 Thening
-        <br /> Tel. 0 (043) 7221 630 16
+        <br /> Tel. +43 7221 630 16
         <br /> tischler@thening.at
       </p>
       <ul>

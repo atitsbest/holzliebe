@@ -3,7 +3,8 @@ import Header from './header'
 import Footer from './Footer'
 import styled from 'styled-components'
 import { media } from '../utils/style'
-import Typography from '../utils/typography'
+
+import fbIcon from '../images/Facebook-icon_negativ.svg'
 
 const Wrapper = styled.div`
   max-width: 1360px;
@@ -36,9 +37,28 @@ const SuperTitle = styled.div`
 export default ({ children }) => (
   <React.Fragment>
     <SuperTitle>
-      <div>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'flex-end',
+          lineHeight: 1,
+        }}
+      >
         <a href="tel:+43722163016" data-rel="external">
-          Tel. 0 (043) 7221 630 16
+          Tel. +43 7221 630 16
+        </a>
+        &nbsp; &middot; &nbsp;
+        <a
+          href="https://www.facebook.com/Jungreithmayr-Architektur-Tischlerei-872429343120179/"
+          target="_blank"
+          style={{ lineHeight: 1 }}
+        >
+          <img
+            style={{ height: 24, margin: 0, padding: 0 }}
+            src={fbIcon}
+            alt="Facebook"
+          />
         </a>
       </div>
     </SuperTitle>
