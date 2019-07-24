@@ -52,6 +52,7 @@ export default ({ children }) => (
         <a
           href="https://www.facebook.com/Jungreithmayr-Architektur-Tischlerei-872429343120179/"
           target="_blank"
+          rel="noopener noreferrer"
           style={{ lineHeight: 1 }}
         >
           <img

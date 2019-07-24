@@ -54,6 +54,13 @@ export default class HTML extends React.Component {
             );`,
             }}
           />
+          <div id="fb-root" />
+          <script
+            async
+            defer
+            crossorigin="anonymous"
+            src="https://connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v3.3"
+          />
           <script
             dangerouslySetInnerHTML={{
               __html: `

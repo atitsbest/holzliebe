@@ -79,6 +79,28 @@ const Footer = () => (
         <li>
           <a href="mailto:tischler@thening.at">Kontakt</a>
         </li>
+        <li>
+          <div
+            class="fb-page"
+            data-href="https://www.facebook.com/Jungreithmayr-Architektur-Tischlerei-872429343120179/"
+            data-tabs=""
+            data-width=""
+            data-height=""
+            data-small-header="true"
+            data-adapt-container-width="true"
+            data-hide-cover="true"
+            data-show-facepile="false"
+          >
+            <blockquote
+              cite="https://www.facebook.com/Jungreithmayr-Architektur-Tischlerei-872429343120179/"
+              class="fb-xfbml-parse-ignore"
+            >
+              <a href="https://www.facebook.com/Jungreithmayr-Architektur-Tischlerei-872429343120179/">
+                Jungreithmayr - Architektur &amp; Tischlerei
+              </a>
+            </blockquote>
+          </div>
+        </li>
       </ul>
       {/*
       <a href="/" className="facebook">
