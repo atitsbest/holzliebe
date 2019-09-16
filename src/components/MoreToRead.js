@@ -23,13 +23,6 @@ const MoreToRead = () => (
                 }
               }
               image1_text
-              image2 {
-                childImageSharp {
-                  fluid(maxWidth: 1280) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
               fields {
                 slug
               }
@@ -39,7 +32,7 @@ const MoreToRead = () => (
       }
     `}
     render={data => (
-      <div style={{ background: '#f9f9f9', padding: '32px 0' }}>
+      <div style={{ background: '#f9f9f9', padding: '32px 16px' }}>
         <div style={{ maxWidth: 728, margin: '0 auto' }}>
           <h4>Mehr Geschichten</h4>
           <hr />

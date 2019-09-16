@@ -41,28 +41,29 @@ export default ({ data, pageContext }) => (
         margin: '40px auto 32px',
       }}
     >
-      <div style={{ marginBottom: 64 }}>
-        <BlogTitle>{data.strapiBlogpost.title}</BlogTitle>
-        <BlogSubTitle>{data.strapiBlogpost.subtitle}</BlogSubTitle>
-        <Author>von {data.strapiBlogpost.user.username}</Author>
-        {data.strapiBlogpost.image1 && (
-          <div style={{ textAlign: 'center' }}>
-            <Img fluid={data.strapiBlogpost.image1.childImageSharp.fluid} />
-            <small
-              style={{
-                margin: '8px 0 40px',
-                display: 'block',
-                opacity: 0.7,
-              }}
-            >
-              {data.strapiBlogpost.image1_text}
-            </small>
-          </div>
-        )}
-        <BlogBody>
-          <ReactMarkdown source={data.strapiBlogpost.body} />
-        </BlogBody>
-        {/*
+      <div style={{ margin: '0 16px' }}>
+        <div style={{ marginBottom: 64 }}>
+          <BlogTitle>{data.strapiBlogpost.title}</BlogTitle>
+          <BlogSubTitle>{data.strapiBlogpost.subtitle}</BlogSubTitle>
+          <Author>von {data.strapiBlogpost.user.username}</Author>
+          {data.strapiBlogpost.image1 && (
+            <div style={{ textAlign: 'center' }}>
+              <Img fluid={data.strapiBlogpost.image1.childImageSharp.fluid} />
+              <small
+                style={{
+                  margin: '8px 0 40px',
+                  display: 'block',
+                  opacity: 0.7,
+                }}
+              >
+                {data.strapiBlogpost.image1_text}
+              </small>
+            </div>
+          )}
+          <BlogBody>
+            <ReactMarkdown source={data.strapiBlogpost.body} />
+          </BlogBody>
+          {/*
           {post.node.image2 && (
             <ImageSlider
               images={[
@@ -72,14 +73,15 @@ export default ({ data, pageContext }) => (
             />
           )}
             */}
-        <div
-          style={{
-            textAlign: 'center',
-            marginTop: 32,
-            opacity: 0.5,
-          }}
-        >
-          &middot;&nbsp;&middot;&nbsp;&middot;
+          <div
+            style={{
+              textAlign: 'center',
+              marginTop: 32,
+              opacity: 0.5,
+            }}
+          >
+            &middot;&nbsp;&middot;&nbsp;&middot;
+          </div>
         </div>
       </div>
     </div>
@@ -104,13 +106,6 @@ export const query = graphql`
         }
       }
       image1_text
-      image2 {
-        childImageSharp {
-          fluid(maxWidth: 1280) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
     }
   }
 `

@@ -41,34 +41,35 @@ export default ({ data }) => (
         margin: '40px auto 32px',
       }}
     >
-      {data.allStrapiBlogpost.edges.map(post => (
-        <div style={{ marginBottom: 64 }}>
-          <Link
-            to={`/blog/${post.node.fields.slug}`}
-            style={{ textDecoration: 'none', color: 'inherit' }}
-          >
-            <BlogTitle>{post.node.title}</BlogTitle>
-            <BlogSubTitle>{post.node.subtitle}</BlogSubTitle>
-            <Author>von {post.node.user.username}</Author>
-            {post.node.image1 && (
-              <div style={{ textAlign: 'center' }}>
-                <Img fluid={post.node.image1.childImageSharp.fluid} />
-                <small
-                  style={{
-                    margin: '8px 0 40px',
-                    display: 'block',
-                    opacity: 0.7,
-                  }}
-                >
-                  {post.node.image1_text}
-                </small>
-              </div>
-            )}
-          </Link>
-          <BlogBody>
-            <ReactMarkdown source={post.node.body} />
-          </BlogBody>
-          {/*
+      <div style={{ margin: '0 16px' }}>
+        {data.allStrapiBlogpost.edges.map(post => (
+          <div style={{ marginBottom: 64 }}>
+            <Link
+              to={`/blog/${post.node.fields.slug}`}
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              <BlogTitle>{post.node.title}</BlogTitle>
+              <BlogSubTitle>{post.node.subtitle}</BlogSubTitle>
+              <Author>von {post.node.user.username}</Author>
+              {post.node.image1 && (
+                <div style={{ textAlign: 'center' }}>
+                  <Img fluid={post.node.image1.childImageSharp.fluid} />
+                  <small
+                    style={{
+                      margin: '8px 0 40px',
+                      display: 'block',
+                      opacity: 0.7,
+                    }}
+                  >
+                    {post.node.image1_text}
+                  </small>
+                </div>
+              )}
+            </Link>
+            <BlogBody>
+              <ReactMarkdown source={post.node.body} />
+            </BlogBody>
+            {/*
           {post.node.image2 && (
             <ImageSlider
               images={[
@@ -78,17 +79,18 @@ export default ({ data }) => (
             />
           )}
             */}
-          <div
-            style={{
-              textAlign: 'center',
-              marginTop: 32,
-              opacity: 0.5,
-            }}
-          >
-            &middot;&nbsp;&middot;&nbsp;&middot;
+            <div
+              style={{
+                textAlign: 'center',
+                marginTop: 32,
+                opacity: 0.5,
+              }}
+            >
+              &middot;&nbsp;&middot;&nbsp;&middot;
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
     <MoreToRead />
   </Layout>
@@ -113,13 +115,6 @@ export const query = graphql`
             }
           }
           image1_text
-          image2 {
-            childImageSharp {
-              fluid(maxWidth: 1280) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
           fields {
             slug
           }
