@@ -1,0 +1,145 @@
+import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/layout'
+import Img from 'gatsby-image'
+import ReactMarkdown from 'react-markdown'
+import styled from 'styled-components'
+import Theme from '../utils/theme'
+import Typography from '../utils/typography'
+import { ImageSlider } from '../components/ImageSlider'
+
+const BlogTitle = styled.h1`
+  font-family: ${Theme.fonts.secondary};
+  margin-bottom: ${Typography.rhythm(0.5)};
+`
+
+const BlogSubTitle = styled.h4`
+  margin-bottom: ${Typography.rhythm(1)};
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 1.5;
+  font-weight: 500;
+`
+
+const Author = styled.small`
+  margin-bottom: ${Typography.rhythm(1)};
+  display: block;
+`
+
+const BlogBody = styled.p`
+  font-family: ${Theme.fonts.secondary};
+  font-weight: 400;
+`
+
+export default ({ data }) => (
+  <Layout>
+    <hr />
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        maxWidth: 728,
+        margin: '40px auto 32px',
+      }}
+    >
+      {data.allStrapiBlogpost.edges.map(post => (
+        <div style={{ marginBottom: 64 }}>
+          <BlogTitle>{post.node.title}</BlogTitle>
+          <BlogSubTitle>{post.node.subtitle}</BlogSubTitle>
+          <Author>von {post.node.user.username}</Author>
+          {post.node.image1 && (
+            <div style={{ textAlign: 'center' }}>
+              <Img fluid={post.node.image1.childImageSharp.fluid} />
+              <small
+                style={{
+                  margin: '8px 0 40px',
+                  display: 'block',
+                  opacity: 0.7,
+                }}
+              >
+                {post.node.image1_text}
+              </small>
+            </div>
+          )}
+          <BlogBody>
+            <ReactMarkdown source={post.node.body} />
+          </BlogBody>
+          {/*
+          {post.node.image2 && (
+            <ImageSlider
+              images={[
+                post.node.image2.childImageSharp.fluid,
+                post.node.image3.childImageSharp.fluid,
+              ]}
+            />
+          )}
+            */}
+          <div
+            style={{
+              textAlign: 'center',
+              marginTop: 32,
+              opacity: 0.5,
+            }}
+          >
+            &middot;&nbsp;&middot;&nbsp;&middot;
+          </div>
+        </div>
+      ))}
+    </div>
+    <div style={{ background: '#f9f9f9', padding: '32px 0' }}>
+      <div style={{ maxWidth: 728, margin: '0 auto' }}>
+        <h4>Mehr Geschichten</h4>
+        <hr />
+        <div style={{ display: 'flex' }}>
+          {data.allStrapiBlogpost.edges.slice(0, 3).map(post => (
+            <div style={{ flex: '1 1 33%', flexWrap: 'wrap', margin: '0 8px' }}>
+              {post.node.image1 && (
+                <Img
+                  fluid={{
+                    ...post.node.image1.childImageSharp.fluid,
+                    aspectRatio: 4 / 3,
+                  }}
+                />
+              )}
+              <h4 style={{ marginTop: 16, marginBottom: 8 }}>
+                {post.node.title}
+              </h4>
+              <small>von {post.node.user.username}</small>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </Layout>
+)
+
+export const query = graphql`
+  query blogPostsQuery {
+    allStrapiBlogpost {
+      edges {
+        node {
+          title
+          subtitle
+          body
+          user {
+            username
+          }
+          image1 {
+            childImageSharp {
+              fluid(maxWidth: 1280) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          image1_text
+          image2 {
+            childImageSharp {
+              fluid(maxWidth: 1280) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`

@@ -3,7 +3,7 @@ import holz_bg from '../images/holz_bg.gif'
 
 const sizes = {
   giant: 90,
-  desktop: 75,
+  desktop: 77,
   tablet: 60,
   mobile: 48,
 }

@@ -48,7 +48,7 @@ const Nav = styled.nav`
     list-style-type: none;
     margin: 0 0 ${Typography.rhythm(1)} 0;
     > li {
-      margin: ${Typography.rhythm(1)} ${Typography.rhythm(1.5)} 0 0;
+      margin: ${Typography.rhythm(1)} ${Typography.rhythm(1)} 0 0;
 
       &:last-child {
         margin-right: 0.5rem;
@@ -143,6 +143,11 @@ class Header extends React.Component {
             <li>
               <Link to="/impressionen" activeStyle={activeLinkStyle}>
                 Impressionen.
+              </Link>
+            </li>
+            <li>
+              <Link to="/blog" activeStyle={activeLinkStyle}>
+                Blog.
               </Link>
             </li>
             <li>

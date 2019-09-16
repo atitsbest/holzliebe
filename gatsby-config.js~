@@ -14,14 +14,16 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: 'gatsby-source-strapi',
-      options: {
-        apiURL: 'http://159.89.111.187:1337',
-        contentTypes: ['blogpost', 'user'],
-        queryLimit: 100,
-      },
-    },
+		{
+			resolve: 'gatsby-source-strapi',
+			options: {
+				apiURL: 'http://localhost:1337',
+				contentTypes: [
+					'blogpost',
+				],
+				queryLimit: 1000
+			}
+		},
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
@@ -47,7 +49,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Lora\:400,700`, `Raleway\:100,300,500,700`],
+        fonts: [`Lora\:300,700`, `Raleway\:100,300,700`],
       },
     },
   ],

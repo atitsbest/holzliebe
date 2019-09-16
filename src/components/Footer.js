@@ -66,6 +66,28 @@ const Footer = () => (
         <br /> Tel. +43 7221 630 16
         <br /> tischler@thening.at
       </p>
+      <div style={{ marginBottom: 24 }}>
+        <div
+          class="fb-page"
+          data-href="https://www.facebook.com/Jungreithmayr-Architektur-Tischlerei-872429343120179/"
+          data-tabs="timeline"
+          data-width=""
+          data-height=""
+          data-small-header="false"
+          data-adapt-container-width="true"
+          data-hide-cover="false"
+          data-show-facepile="true"
+        >
+          <blockquote
+            cite="https://www.facebook.com/Jungreithmayr-Architektur-Tischlerei-872429343120179/"
+            class="fb-xfbml-parse-ignore"
+          >
+            <a href="https://www.facebook.com/Jungreithmayr-Architektur-Tischlerei-872429343120179/">
+              Jungreithmayr - Architektur &amp; Tischlerei
+            </a>
+          </blockquote>
+        </div>
+      </div>
       <ul>
         {/*<li>
           <a href="/">Newsletter</a>
@@ -78,28 +100,6 @@ const Footer = () => (
         </li>
         <li>
           <a href="mailto:tischler@thening.at">Kontakt</a>
-        </li>
-        <li>
-          <div
-            class="fb-page"
-            data-href="https://www.facebook.com/Jungreithmayr-Architektur-Tischlerei-872429343120179/"
-            data-tabs=""
-            data-width=""
-            data-height=""
-            data-small-header="true"
-            data-adapt-container-width="true"
-            data-hide-cover="true"
-            data-show-facepile="false"
-          >
-            <blockquote
-              cite="https://www.facebook.com/Jungreithmayr-Architektur-Tischlerei-872429343120179/"
-              class="fb-xfbml-parse-ignore"
-            >
-              <a href="https://www.facebook.com/Jungreithmayr-Architektur-Tischlerei-872429343120179/">
-                Jungreithmayr - Architektur &amp; Tischlerei
-              </a>
-            </blockquote>
-          </div>
         </li>
       </ul>
       {/*

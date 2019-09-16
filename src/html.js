@@ -58,7 +58,7 @@ export default class HTML extends React.Component {
           <script
             async
             defer
-            crossorigin="anonymous"
+            crossOrigin="anonymous"
             src="https://connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v3.3"
           />
           <script
