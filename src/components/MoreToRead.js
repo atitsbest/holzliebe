@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 
 const MoreToRead = () => (
@@ -53,18 +53,23 @@ const MoreToRead = () => (
                 <div
                   style={{ flex: '1 1 33%', flexWrap: 'wrap', margin: '0 8px' }}
                 >
-                  {post.node.image1 && (
-                    <Img
-                      fluid={{
-                        ...post.node.image1.childImageSharp.fluid,
-                        aspectRatio: 4 / 3,
-                      }}
-                    />
-                  )}
-                  <h4 style={{ marginTop: 16, marginBottom: 8 }}>
-                    {post.node.title}
-                  </h4>
-                  <small>von {post.node.user.username}</small>
+                  <Link
+                    to={`/blog/${post.node.fields.slug}`}
+                    style={{ textDecoration: 'none', color: 'inherit' }}
+                  >
+                    {post.node.image1 && (
+                      <Img
+                        fluid={{
+                          ...post.node.image1.childImageSharp.fluid,
+                          aspectRatio: 4 / 3,
+                        }}
+                      />
+                    )}
+                    <h4 style={{ marginTop: 16, marginBottom: 8 }}>
+                      {post.node.title}
+                    </h4>
+                    <small>von {post.node.user.username}</small>
+                  </Link>
                 </div>
               ))}
           </div>
