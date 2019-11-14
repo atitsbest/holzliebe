@@ -32,12 +32,18 @@ jobs:
          
     - name: Install dependencies
       run: npm install
-      
+
+    - name: Cache build assets
+      uses: actions/cache@v1
+      with:
+        path: .cache
+        key: ${{ runner.OS }}-build-${{ hashFiles('src/images/**/*.*') }}
+
     - name: Build
       run: npm run build
       
     - name: List output files
-      run: ls
+      run: ls -la
 
     - name: FTP Deploy
       uses: SamKirkland/FTP-Deploy-Action@1.5.0
