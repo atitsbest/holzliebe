@@ -1,0 +1,40 @@
+name: Update holzliebe.at
+
+on:
+  push:
+    branches: 
+      - master
+  repository_dispatch:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set Node.js
+      uses: actions/setup-node@master
+      with:
+         node-version: 10.x
+         
+    - name: Install dependencies
+      run: npm install
+      
+    - name: Build
+      run: npm run build
+      
+    - name: List output files
+      run: ls
+
+    - name: FTP Deploy
+      uses: SamKirkland/FTP-Deploy-Action@1.5.0
+      env:
+        FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        FTP_USERNAME: ${{ secrets.FTP_USER }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        LOCAL_DIR: public
+        ARGS: --delete --parallel=5
+      
