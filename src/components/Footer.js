@@ -67,26 +67,17 @@ const Footer = () => (
         <br /> tischler@thening.at
       </p>
       <div style={{ marginBottom: 24 }}>
-        <div
-          className="fb-page"
-          data-href="https://www.facebook.com/Jungreithmayr-Architektur-Tischlerei-872429343120179/"
-          data-tabs="timeline"
-          data-width=""
-          data-height=""
-          data-small-header="false"
-          data-adapt-container-width="true"
-          data-hide-cover="false"
-          data-show-facepile="true"
-        >
-          <blockquote
-            cite="https://www.facebook.com/Jungreithmayr-Architektur-Tischlerei-872429343120179/"
-            className="fb-xfbml-parse-ignore"
-          >
-            <a href="https://www.facebook.com/Jungreithmayr-Architektur-Tischlerei-872429343120179/">
-              Jungreithmayr - Architektur &amp; Tischlerei
-            </a>
-          </blockquote>
-        </div>
+        <iframe
+          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FJungreithmayr-Architektur-Tischlerei-872429343120179%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+          width="340"
+          height="500"
+          style={{ border: 'none', overflow: 'hidden' }}
+          scrolling="no"
+          frameborder="0"
+          allowTransparency="true"
+          allow="encrypted-media"
+          title="facebook page"
+        />
       </div>
       <ul>
         {/*<li>
