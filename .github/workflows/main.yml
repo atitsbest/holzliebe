@@ -36,7 +36,7 @@ jobs:
     - name: Cache build assets
       uses: actions/cache@v1
       with:
-        path: .cache
+        path: .cache/caches/gatsby-transformer-sharp
         key: ${{ runner.OS }}-build-${{ hashFiles('src/images/**/*.*') }}
 
     - name: Build
