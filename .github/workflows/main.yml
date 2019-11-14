@@ -4,6 +4,9 @@ on:
   push:
     branches: 
       - master
+  repository_dispatch:
+    branches:
+      - master
 
 jobs:
   build:
@@ -33,5 +36,5 @@ jobs:
         FTP_USERNAME: ${{ secrets.FTP_USER }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         LOCAL_DIR: public
-        ARGS: --delete
+        ARGS: --delete --parallel=5
       
