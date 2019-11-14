@@ -7,6 +7,7 @@ import styled from 'styled-components'
 import Theme from '../utils/theme'
 import Typography from '../utils/typography'
 import MoreToRead from '../components/MoreToRead'
+import FacebookVideo from '../components/FacebookVideo'
 
 const BlogTitle = styled.h1`
   font-family: ${Theme.fonts.secondary};
@@ -47,22 +48,10 @@ export default ({ data, pageContext }) => (
           <BlogSubTitle>{data.strapiBlogpost.subtitle}</BlogSubTitle>
           <Author>von {data.strapiBlogpost.user.username}</Author>
           {data.strapiBlogpost.facebook_video ? (
-            <div style={{ marginBottom: 8 }}>
-              <iframe
-                src={`https://www.facebook.com/plugins/video.php?href=${
-                  data.strapiBlogpost.facebook_video
-                }&width=728&show_text=false&height=408&appId`}
-                width="728"
-                height="408"
-                style={{ border: 'none', overflow: 'hidden' }}
-                scrolling="no"
-                frameborder="0"
-                allowTransparency="true"
-                allow="encrypted-media"
-                allowFullScreen="true"
-                title={data.strapiBlogpost.title}
-              />
-            </div>
+            <FacebookVideo
+              url={data.strapiBlogpost.facebook_video}
+              title={data.strapiBlogpost.title}
+            />
           ) : (
             data.strapiBlogpost.image1 && (
               <div style={{ textAlign: 'center' }}>

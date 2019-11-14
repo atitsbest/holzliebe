@@ -7,6 +7,7 @@ import styled from 'styled-components'
 import Theme from '../utils/theme'
 import Typography from '../utils/typography'
 import MoreToRead from '../components/MoreToRead'
+import FacebookVideo from '../components/FacebookVideo'
 
 const BlogTitle = styled.h1`
   font-family: ${Theme.fonts.secondary};
@@ -54,22 +55,10 @@ export default ({ data }) => (
               {post.node.image1 && (
                 <div style={{ textAlign: 'center' }}>
                   {post.node.facebook_video ? (
-                    <div style={{ marginBottom: 8 }}>
-                      <iframe
-                        src={`https://www.facebook.com/plugins/video.php?href=${
-                          post.node.facebook_video
-                        }&width=728&show_text=false&height=408&appId`}
-                        width="728"
-                        height="408"
-                        style={{ border: 'none', overflow: 'hidden' }}
-                        scrolling="no"
-                        frameborder="0"
-                        allowTransparency="true"
-                        allow="encrypted-media"
-                        allowFullScreen="true"
-                        title={post.node.title}
-                      />
-                    </div>
+                    <FacebookVideo
+                      url={post.node.facebook_video}
+                      title={post.node.title}
+                    />
                   ) : (
                     <Img fluid={post.node.image1.childImageSharp.fluid} />
                   )}
