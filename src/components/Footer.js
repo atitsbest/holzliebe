@@ -68,7 +68,7 @@ const Footer = () => (
       </p>
       <div style={{ marginBottom: 24 }}>
         <div
-          class="fb-page"
+          className="fb-page"
           data-href="https://www.facebook.com/Jungreithmayr-Architektur-Tischlerei-872429343120179/"
           data-tabs="timeline"
           data-width=""
@@ -80,7 +80,7 @@ const Footer = () => (
         >
           <blockquote
             cite="https://www.facebook.com/Jungreithmayr-Architektur-Tischlerei-872429343120179/"
-            class="fb-xfbml-parse-ignore"
+            className="fb-xfbml-parse-ignore"
           >
             <a href="https://www.facebook.com/Jungreithmayr-Architektur-Tischlerei-872429343120179/">
               Jungreithmayr - Architektur &amp; Tischlerei

@@ -46,19 +46,30 @@ export default ({ data, pageContext }) => (
           <BlogTitle>{data.strapiBlogpost.title}</BlogTitle>
           <BlogSubTitle>{data.strapiBlogpost.subtitle}</BlogSubTitle>
           <Author>von {data.strapiBlogpost.user.username}</Author>
-          {data.strapiBlogpost.image1 && (
-            <div style={{ textAlign: 'center' }}>
-              <Img fluid={data.strapiBlogpost.image1.childImageSharp.fluid} />
-              <small
-                style={{
-                  margin: '8px 0 40px',
-                  display: 'block',
-                  opacity: 0.7,
-                }}
-              >
-                {data.strapiBlogpost.image1_text}
-              </small>
+          {data.strapiBlogpost.facebook_video ? (
+            <div style={{ marginBottom: 8 }}>
+              <div
+                className="fb-video"
+                data-href={data.strapiBlogpost.facebook_video}
+                data-width="728"
+                data-show-text="false"
+              />
             </div>
+          ) : (
+            data.strapiBlogpost.image1 && (
+              <div style={{ textAlign: 'center' }}>
+                <Img fluid={data.strapiBlogpost.image1.childImageSharp.fluid} />
+                <small
+                  style={{
+                    margin: '8px 0 40px',
+                    display: 'block',
+                    opacity: 0.7,
+                  }}
+                >
+                  {data.strapiBlogpost.image1_text}
+                </small>
+              </div>
+            )
           )}
           <BlogBody>
             <ReactMarkdown source={data.strapiBlogpost.body} />
@@ -106,6 +117,7 @@ export const query = graphql`
         }
       }
       image1_text
+      facebook_video
     }
   }
 `

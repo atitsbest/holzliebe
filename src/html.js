@@ -16,6 +16,13 @@ export default class HTML extends React.Component {
         </head>
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
+          <div id="fb-root" />
+          <script
+            async
+            defer
+            crossOrigin="anonymous"
+            src="https://connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v5.0"
+          />
           <div
             key={`body`}
             id="___gatsby"
@@ -53,13 +60,6 @@ export default class HTML extends React.Component {
             })}
             );`,
             }}
-          />
-          <div id="fb-root" />
-          <script
-            async
-            defer
-            crossOrigin="anonymous"
-            src="https://connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v3.3"
           />
           <script
             dangerouslySetInnerHTML={{

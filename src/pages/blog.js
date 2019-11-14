@@ -53,7 +53,18 @@ export default ({ data }) => (
               <Author>von {post.node.user.username}</Author>
               {post.node.image1 && (
                 <div style={{ textAlign: 'center' }}>
-                  <Img fluid={post.node.image1.childImageSharp.fluid} />
+                  {post.node.facebook_video ? (
+                    <div style={{ marginBottom: 8 }}>
+                      <div
+                        className="fb-video"
+                        data-href={post.node.facebook_video}
+                        data-width="728"
+                        data-show-text="false"
+                      />
+                    </div>
+                  ) : (
+                    <Img fluid={post.node.image1.childImageSharp.fluid} />
+                  )}
                   <small
                     style={{
                       margin: '8px 0 40px',
@@ -118,6 +129,7 @@ export const query = graphql`
           fields {
             slug
           }
+          facebook_video
         }
       }
     }
