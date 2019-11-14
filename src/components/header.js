@@ -145,7 +145,7 @@ class Header extends React.Component {
                 Impressionen.
               </Link>
             </li>
-          {/*  <li>
+            <li>
               <Link
                 to="/blog"
                 activeStyle={activeLinkStyle}
@@ -154,7 +154,6 @@ class Header extends React.Component {
                 Blog.
               </Link>
             </li>
-          */}
             <li>
               <Link to="/about" activeStyle={activeLinkStyle}>
                 Über uns.
