@@ -52,5 +52,5 @@ jobs:
         FTP_USERNAME: ${{ secrets.FTP_USER }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         LOCAL_DIR: public
-        ARGS: --delete --parallel=5
+        ARGS: --parallel=5
       
