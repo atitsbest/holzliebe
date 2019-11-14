@@ -14,7 +14,7 @@ const BlogTitle = styled.h1`
 `
 
 const BlogSubTitle = styled.h4`
-  margin-bottom: ${Typography.rhythm(1)};
+  margin-bottom: ${Typography.rhythm(0.5)};
   color: rgba(0, 0, 0, 0.5);
   line-height: 1.5;
   font-weight: 500;
@@ -55,11 +55,19 @@ export default ({ data }) => (
                 <div style={{ textAlign: 'center' }}>
                   {post.node.facebook_video ? (
                     <div style={{ marginBottom: 8 }}>
-                      <div
-                        className="fb-video"
-                        data-href={post.node.facebook_video}
-                        data-width="728"
-                        data-show-text="false"
+                      <iframe
+                        src={`https://www.facebook.com/plugins/video.php?href=${
+                          post.node.facebook_video
+                        }&width=728&show_text=false&height=408&appId`}
+                        width="728"
+                        height="408"
+                        style={{ border: 'none', overflow: 'hidden' }}
+                        scrolling="no"
+                        frameborder="0"
+                        allowTransparency="true"
+                        allow="encrypted-media"
+                        allowFullScreen="true"
+                        title={post.node.title}
                       />
                     </div>
                   ) : (

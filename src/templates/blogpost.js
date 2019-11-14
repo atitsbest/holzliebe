@@ -14,7 +14,7 @@ const BlogTitle = styled.h1`
 `
 
 const BlogSubTitle = styled.h4`
-  margin-bottom: ${Typography.rhythm(1)};
+  margin-bottom: ${Typography.rhythm(0.5)};
   color: rgba(0, 0, 0, 0.5);
   line-height: 1.5;
   font-weight: 500;
@@ -42,17 +42,25 @@ export default ({ data, pageContext }) => (
       }}
     >
       <div style={{ margin: '0 16px' }}>
-        <div style={{ marginBottom: 64 }}>
+        <div style={{ marginBottom: 0 }}>
           <BlogTitle>{data.strapiBlogpost.title}</BlogTitle>
           <BlogSubTitle>{data.strapiBlogpost.subtitle}</BlogSubTitle>
           <Author>von {data.strapiBlogpost.user.username}</Author>
           {data.strapiBlogpost.facebook_video ? (
             <div style={{ marginBottom: 8 }}>
-              <div
-                className="fb-video"
-                data-href={data.strapiBlogpost.facebook_video}
-                data-width="728"
-                data-show-text="false"
+              <iframe
+                src={`https://www.facebook.com/plugins/video.php?href=${
+                  data.strapiBlogpost.facebook_video
+                }&width=728&show_text=false&height=408&appId`}
+                width="728"
+                height="408"
+                style={{ border: 'none', overflow: 'hidden' }}
+                scrolling="no"
+                frameborder="0"
+                allowTransparency="true"
+                allow="encrypted-media"
+                allowFullScreen="true"
+                title={data.strapiBlogpost.title}
               />
             </div>
           ) : (
