@@ -106,7 +106,7 @@ export default ({ data }) => (
 
 export const query = graphql`
   query blogPostsQuery {
-    allStrapiBlogpost {
+    allStrapiBlogpost(sort: { fields: [created_at], order: DESC }) {
       edges {
         node {
           title
