@@ -2,7 +2,7 @@
   
 </p>
 <h1 align="center">
-  Holzliebe
+  <a href="https://holzliebe.at">Holzliebe</a>
 </h1>
 
 Kick off your project with this default boilerplate. This barebones starter ships with the main Gatsby configuration files you might need. 
