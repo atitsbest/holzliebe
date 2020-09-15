@@ -20,6 +20,9 @@ const Impressum = () => (
         <br />
         <br />
         tischler@thening.at
+        <br />
+        <br />
+        ATU 22634102
       </p>
       <Link to="/datenschutz">Datenschutz</Link>
     </div>
