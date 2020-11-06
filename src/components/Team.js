@@ -41,9 +41,7 @@ const Team = () => (
   <StaticQuery
     query={graphql`
       query Team {
-        person1: file(
-          relativePath: { eq: "mitarbeiter/jh_jungreithmayr_096.jpg" }
-        ) {
+        person1: file(relativePath: { eq: "mitarbeiter/derjo.jpg" }) {
           childImageSharp {
             sizes(maxWidth: 480) {
               ...GatsbyImageSharpSizes
