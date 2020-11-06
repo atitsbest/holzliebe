@@ -181,7 +181,7 @@ export const query = graphql`
         }
       }
     }
-    joImage: file(relativePath: { eq: "jh_jungreithmayr_096.jpg" }) {
+    joImage: file(relativePath: { eq: "mitarbeiter/derjo.jpg" }) {
       childImageSharp {
         sizes(maxWidth: 480) {
           ...GatsbyImageSharpSizes
