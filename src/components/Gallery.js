@@ -4,6 +4,9 @@ import Lightbox from 'react-images'
 import styled from 'styled-components'
 import Typography from '../utils/typography'
 import { media } from '../utils/style'
+import play from '../images/play.png'
+import ReactPlayer from 'react-player'
+var path = require('path')
 
 class Gallery extends React.Component {
   constructor(props) {
@@ -16,8 +19,10 @@ class Gallery extends React.Component {
         Object.assign({
           srcSet: photo.node.childImageSharp.fluid.srcSet,
           src: photo.node.childImageSharp.fluid.src,
+          basename: path.basename(photo.node.childImageSharp.fluid.src),
         })
       ),
+      currentVideoUrl: null,
     }
   }
 
@@ -40,6 +45,11 @@ class Gallery extends React.Component {
     this.setState({ lightbox: false })
   }
 
+  showVideo(videoUrl, event) {
+    event.preventDefault()
+    this.setState({ currentVideoUrl: videoUrl })
+  }
+
   render() {
     const { photos } = this.props
     return (
@@ -47,17 +57,55 @@ class Gallery extends React.Component {
         <ImageGrid>
           {photos.map((image, idx) => (
             <Frame key={idx}>
-              <a
-                href={image.node.childImageSharp.fluid.src}
-                onClick={e => this.openLightbox(idx, e)}
-              >
-                <Img
-                  fluid={{
-                    ...image.node.childImageSharp.fluid,
-                    aspectRatio: 4 / 3,
-                  }}
-                />
-              </a>
+              {this.props.videos[
+                path.basename(image.node.childImageSharp.fluid.src)
+              ] ? (
+                <a
+                  href={image.node.childImageSharp.fluid.src}
+                  onClick={e =>
+                    this.showVideo(
+                      this.props.videos[
+                        path.basename(image.node.childImageSharp.fluid.src)
+                      ],
+                      e
+                    )
+                  }
+                >
+                  <div
+                    style={{
+                      position: 'relative',
+                    }}
+                  >
+                    <Img
+                      fluid={{
+                        ...image.node.childImageSharp.fluid,
+                        aspectRatio: 4 / 3,
+                      }}
+                    />
+                    <img
+                      src={play}
+                      style={{
+                        position: 'absolute',
+                        maxWidth: '100%',
+                        top: '40%',
+                      }}
+                      alt="Play"
+                    />
+                  </div>
+                </a>
+              ) : (
+                <a
+                  href={image.node.childImageSharp.fluid.src}
+                  onClick={e => this.openLightbox(idx, e)}
+                >
+                  <Img
+                    fluid={{
+                      ...image.node.childImageSharp.fluid,
+                      aspectRatio: 4 / 3,
+                    }}
+                  />
+                </a>
+              )}
             </Frame>
           ))}
         </ImageGrid>
@@ -70,6 +118,25 @@ class Gallery extends React.Component {
           onClickNext={() => this.gotoNextLightboxImage()}
           onClose={() => this.closeLightbox()}
         />
+        {this.state.currentVideoUrl && (
+          <div
+            onClick={() => this.setState({ currentVideoUrl: null })}
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              cursor: 'pointer',
+              background: 'rgba(0,0,0,.8)',
+            }}
+          >
+            <ReactPlayer url={this.state.currentVideoUrl} playing />
+          </div>
+        )}
       </div>
     )
   }
