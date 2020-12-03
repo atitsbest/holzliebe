@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
 import Gallery from '../components/Gallery'
+import VideoGallery from '../components/VideoGallery'
 
 import impressionen from '../images/impressionen.png'
 
@@ -13,6 +14,9 @@ export default ({ data }) => (
       photos={data.allImages.edges.sort(
         (a, b) => a.node.modifiedTime < b.node.modifiedTime
       )}
+    videos={{
+      "IMG_20181009_151421.jpg": "https://youtu.be/vSA1n667zoo"
+    }}
     />
   </Layout>
 )
@@ -28,6 +32,16 @@ export const query = graphql`
       childImageSharp {
         sizes(maxWidth: 1280) {
           ...GatsbyImageSharpSizes
+        }
+      }
+    }
+    video1PreviewImage: file(relativePath: { eq: "/impressionen/IMG_20181009_151421.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1280) {
+          src
+          srcSet
+          sizes
+          aspectRatio
         }
       }
     }
