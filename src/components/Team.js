@@ -98,6 +98,15 @@ const Team = () => (
             }
           }
         }
+        person8: file(
+          relativePath: { eq: "mitarbeiter/samuelhagmueller.jpg" }
+        ) {
+          childImageSharp {
+            sizes(maxWidth: 480) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
       }
     `}
     render={data => (
@@ -150,6 +159,13 @@ const Team = () => (
             <Mitarbeiter
               image={data.person7.childImageSharp.sizes}
               name="Marius Munteanu"
+              position="Lehrling"
+            />
+          </Frame>
+          <Frame>
+            <Mitarbeiter
+              image={data.person8.childImageSharp.sizes}
+              name="Samuel Hagmüller"
               position="Lehrling"
             />
           </Frame>
