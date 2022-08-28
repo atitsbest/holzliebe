@@ -15,6 +15,7 @@ const Name = styled.strong`
   font-size: 1em;
   line-height: ${Typography.rhythm(0.75)};
   margin: ${Typography.rhythm(0.5)} 0 0;
+  font-weight: 400;
 `
 
 const Position = styled.span`

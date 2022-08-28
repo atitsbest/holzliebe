@@ -23,7 +23,7 @@ const SubText = styled.h3`
   text-align: center;
   font-family: ${Theme.fonts.secondary};
   line-height: 1.4em;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 0;
 `
 
