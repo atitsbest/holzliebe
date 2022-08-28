@@ -45,12 +45,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Lora\:400,700`, `Raleway\:100,300,500,700`],
-      },
-    },
-    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // The property ID; the tracking code won't be generated without it

@@ -3,6 +3,7 @@ import Header from './header'
 import Footer from './Footer'
 import styled from 'styled-components'
 import { media } from '../utils/style'
+import "./fonts.css";
 
 import fbIcon from '../images/Facebook-icon_negativ.svg'
 

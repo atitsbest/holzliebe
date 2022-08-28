@@ -43,6 +43,7 @@ const Wrapper = styled(Section)`
     h1 {
       text-transform: uppercase;
       margin-bottom: ${Typography.rhythm(1)};
+      font-family: "Raleway Light", sans-serif;
       font-weight: 100;
     }
 
