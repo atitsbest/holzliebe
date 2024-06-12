@@ -98,15 +98,6 @@ const Team = () => (
             }
           }
         }
-        person8: file(
-          relativePath: { eq: "mitarbeiter/samuelhagmueller.jpg" }
-        ) {
-          childImageSharp {
-            sizes(maxWidth: 480) {
-              ...GatsbyImageSharpSizes
-            }
-          }
-        }
       }
     `}
     render={data => (
@@ -122,6 +113,13 @@ const Team = () => (
           </Frame>
           <Frame>
             <Mitarbeiter
+              image={data.person4.childImageSharp.sizes}
+              name="Roland Heitzendorfer"
+              position="Technischer Assistent, Tischlermeister"
+            />
+          </Frame>
+          <Frame>
+            <Mitarbeiter
               image={data.person2.childImageSharp.sizes}
               name="Johannes Stadler"
               position="Tischlermeister"
@@ -132,13 +130,6 @@ const Team = () => (
               image={data.person9.childImageSharp.sizes}
               name="Markus Schmidthaler"
               position="Tischlergeselle"
-            />
-          </Frame>
-          <Frame>
-            <Mitarbeiter
-              image={data.person4.childImageSharp.sizes}
-              name="Roland Heitzendorfer"
-              position="Tischlermeister"
             />
           </Frame>
           <Frame>
@@ -160,13 +151,6 @@ const Team = () => (
               image={data.person7.childImageSharp.sizes}
               name="Oliver Wellinger"
               position="Lehrling"
-            />
-          </Frame>
-          <Frame>
-            <Mitarbeiter
-              image={data.person8.childImageSharp.sizes}
-              name="Samuel Hagmüller"
-              position="Tischlergeselle"
             />
           </Frame>
         </Inner>
