@@ -8,10 +8,10 @@ const Impressum = () => (
     <div style={{ padding: '16px' }}>
       <h1>Impressum</h1>
       <p>
-        Tischlerei Jungreithmayr
+        Jungreithmayr Tischlerei GmbH
         <br />
         <br />
-        Tischlerstrasse 6<br />A - 4062 Kirchberg-Thening
+        Tischlerstraße 6<br />A - 4062 Kirchberg-Thening
         <br />
         <br />
         Tel.:0043 7221 63 0 16
