@@ -14,14 +14,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: 'gatsby-source-strapi',
-      options: {
-        apiURL: 'http://159.89.111.187:1337',
-        contentTypes: ['blogpost', 'user'],
-        queryLimit: 100,
-      },
-    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
