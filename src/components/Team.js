@@ -150,7 +150,7 @@ const Team = () => (
             <Mitarbeiter
               image={data.person7.childImageSharp.sizes}
               name="Oliver Wellinger"
-              position="Lehrling"
+              position="Tischlergeselle"
             />
           </Frame>
         </Inner>

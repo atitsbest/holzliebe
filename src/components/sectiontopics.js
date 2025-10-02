@@ -83,7 +83,7 @@ const SectionTopics = () => {
             <HolzarchitekturIcon {...iconProps} />
             <Title>Holzarchitektur</Title>
             <p>
-              Wir planen und bauen elegante Massivholzhäuser mit unnachahmlicher
+              Wir planen elegante Massivholzhäuser mit unnachahmlicher
               Wohnatmosphäre. Raffinierte Innovationen und architektonisches
               Gespür machen es möglich.
             </p>
