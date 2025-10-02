@@ -17,14 +17,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v4
     - name: Set Node.js
-      uses: actions/setup-node@master
+      uses: actions/setup-node@v4
       with:
-         node-version: 10.x
-         
+         node-version: 20.x
+
     - name: Cache node modules
-      uses: actions/cache@v1
+      uses: actions/cache@v4
       with:
         path: node_modules
         key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
@@ -32,12 +32,12 @@ jobs:
           ${{ runner.OS }}-build-${{ env.cache-name }}-
           ${{ runner.OS }}-build-
           ${{ runner.OS }}-
-         
+
     - name: Install dependencies
       run: npm install
 
     - name: Cache build assets
-      uses: actions/cache@v1
+      uses: actions/cache@v4
       with:
         path: .cache/caches/gatsby-transformer-sharp
         key: ${{ runner.OS }}-build-${{ hashFiles('src/images/**/*.*') }}
@@ -49,7 +49,7 @@ jobs:
       run: ls -la
 
     - name: FTP Deploy
-      uses: SamKirkland/FTP-Deploy-Action@1.5.0
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       env:
         FTP_SERVER: ${{ secrets.FTP_SERVER }}
         FTP_USERNAME: ${{ secrets.FTP_USER }}
