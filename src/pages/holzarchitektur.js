@@ -18,7 +18,7 @@ export default ({ data }) => (
     <TopicHeader
       icon={HolzarchitekturIcon}
       title="Holzarchitektur"
-      text="Wir planen und bauen elegante Massivholzhäuser mit unnachahmlicher Wohnatmosphäre. Raffinierte Innovationen und architektonisches Gespür machen es möglich."
+      text="Wir planen elegante Massivholzhäuser mit unnachahmlicher Wohnatmosphäre. Raffinierte Innovationen und architektonisches Gespür machen es möglich."
     />
     <Grid>
       <Half>
