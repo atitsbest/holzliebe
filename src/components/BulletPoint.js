@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 import Typography from '../utils/typography'
 import Theme from '../utils/theme'
@@ -21,8 +21,8 @@ const BulletPoint = ({ motto, number, title, text, image, odd }) => (
     </Quarter>
     <NumberWrapper>
       {image && (
-        <Img
-          sizes={image}
+        <GatsbyImage
+          image={getImage(image)}
           alt="title"
           style={{ width: '100%', height: '100%' }}
         />

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Section } from './section'
 import Typography from '../utils/typography'
 import { media } from '../utils/style'
@@ -69,9 +69,10 @@ const Wrapper = styled(Section)`
 
 const Article = ({ image, headline, intro, body }) => (
   <Wrapper>
-    <Img
+    <GatsbyImage
       className="biopic"
-      sizes={{ ...image, aspectRatio: 9 / 16 }}
+      image={getImage(image)}
+      alt=""
       imgStyle={{ objectPosition: 'center top' }}
     />
     <div>

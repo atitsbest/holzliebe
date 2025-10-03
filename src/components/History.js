@@ -8,16 +8,14 @@ const History = () => (
       query History {
         history: file(relativePath: { eq: "history.jpg" }) {
           childImageSharp {
-            sizes(maxWidth: 600) {
-              ...GatsbyImageSharpSizes
-            }
+            gatsbyImageData(width: 600, aspectRatio: 0.5625)
           }
         }
       }
     `}
     render={data => (
       <Article
-        image={data.history.childImageSharp.sizes}
+        image={data.history}
         headline={
           <span>
             Seit 5<br /> Generationen

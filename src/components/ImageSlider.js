@@ -1,6 +1,6 @@
 import React from 'react'
 import Slider from 'react-slick'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 import Typography from '../utils/typography'
 import './slick.css'
@@ -23,9 +23,9 @@ export default class ImageSlider extends React.Component {
   render() {
     return (
       <StyledSlider {...this.settings}>
-        {this.props.images.map((sizes, idx) => (
+        {this.props.images.map((imageData, idx) => (
           <div key={idx}>
-            <Img sizes={sizes} />
+            <GatsbyImage image={getImage(imageData)} alt="" />
           </div>
         ))}
       </StyledSlider>

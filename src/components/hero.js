@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 import { media } from '../utils/style'
 import Typography from '../utils/typography'
@@ -25,10 +25,11 @@ const Overlay = styled.img`
     max-width: 200px;
   `};
 `
-const Hero = ({ sizes, label }) => {
+const Hero = ({ sizes, image, label }) => {
+  const img = image || sizes
   return (
     <Wrapper>
-      <Img sizes={{ ...sizes, aspectRatio: 16 / 9 }} />
+      <GatsbyImage image={getImage(img)} alt="" />
       {label && <Overlay src={label} alt="Originell" />}
     </Wrapper>
   )

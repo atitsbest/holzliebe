@@ -1,27 +1,31 @@
 import React from 'react'
-import Img from 'gatsby-image'
-import Lightbox from 'react-images'
+import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
+import Lightbox from 'yet-another-react-lightbox'
+import 'yet-another-react-lightbox/styles.css'
 import styled from 'styled-components'
 import Typography from '../utils/typography'
 import { media } from '../utils/style'
 import play from '../images/play.png'
 import ReactPlayer from 'react-player'
-var path = require('path')
+
+const getBasename = (path) => path.split('/').pop()
 
 class Gallery extends React.Component {
   constructor(props) {
     super(props)
+    const photos = props.photos.map(photo => {
+      const src = getSrc(photo.node)
+      return {
+        src: src,
+        basename: getBasename(src),
+      }
+    })
     this.state = {
       shareOpen: false,
       anchorEl: null,
       lightbox: false,
-      photos: props.photos.map(photo =>
-        Object.assign({
-          srcSet: photo.node.childImageSharp.fluid.srcSet,
-          src: photo.node.childImageSharp.fluid.src,
-          basename: path.basename(photo.node.childImageSharp.fluid.src),
-        })
-      ),
+      photo: 0,
+      photos: photos,
       currentVideoUrl: null,
     }
   }
@@ -55,68 +59,56 @@ class Gallery extends React.Component {
     return (
       <div>
         <ImageGrid>
-          {photos.map((image, idx) => (
-            <Frame key={idx}>
-              {this.props.videos[
-                path.basename(image.node.childImageSharp.fluid.src)
-              ] ? (
-                <a
-                  href={image.node.childImageSharp.fluid.src}
-                  onClick={e =>
-                    this.showVideo(
-                      this.props.videos[
-                        path.basename(image.node.childImageSharp.fluid.src)
-                      ],
-                      e
-                    )
-                  }
-                >
-                  <div
-                    style={{
-                      position: 'relative',
-                    }}
+          {photos.map((image, idx) => {
+            const src = getSrc(image.node)
+            const basename = getBasename(src)
+            return (
+              <Frame key={idx}>
+                {this.props.videos[basename] ? (
+                  <a
+                    href={src}
+                    onClick={e => this.showVideo(this.props.videos[basename], e)}
                   >
-                    <Img
-                      fluid={{
-                        ...image.node.childImageSharp.fluid,
-                        aspectRatio: 4 / 3,
-                      }}
-                    />
-                    <img
-                      src={play}
+                    <div
                       style={{
-                        position: 'absolute',
-                        maxWidth: '100%',
-                        top: '40%',
+                        position: 'relative',
                       }}
-                      alt="Play"
+                    >
+                      <GatsbyImage
+                        image={getImage(image.node)}
+                        alt=""
+                      />
+                      <img
+                        src={play}
+                        style={{
+                          position: 'absolute',
+                          maxWidth: '100%',
+                          top: '40%',
+                        }}
+                        alt="Play"
+                      />
+                    </div>
+                  </a>
+                ) : (
+                  <a
+                    href={src}
+                    onClick={e => this.openLightbox(idx, e)}
+                  >
+                    <GatsbyImage
+                      image={getImage(image.node)}
+                      alt=""
                     />
-                  </div>
-                </a>
-              ) : (
-                <a
-                  href={image.node.childImageSharp.fluid.src}
-                  onClick={e => this.openLightbox(idx, e)}
-                >
-                  <Img
-                    fluid={{
-                      ...image.node.childImageSharp.fluid,
-                      aspectRatio: 4 / 3,
-                    }}
-                  />
-                </a>
-              )}
-            </Frame>
-          ))}
+                  </a>
+                )}
+              </Frame>
+            )
+          })}
         </ImageGrid>
         <Lightbox
-          backdropClosesModal
-          images={this.state.photos}
-          currentImage={this.state.photo}
-          isOpen={this.state.lightbox}
-          onClickPrev={() => this.gotoPrevLightboxImage()}
-          onClickNext={() => this.gotoNextLightboxImage()}
-          onClose={() => this.closeLightbox()}
+          open={this.state.lightbox}
+          close={() => this.closeLightbox()}
+          slides={this.state.photos}
+          index={this.state.photo}
         />
         {this.state.currentVideoUrl && (
           <div
@@ -132,6 +124,7 @@ class Gallery extends React.Component {
               bottom: 0,
               cursor: 'pointer',
               background: 'rgba(0,0,0,.8)',
+              zIndex: 9999,
             }}
           >
             <ReactPlayer url={this.state.currentVideoUrl} playing />

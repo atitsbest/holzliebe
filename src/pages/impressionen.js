@@ -9,7 +9,7 @@ import impressionen from '../images/impressionen.png'
 
 export default ({ data }) => (
   <Layout>
-    <Hero sizes={data.heroImage.childImageSharp.sizes} label={impressionen} />
+    <Hero sizes={data.heroImage} label={impressionen} />
     <Gallery
       photos={data.allImages.edges.sort(
         (a, b) => a.node.modifiedTime < b.node.modifiedTime
@@ -30,19 +30,12 @@ export const query = graphql`
     }
     heroImage: file(relativePath: { eq: "jh_jungreithmayr_005.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 1280) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 1280)
       }
     }
     video1PreviewImage: file(relativePath: { eq: "/impressionen/IMG_20181009_151421.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1280) {
-          src
-          srcSet
-          sizes
-          aspectRatio
-        }
+        gatsbyImageData(width: 1280)
       }
     }
     allImages: allFile(
@@ -52,12 +45,7 @@ export const query = graphql`
         node {
           modifiedTime
           childImageSharp {
-            fluid(maxWidth: 1280) {
-              src
-              srcSet
-              sizes
-              aspectRatio
-            }
+            gatsbyImageData(width: 1280)
           }
         }
       }

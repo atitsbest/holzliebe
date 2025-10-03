@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 import Theme from '../utils/theme'
 import Typography from '../utils/typography'
@@ -22,13 +22,13 @@ const Position = styled.span`
   font-size: 0.9em;
 `
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   width: 100%;
 `
 
 const Mitarbeiter = ({ image, name, position }) => (
   <Wrapper>
-    <Image sizes={{ ...image, aspectRatio: 4 / 3 }} />
+    <Image image={getImage(image)} alt={name} />
     <Name>{name}</Name>
     <Position>{position}</Position>
   </Wrapper>
