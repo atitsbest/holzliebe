@@ -1,6 +1,7 @@
 import React from 'react'
-import Img from 'gatsby-image'
-import Lightbox from 'react-images'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import Lightbox from 'yet-another-react-lightbox'
+import 'yet-another-react-lightbox/styles.css'
 import styled from 'styled-components'
 import Typography from '../utils/typography'
 import { media } from '../utils/style'
@@ -12,6 +13,7 @@ class VideoGallery extends React.Component {
       shareOpen: false,
       anchorEl: null,
       lightbox: false,
+      photo: 0,
     }
   }
 
@@ -35,6 +37,7 @@ class VideoGallery extends React.Component {
   }
 
   render() {
+    const slides = this.props.videos.map(set => ({ src: set.url }))
     return (
       <div>
         <ImageGrid>
@@ -44,24 +47,19 @@ class VideoGallery extends React.Component {
                 href={set.url}
                 onClick={e => this.openLightbox(idx, e)}
               >
-                <Img
-                  fluid={{
-                    ...set.previewImage.childImageSharp.fluid,
-                    aspectRatio: 4 / 3,
-                  }}
+                <GatsbyImage
+                  image={getImage(set.previewImage)}
+                  alt=""
                 />
               </a>
             </Frame>
           ))}
         </ImageGrid>
         <Lightbox
-          backdropClosesModal
-          images={this.state.photos}
-          currentImage={this.state.photo}
-          isOpen={this.state.lightbox}
-          onClickPrev={() => this.gotoPrevLightboxImage()}
-          onClickNext={() => this.gotoNextLightboxImage()}
-          onClose={() => this.closeLightbox()}
+          open={this.state.lightbox}
+          close={() => this.closeLightbox()}
+          slides={slides}
+          index={this.state.photo}
         />
       </div>
     )

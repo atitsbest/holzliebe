@@ -14,7 +14,7 @@ import { media } from '../utils/style'
 
 const NotFoundPage = ({ data }) => (
   <Layout>
-    <Hero sizes={data.heroImage.childImageSharp.sizes} label={originell} />
+    <Hero sizes={data.heroImage} label={originell} />
     <TopicHeader
       icon={RaumplanungIcon}
       title="Raumplanung"
@@ -25,7 +25,7 @@ const NotFoundPage = ({ data }) => (
         <Link to="/impressionen">
           <LabeledImage
             image={{
-              ...data.schlafen.childImageSharp.sizes,
+              ...data.schlafen,
               aspectRatio: 4 / 3,
             }}
             label="Schlafen."
@@ -36,7 +36,7 @@ const NotFoundPage = ({ data }) => (
       <Frame>
         <Link to="/impressionen">
           <LabeledImage
-            image={{ ...data.wohnen.childImageSharp.sizes, aspectRatio: 4 / 3 }}
+            image={{ ...data.wohnen, aspectRatio: 4 / 3 }}
             label="Wohnen."
             text="Was auch immer im Trend liegt: Vergessen Sie es! Denn Wohnen ist dann gut, wenn es genau zu Ihnen passt. Das machen wir!"
           />
@@ -45,7 +45,7 @@ const NotFoundPage = ({ data }) => (
       <Frame>
         <Link to="/impressionen">
           <LabeledImage
-            image={{ ...data.kochen.childImageSharp.sizes, aspectRatio: 4 / 3 }}
+            image={{ ...data.kochen, aspectRatio: 4 / 3 }}
             label="Kochen."
             text="Wir kochen nicht. Aber wir wissen, was es braucht, damit Sie es mit Freude tun können. Das ist Erfahrung!"
           />
@@ -54,7 +54,7 @@ const NotFoundPage = ({ data }) => (
       <Frame>
         <Link to="/impressionen">
           <LabeledImage
-            image={{ ...data.buero.childImageSharp.sizes, aspectRatio: 4 / 3 }}
+            image={{ ...data.buero, aspectRatio: 4 / 3 }}
             label="Büro."
             text="Der Erfolg Ihrer Arbeit liegt nicht am Design Ihres Schreibtischs. Aber wir können Design, Funktion und Umsetzung so perfekt kombinieren, dass die Menschen es glauben werden. Das ist Erfolg!"
           />
@@ -64,7 +64,7 @@ const NotFoundPage = ({ data }) => (
         <Link to="/impressionen">
           <LabeledImage
             image={{
-              ...data.badezimmer.childImageSharp.sizes,
+              ...data.badezimmer,
               aspectRatio: 4 / 3,
             }}
             label="Badezimmer."
@@ -76,7 +76,7 @@ const NotFoundPage = ({ data }) => (
         <Link to="/impressionen">
           <LabeledImage
             image={{
-              ...data.garderobe.childImageSharp.sizes,
+              ...data.garderobe,
               aspectRatio: 4 / 3,
             }}
             label="Garderobe."
@@ -88,7 +88,7 @@ const NotFoundPage = ({ data }) => (
         <Link to="/impressionen">
           <LabeledImage
             image={{
-              ...data.freiraum.childImageSharp.sizes,
+              ...data.freiraum,
               aspectRatio: 4 / 3,
             }}
             label="Freiraum."
@@ -99,7 +99,7 @@ const NotFoundPage = ({ data }) => (
       <Frame>
         <Link to="/impressionen">
           <LabeledImage
-            image={{ ...data.sauna.childImageSharp.sizes, aspectRatio: 4 / 3 }}
+            image={{ ...data.sauna, aspectRatio: 4 / 3 }}
             label="Sauna."
             text="Eine Sauna aus Holz zu bauen ist nicht überraschend. Eine schöne Sauna aus Holz zu bauen wird Sie überraschen. Bereit für den Design-Aufguss?"
           />
@@ -109,7 +109,7 @@ const NotFoundPage = ({ data }) => (
         <Link to="/impressionen">
           <LabeledImage
             image={{
-              ...data.accessoires.childImageSharp.sizes,
+              ...data.accessoires,
               aspectRatio: 4 / 3,
             }}
             label="Accessoires."
@@ -118,13 +118,13 @@ const NotFoundPage = ({ data }) => (
         </Link>
       </Frame>
     </ImageGrid>
-    <Hero sizes={data.hero2Image.childImageSharp.sizes} />
+    <Hero sizes={data.hero2Image} />
     <TopicHeader
       title="Raumplanung"
       text="Ein guter Plan beginnt nicht am Papier. Auch nicht im Kopf. Sondern beim Zuhören. Nur so kann Ihr Wohntraum in Erfüllung gehen. Das ist nicht Traumdeutung, sondern Gespür, Leidenschaft und ganz viel Erfahrung."
     />
     <CallToContact title="Kontakt" icon={HolzarchitekturIcon} />
-    <Hero sizes={data.hero3Image.childImageSharp.sizes} />
+    <Hero sizes={data.hero3Image} />
   </Layout>
 )
 
@@ -134,86 +134,62 @@ export const query = graphql`
   query raumplanungQuery {
     heroImage: file(relativePath: { eq: "jh_jungreithmayr_originell.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 1200) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 1200)
       }
     }
     hero2Image: file(relativePath: { eq: "raumplanung_plan.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 1200) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 1200)
       }
     }
     hero3Image: file(relativePath: { eq: "jh_jungreithmayr_126.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 1200) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 1200)
       }
     }
     schlafen: file(relativePath: { eq: "jh_jungreithmayr_081.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 480) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 480)
       }
     }
     wohnen: file(relativePath: { eq: "jh_jungreithmayr_122.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 480) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 480)
       }
     }
     kochen: file(relativePath: { eq: "jh_jungreithmayr_085.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 480) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 480)
       }
     }
     buero: file(relativePath: { eq: "jh_jungreithmayr_079.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 480) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 480)
       }
     }
     badezimmer: file(relativePath: { eq: "jh_jungreithmayr_072.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 480) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 480)
       }
     }
     garderobe: file(relativePath: { eq: "raumplanung_garderobe.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 480) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 480)
       }
     }
     freiraum: file(relativePath: { eq: "jh_jungreithmayr_008.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 480) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 480)
       }
     }
     sauna: file(relativePath: { eq: "raumplanung_sauna.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 480) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 480)
       }
     }
     accessoires: file(relativePath: { eq: "jh_jungreithmayr_048.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 480) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 480)
       }
     }
   }

@@ -28,7 +28,7 @@ export default class Index extends React.Component {
     return (
       <Layout>
         <Hero
-          sizes={data.heroImage.childImageSharp.sizes}
+          sizes={data.heroImage}
           label={wohlfuehlen}
         />
         <Section>
@@ -36,10 +36,10 @@ export default class Index extends React.Component {
         </Section>
         <ImageSlider
           images={[
-            data.sliderImage1.childImageSharp.sizes,
-            data.sliderImage2.childImageSharp.sizes,
-            data.sliderImage3.childImageSharp.sizes,
-            data.sliderImage4.childImageSharp.sizes,
+            data.sliderImage1,
+            data.sliderImage2,
+            data.sliderImage3,
+            data.sliderImage4,
           ]}
         />
         <HeroText
@@ -64,7 +64,7 @@ export default class Index extends React.Component {
             <Link to="/raumplanung">
               <LabeledImage
                 image={{
-                  ...data.raumplanung.childImageSharp.sizes,
+                  ...data.raumplanung,
                   aspectRatio: 21 / 11,
                 }}
                 label="Raumplanung"
@@ -72,16 +72,16 @@ export default class Index extends React.Component {
             </Link>
           </Half>
           <Quarter>
-            <BackgroundImage sizes={data.raumplanung1.childImageSharp.sizes} />
+            <BackgroundImage sizes={data.raumplanung1} />
           </Quarter>
           <Quarter>
-            <BackgroundImage sizes={data.raumplanung2.childImageSharp.sizes} />
+            <BackgroundImage sizes={data.raumplanung2} />
           </Quarter>
           <Half>
             <Link to="/tischlerei">
               <LabeledImage
                 image={{
-                  ...data.tischlerei.childImageSharp.sizes,
+                  ...data.tischlerei,
                   aspectRatio: 21 / 11,
                 }}
                 label="Tischlerei"
@@ -91,7 +91,7 @@ export default class Index extends React.Component {
           <Half>
             <BackgroundImage
               sizes={{
-                ...data.tischlerei1.childImageSharp.sizes,
+                ...data.tischlerei1,
                 aspectRatio: 21 / 11,
               }}
             />
@@ -100,7 +100,7 @@ export default class Index extends React.Component {
             <Link to="/holzarchitektur">
               <LabeledImage
                 image={{
-                  ...data.architektur.childImageSharp.sizes,
+                  ...data.architektur,
                   aspectRatio: 21 / 11,
                 }}
                 label="Architektur"
@@ -110,7 +110,7 @@ export default class Index extends React.Component {
           <Quarter>
             <BackgroundImage
               sizes={{
-                ...data.architektur1.childImageSharp.sizes,
+                ...data.architektur1,
                 aspectRatio: 10.5 / 11,
               }}
             />
@@ -118,7 +118,7 @@ export default class Index extends React.Component {
           <Quarter>
             <BackgroundImage
               sizes={{
-                ...data.architektur2.childImageSharp.sizes,
+                ...data.architektur2,
                 aspectRatio: 10.5 / 11,
               }}
             />
@@ -137,7 +137,7 @@ export default class Index extends React.Component {
           ) : (
             <HeroContainer onClick={() => this.setState({ showVideo: true })}>
               <Hero
-                sizes={data.videoImage.childImageSharp.sizes}
+                sizes={data.videoImage}
                 label={play}
               />
             </HeroContainer>
@@ -149,16 +149,16 @@ export default class Index extends React.Component {
 
         <Zitat
           motto={['Holz,', 'Raum,', 'Lebens-', 'raum']}
-          image={data.joImage.childImageSharp.sizes}
+          image={data.joImage}
           text1="HOLZ, SEE, STADT, THENING."
           subtext1="Den Duft von Holz habe ich hier schon als Kind erlebt. Den Duft des Hallstättersees als Jugendlicher in der Holz-HTL. Den Duft der Stadt beim Architekturstudium in Graz. Alles zusammen verschmilzt zu einem besonderen „Parfum“: Mehr als eine Tischlerei."
           text2="Joachim Jungreithmayr"
           subtext2="5. Generation"
         />
-        <Hero sizes={data.hero2Image.childImageSharp.sizes} />
+        <Hero sizes={data.hero2Image} />
         <CallToContact title="Kontakt" icon={HolzarchitekturIcon} />
         <Wisdom
-          backgroundImage={data.kirschblueten.childImageSharp.sizes}
+          backgroundImage={data.kirschblueten}
           author="Joachim Jungreithmayr"
         />
         <Team />
@@ -177,128 +177,92 @@ export const query = graphql`
     }
     heroImage: file(relativePath: { eq: "jh_jungreithmayr_061.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 1280) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 1280)
       }
     }
     videoImage: file(relativePath: { eq: "impressionen/DSC_2170.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 1280) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 1280)
       }
     }
     hero2Image: file(relativePath: { eq: "jh_jungreithmayr_020.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 1280) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 1280)
       }
     }
     sliderImage1: file(relativePath: { eq: "jh_jungreithmayr_081.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 1280) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 1280)
       }
     }
     sliderImage2: file(relativePath: { eq: "jh_jungreithmayr_022.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 1280) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 1280)
       }
     }
     sliderImage3: file(relativePath: { eq: "jh_jungreithmayr_023.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 1280) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 1280)
       }
     }
     sliderImage4: file(relativePath: { eq: "jh_jungreithmayr_079.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 1280) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 1280)
       }
     }
     joImage: file(relativePath: { eq: "mitarbeiter/derjo.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 480) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 480)
       }
     }
     kirschblueten: file(relativePath: { eq: "kirschblueten.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 1280) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 1280)
       }
     }
     history: file(relativePath: { eq: "history.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 480) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 480)
       }
     }
     raumplanung: file(relativePath: { eq: "jh_jungreithmayr_020.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 600) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 600)
       }
     }
     raumplanung1: file(relativePath: { eq: "jh_jungreithmayr_055.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 480) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 480)
       }
     }
     raumplanung2: file(relativePath: { eq: "raumplanung_plan.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 480) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 480)
       }
     }
     tischlerei: file(relativePath: { eq: "jh_jungreithmayr_146.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 600) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 600)
       }
     }
     tischlerei1: file(relativePath: { eq: "jh_jungreithmayr_181.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 600) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 600)
       }
     }
     architektur: file(relativePath: { eq: "jh_jungreithmayr_004.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 600) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 600)
       }
     }
     architektur1: file(relativePath: { eq: "jh_jungreithmayr_061.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 480) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 480)
       }
     }
     architektur2: file(relativePath: { eq: "jh_jungreithmayr_082.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 480) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 480)
       }
     }
   }

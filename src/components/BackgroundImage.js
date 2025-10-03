@@ -1,7 +1,7 @@
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 
-const BackgroundImage = styled(Img)`
+const BackgroundImage = styled(GatsbyImage)`
   position: absolute;
   top: 0;
   left: 0;
@@ -9,11 +9,10 @@ const BackgroundImage = styled(Img)`
   z-index: -1;
   height: 100%;
 
-  // Adjust image positioning (if image covers area with defined height) and add font-family for polyfill
+  // Adjust image positioning (if image covers area with defined height)
   & > img {
-    object-fit: cover !important; // or whatever
-    object-position: 0% 0% !important; // or whatever
-    font-family: 'object-fit: cover !important; object-position: 0% 0% !important;'; // needed for IE9+ polyfill
+    object-fit: cover !important;
+    object-position: 0% 0% !important;
   }
 `
 

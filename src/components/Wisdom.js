@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 import { media } from '../utils/style'
 import Theme from '../utils/theme'
@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   margin-bottom: ${Typography.rhythm(0.25)};
 `
 
-const Background = styled(Img)`
+const Background = styled(GatsbyImage)`
   min-height: ${Typography.rhythm(7)};
 `
 
@@ -50,7 +50,7 @@ const Quote = styled.h1`
 
 const Wisdom = ({ backgroundImage, author }) => (
   <Wrapper>
-    <Background sizes={{ ...backgroundImage, aspectRation: 16 / 9 }} />
+    <Background image={getImage(backgroundImage)} alt="" />
     <Content>
       <Author>{author}</Author>
       <Quote>

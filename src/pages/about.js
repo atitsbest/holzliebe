@@ -31,11 +31,11 @@ export default class About extends React.Component {
           </VideoContainer>
         ) : (
           <HeroContainer onClick={() => this.setState({ showVideo: true })}>
-            <Hero sizes={data.heroImage.childImageSharp.sizes} label={play} />
+            <Hero sizes={data.heroImage} label={play} />
           </HeroContainer>
         )}
         <Article
-          image={data.joImage.childImageSharp.sizes}
+          image={data.joImage}
           headline={
             <span>
               Joachim <br />
@@ -47,10 +47,10 @@ export default class About extends React.Component {
         />
         <ImageSlider
           images={[
-            data.sliderImage1.childImageSharp.sizes,
-            data.sliderImage2.childImageSharp.sizes,
-            data.sliderImage3.childImageSharp.sizes,
-            data.sliderImage4.childImageSharp.sizes,
+            data.sliderImage1,
+            data.sliderImage2,
+            data.sliderImage3,
+            data.sliderImage4,
           ]}
         />
         <History />
@@ -71,44 +71,32 @@ export const query = graphql`
     }
     heroImage: file(relativePath: { eq: "jh_jungreithmayr_006.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 1280) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 1280)
       }
     }
     sliderImage1: file(relativePath: { eq: "jh_jungreithmayr_145.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 1280) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 1280)
       }
     }
     sliderImage2: file(relativePath: { eq: "jh_jungreithmayr_163.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 1280) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 1280)
       }
     }
     sliderImage3: file(relativePath: { eq: "jh_jungreithmayr_165.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 1280) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 1280)
       }
     }
     sliderImage4: file(relativePath: { eq: "jh_jungreithmayr_181.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 1280) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 1280)
       }
     }
     joImage: file(relativePath: { eq: "mitarbeiter/derjo.jpg" }) {
       childImageSharp {
-        sizes(maxWidth: 960) {
-          ...GatsbyImageSharpSizes
-        }
+        gatsbyImageData(width: 960)
       }
     }
   }

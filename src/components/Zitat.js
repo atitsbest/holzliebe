@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Theme from '../utils/theme'
 import Typography from '../utils/typography'
 import { media } from '../utils/style'
@@ -38,7 +38,7 @@ const Inner = styled.div`
   margin: 0 ${Typography.rhythm(1)};
 `
 
-const Image = styled(Img)`
+const Image = styled(GatsbyImage)`
   max-width: 400px;
   width: 60%;
   margin-bottom: ${Typography.rhythm(1)};
@@ -75,7 +75,7 @@ const Zitat = ({ motto, text1, subtext1, text2, subtext2, image }) => (
         ))}
       </Motto>
       <Image
-        sizes={image}
+        image={getImage(image)}
         alt={text1}
         style={{ mixBlendMode: 'multiply', background: '#CAD3CE' }}
       />

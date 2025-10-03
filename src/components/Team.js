@@ -43,59 +43,45 @@ const Team = () => (
       query Team {
         person1: file(relativePath: { eq: "mitarbeiter/derjo.jpg" }) {
           childImageSharp {
-            sizes(maxWidth: 480) {
-              ...GatsbyImageSharpSizes
-            }
+            gatsbyImageData(width: 480)
           }
         }
         person2: file(relativePath: { eq: "mitarbeiter/johannesstadler.jpg" }) {
           childImageSharp {
-            sizes(maxWidth: 480) {
-              ...GatsbyImageSharpSizes
-            }
+            gatsbyImageData(width: 480)
           }
         }
         person4: file(
           relativePath: { eq: "mitarbeiter/rolandheitzendorfer.jpg" }
         ) {
           childImageSharp {
-            sizes(maxWidth: 480) {
-              ...GatsbyImageSharpSizes
-            }
+            gatsbyImageData(width: 480)
           }
         }
         person5: file(
           relativePath: { eq: "mitarbeiter/jh_jungreithmayr_163.jpg" }
         ) {
           childImageSharp {
-            sizes(maxWidth: 480) {
-              ...GatsbyImageSharpSizes
-            }
+            gatsbyImageData(width: 480)
           }
         }
         person6: file(
           relativePath: { eq: "mitarbeiter/bernhardronacher.jpg" }
         ) {
           childImageSharp {
-            sizes(maxWidth: 480) {
-              ...GatsbyImageSharpSizes
-            }
+            gatsbyImageData(width: 480)
           }
         }
         person9: file(
           relativePath: { eq: "mitarbeiter/markusschmidthaler.jpg" }
         ) {
           childImageSharp {
-            sizes(maxWidth: 480) {
-              ...GatsbyImageSharpSizes
-            }
+            gatsbyImageData(width: 480)
           }
         }
         person7: file(relativePath: { eq: "mitarbeiter/owellinger.jpg" }) {
           childImageSharp {
-            sizes(maxWidth: 480) {
-              ...GatsbyImageSharpSizes
-            }
+            gatsbyImageData(width: 480)
           }
         }
       }
@@ -106,49 +92,49 @@ const Team = () => (
         <Inner>
           <Frame>
             <Mitarbeiter
-              image={data.person1.childImageSharp.sizes}
+              image={data.person1}
               name="Joachim Jungreithmayr"
               position="Geschäftsführer"
             />
           </Frame>
           <Frame>
             <Mitarbeiter
-              image={data.person4.childImageSharp.sizes}
+              image={data.person4}
               name="Roland Heitzendorfer"
               position="Technischer Assistent, Tischlermeister"
             />
           </Frame>
           <Frame>
             <Mitarbeiter
-              image={data.person2.childImageSharp.sizes}
+              image={data.person2}
               name="Johannes Stadler"
               position="Tischlermeister"
             />
           </Frame>
           <Frame>
             <Mitarbeiter
-              image={data.person9.childImageSharp.sizes}
+              image={data.person9}
               name="Markus Schmidthaler"
               position="Tischlergeselle"
             />
           </Frame>
           <Frame>
             <Mitarbeiter
-              image={data.person5.childImageSharp.sizes}
+              image={data.person5}
               name="Markus Eder"
               position="Tischlermeister"
             />
           </Frame>
           <Frame>
             <Mitarbeiter
-              image={data.person6.childImageSharp.sizes}
+              image={data.person6}
               name="Bernhard Ronacher"
               position="Tischlergeselle"
             />
           </Frame>
           <Frame>
             <Mitarbeiter
-              image={data.person7.childImageSharp.sizes}
+              image={data.person7}
               name="Oliver Wellinger"
               position="Tischlergeselle"
             />
