@@ -53,10 +53,8 @@ jobs:
 
     - name: FTP Deploy
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      env:
-        LOCAL_DIR: public
-        ARGS: --parallel=5
       with:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./public/
