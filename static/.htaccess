@@ -1,0 +1,40 @@
+# ABOUTME: Apache cache-control rules for Gatsby static site.
+# ABOUTME: Ensures HTML is always fresh while hashed assets are cached long-term.
+
+<IfModule mod_headers.c>
+    # HTML files: never cache, always revalidate
+    <FilesMatch "\.html$">
+        Header set Cache-Control "public, max-age=0, must-revalidate"
+    </FilesMatch>
+
+    # Gatsby page-data JSON: never cache, always revalidate
+    <FilesMatch "page-data\.json$">
+        Header set Cache-Control "public, max-age=0, must-revalidate"
+    </FilesMatch>
+    <FilesMatch "app-data\.json$">
+        Header set Cache-Control "public, max-age=0, must-revalidate"
+    </FilesMatch>
+
+    # Hashed JS and CSS bundles: cache forever (filename changes on content change)
+    <FilesMatch "\.[0-9a-f]{20}\.js$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    <FilesMatch "\.[0-9a-f]{20}\.css$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # Web manifest and SW: no cache
+    <FilesMatch "manifest\.webmanifest$">
+        Header set Cache-Control "public, max-age=0, must-revalidate"
+    </FilesMatch>
+
+    # Static assets (images, fonts): moderate cache with revalidation
+    <FilesMatch "\.(jpg|jpeg|png|gif|svg|webp|avif|ico|woff|woff2|ttf|eot)$">
+        Header set Cache-Control "public, max-age=86400, must-revalidate"
+    </FilesMatch>
+</IfModule>
+
+# Enable compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>
