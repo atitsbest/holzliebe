@@ -62,44 +62,22 @@ class Gallery extends React.Component {
           {photos.map((image, idx) => {
             const src = getSrc(image.node)
             const basename = getBasename(src)
+            const isVideo = Boolean(this.props.videos[basename])
             return (
               <Frame key={idx}>
-                {this.props.videos[basename] ? (
-                  <a
-                    href={src}
-                    onClick={e => this.showVideo(this.props.videos[basename], e)}
-                  >
-                    <div
-                      style={{
-                        position: 'relative',
-                      }}
-                    >
-                      <GatsbyImage
-                        image={getImage(image.node)}
-                        alt=""
-                      />
-                      <img
-                        src={play}
-                        style={{
-                          position: 'absolute',
-                          maxWidth: '100%',
-                          top: '40%',
-                        }}
-                        alt="Play"
-                      />
-                    </div>
-                  </a>
-                ) : (
-                  <a
-                    href={src}
-                    onClick={e => this.openLightbox(idx, e)}
-                  >
-                    <GatsbyImage
-                      image={getImage(image.node)}
-                      alt=""
-                    />
-                  </a>
-                )}
+                <a
+                  href={src}
+                  onClick={e =>
+                    isVideo
+                      ? this.showVideo(this.props.videos[basename], e)
+                      : this.openLightbox(idx, e)
+                  }
+                >
+                  <Thumb>
+                    <GatsbyImage image={getImage(image.node)} alt="" />
+                    {isVideo && <PlayIcon src={play} alt="Play" />}
+                  </Thumb>
+                </a>
               </Frame>
             )
           })}
@@ -155,6 +133,34 @@ const Frame = styled.div`
     flex: 1 0 50%;
     max-width: 50%;
   `};
+`
+
+const Thumb = styled.div`
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+
+  .gatsby-image-wrapper {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+`
+
+const PlayIcon = styled.img`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 40%;
+  pointer-events: none;
 `
 
 export default Gallery
