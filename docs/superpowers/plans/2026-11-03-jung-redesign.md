@@ -19,7 +19,7 @@
 - "Jetzt anfragen" links go to `/kontakt`; only the Kontakt page and the footer use `mailto:`.
 - Copy for Home, Über uns and Kontakt is verbatim from the PDF (given in the tasks below).
 - No test suite exists. The check for every task is `npm run build` exiting 0; page tasks add a visual check.
-- **MR split (qoncept mr-size hook):** every task below is ONE MR on its own branch off `origin/master`, at most 400 changed lines and 20 files versus `origin/master` (Markdown under `docs/` and `package-lock.json` do not count). Commit with `QC_MR_SIZE_CONFIRMED=1` (tier 2 confirmed by the developer); each MR description gets a "Size" bullet. A task that depends on an earlier one starts only after that MR is merged into `master` (merging deploys the live site).
+- **Delivery (updated):** PoC, one feature branch `feat/jung-redesign` and one PR into `master` (size approved by sme via `QC_MR_SIZE_APPROVED_BY`). Tasks 1–3 are merged into it; Tasks 4–10 commit directly on it. Ignore each task's "Branch" step and the per-task branch names.
 - **Live site stays coherent:** never change files the old pages use (`layout.js`, `header.js`, `Footer.js`, `section.js`, `ImageSlider.js`, `History.js`, `Team.js`, old `@font-face`s, old `Theme` keys, `gatsby-plugin-typography`). New code lives in new files.
 - Commit messages: no AI attribution lines (user rule).
 - `pathPrefix: '/2019'` stays; never hardcode absolute asset URLs, always import assets or use `Link`.

@@ -13,7 +13,7 @@ Restyle the existing Gatsby 5 site to the new JUNG* brand. Home, Über uns and K
 | Topic | Decision |
 |---|---|
 | Approach | Restyle in place. Keep Gatsby, styled-components, gatsby-plugin-image, react-slick, lightbox. |
-| Delivery | 10 MRs, each at most 400 lines / 20 files vs `origin/master` (qoncept mr-size hook, tier 2 confirmed). New pages use a separate `JungLayout`, so old and new pages coexist on the live site while MRs merge page by page. |
+| Delivery | PoC: one feature branch `feat/jung-redesign`, one PR into `master` (size approved by sme). New pages use a separate `JungLayout`, so old and new pages coexist until every page is switched. |
 | typography.js | Stays active for old pages during the rollout; new pages override it with their own global style. Removal is part of the deferred cleanup. |
 | Navigation | Current items kept, plus Kontakt: Raumplanung, Qualitätstischlerei, Holzarchitektur, Impressionen, Über uns, Kontakt. The PDF's reduced nav is not used. |
 | Fonts | Placeholders until the Adobe Fonts kit exists: Figtree 300 (body) and League Spartan 700 (display, standing in for Riant Display Bold). Self-hosted woff2 in `src/fonts/`, so nothing loads from a CDN (GDPR). |
