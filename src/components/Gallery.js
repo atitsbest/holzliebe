@@ -13,7 +13,7 @@ const getBasename = (path) => path.split('/').pop()
 class Gallery extends React.Component {
   constructor(props) {
     super(props)
-    const photos = props.photos.map(photo => {
+    const photos = props.photos.map((photo) => {
       const src = getSrc(photo.node)
       return {
         src: src,
@@ -67,7 +67,7 @@ class Gallery extends React.Component {
               <Frame key={idx}>
                 <a
                   href={src}
-                  onClick={e =>
+                  onClick={(e) =>
                     isVideo
                       ? this.showVideo(this.props.videos[basename], e)
                       : this.openLightbox(idx, e)
@@ -105,7 +105,12 @@ class Gallery extends React.Component {
               zIndex: 9999,
             }}
           >
-            <ReactPlayer url={this.state.currentVideoUrl} playing />
+            <ReactPlayer
+              src={this.state.currentVideoUrl}
+              playing
+              width="640px"
+              height="360px"
+            />
           </div>
         )}
       </div>
