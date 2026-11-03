@@ -28,20 +28,30 @@ const Header = ({ home }) => {
         <ul>
           {links.map(([to, label]) => (
             <li key={to}>
-              <Link to={to} activeClassName="active" partiallyActive>
+              <Link
+                to={to}
+                activeClassName="active"
+                partiallyActive
+                onClick={() => setOpen(false)}
+              >
                 {label}
               </Link>
             </li>
           ))}
         </ul>
       </Nav>
-      <Burger>
+      <Burger
+        type="button"
+        aria-label="Menü"
+        aria-expanded={open}
+        onClick={() => setOpen(!open)}
+      >
         <Hamburger
           isOpen={open}
-          menuClicked={() => setOpen(!open)}
+          menuClicked={() => {}}
           width={24}
           height={16}
-          color="#fff"
+          color={Theme.colors.white}
         />
       </Burger>
     </Bar>
@@ -100,11 +110,14 @@ const Nav = styled.nav`
   `};
 `
 
-const Burger = styled.div`
+const Burger = styled.button`
   display: none;
   margin-left: auto;
   z-index: 11;
   cursor: pointer;
+  background: none;
+  border: 0;
+  padding: 0;
 
   ${media.tablet`display: block;`};
 `
