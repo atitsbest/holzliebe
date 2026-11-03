@@ -1,222 +1,62 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
-import styled from 'styled-components'
-import Hero from '../components/hero'
-import TopicHeader from '../components/topicheader'
-import Layout from '../components/layout'
-import CallToContact from '../components/CallToContact'
-import LabeledImage from '../components/LabeledImage'
-import { RaumplanungIcon, HolzarchitekturIcon } from '../components/icons'
-import originell from '../images/originell.png'
-import Typography from '../utils/typography'
-import Theme from '../utils/theme'
-import { media } from '../utils/style'
+import { graphql } from 'gatsby'
+import Layout from '../components/JungLayout'
+import PageHero from '../components/PageHero'
+import Intro from '../components/Intro'
+import Cards from '../components/Cards'
+import TextLink from '../components/TextLink'
+import { FullImage } from '../components/Block'
 
-const NotFoundPage = ({ data }) => (
+const Raumplanung = ({ data }) => (
   <Layout>
-    <Hero sizes={data.heroImage} label={originell} />
-    <TopicHeader
-      icon={RaumplanungIcon}
-      title="Raumplanung"
-      text="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung ist mehr, als ein Möbel ins Eck zu stellen. "
+    <PageHero bg="grey" color="lime" title={['Raumplanung']} />
+    <Intro lead="Am Anfang ist der Raum. Er soll schön werden, er soll bestens funktionieren! Unsere Raumplanung ist mehr, als ein Möbel ins Eck zu stellen." />
+    <Cards
+      items={[
+        { image: data.schlafen, title: 'Schlafen', text: 'Wozu Raumplanung in einem Raum, in dem man die Augen schließt? Weil für einen guten Schlaf eine besonders gute Atmosphäre hilfreich ist. Das kann man planen!' },
+        { image: data.wohnen, title: 'Wohnen', text: 'Was auch immer im Trend liegt: Vergessen Sie es! Denn Wohnen ist dann gut, wenn es genau zu Ihnen passt. Das machen wir!' },
+        { image: data.kochen, title: 'Kochen', text: 'Wir kochen nicht. Aber wir wissen, was es braucht, damit Sie es mit Freude tun können. Das ist Erfahrung!' },
+        { image: data.buero, title: 'Büro', text: 'Der Erfolg Ihrer Arbeit liegt nicht am Design Ihres Schreibtischs. Aber wir können Design, Funktion und Umsetzung so perfekt kombinieren, dass die Menschen es glauben werden. Das ist Erfolg!' },
+        { image: data.badezimmer, title: 'Badezimmer', text: 'Wer glaubt, dass sich Holz und Wasser nicht vertragen, vergisst, dass Holz in der Natur „erfunden“ wurde. Diese Qualität wissen wir richtig einzusetzen. Das wird Sie überraschen!' },
+        { image: data.garderobe, title: 'Garderobe', text: 'Nur ein Stauraum für ein paar Mäntel? Manchmal ja. Aber manchmal der erste Eindruck von Ihrem Lebensraum. Wie das Vorwort zu einem guten Buch: Weglegen oder Weiterlesen?' },
+        { image: data.freiraum, title: 'Freiraum', text: 'Viele Menschen gestalten den Raum im Freien mit Beton. Weil es so „praktisch“ ist. Wir gestalten auch mit Holz. Weil es so angenehm ist. Das macht frei!' },
+        { image: data.sauna, title: 'Sauna', text: 'Eine Sauna aus Holz zu bauen ist nicht überraschend. Eine schöne Sauna aus Holz zu bauen wird Sie überraschen. Bereit für den Design-Aufguss?' },
+        { image: data.accessoires, title: 'Accessoires', text: 'Ob Küchenfunktionen oder Verarbeitungsdetails. Wenn es keine gute Lösung gibt am Markt, dann erfinden wir eine. Das ist Liebe zum Detail!' },
+      ]}
     />
-    <ImageGrid>
-      <Frame>
-        <Link to="/impressionen">
-          <LabeledImage
-            image={{
-              ...data.schlafen,
-              aspectRatio: 4 / 3,
-            }}
-            label="Schlafen."
-            text="Wozu Raumplanung in einem Raum, in dem man die Augen schließt? Weil für einen guten Schlaf eine besonders gute Atmosphäre hilfreich ist. Das kann man planen!"
-          />
-        </Link>
-      </Frame>
-      <Frame>
-        <Link to="/impressionen">
-          <LabeledImage
-            image={{ ...data.wohnen, aspectRatio: 4 / 3 }}
-            label="Wohnen."
-            text="Was auch immer im Trend liegt: Vergessen Sie es! Denn Wohnen ist dann gut, wenn es genau zu Ihnen passt. Das machen wir!"
-          />
-        </Link>
-      </Frame>
-      <Frame>
-        <Link to="/impressionen">
-          <LabeledImage
-            image={{ ...data.kochen, aspectRatio: 4 / 3 }}
-            label="Kochen."
-            text="Wir kochen nicht. Aber wir wissen, was es braucht, damit Sie es mit Freude tun können. Das ist Erfahrung!"
-          />
-        </Link>
-      </Frame>
-      <Frame>
-        <Link to="/impressionen">
-          <LabeledImage
-            image={{ ...data.buero, aspectRatio: 4 / 3 }}
-            label="Büro."
-            text="Der Erfolg Ihrer Arbeit liegt nicht am Design Ihres Schreibtischs. Aber wir können Design, Funktion und Umsetzung so perfekt kombinieren, dass die Menschen es glauben werden. Das ist Erfolg!"
-          />
-        </Link>
-      </Frame>
-      <Frame>
-        <Link to="/impressionen">
-          <LabeledImage
-            image={{
-              ...data.badezimmer,
-              aspectRatio: 4 / 3,
-            }}
-            label="Badezimmer."
-            text="Wer glaubt, dass sich Holz und Wasser nicht vertragen, vergisst, dass Holz in der Natur „erfunden“ wurde. Diese Qualität wissen wir richtig einzusetzen. Das wird Sie überraschen!"
-          />
-        </Link>
-      </Frame>
-      <Frame>
-        <Link to="/impressionen">
-          <LabeledImage
-            image={{
-              ...data.garderobe,
-              aspectRatio: 4 / 3,
-            }}
-            label="Garderobe."
-            text="Nur ein Stauraum für ein paar Mäntel? Manchmal ja. Aber manchmal der erste Eindruck von Ihrem Lebensraum. Wie das Vorwort zu einem guten Buch: Weglegen oder Weiterlesen?"
-          />
-        </Link>
-      </Frame>
-      <Frame>
-        <Link to="/impressionen">
-          <LabeledImage
-            image={{
-              ...data.freiraum,
-              aspectRatio: 4 / 3,
-            }}
-            label="Freiraum."
-            text="Viele Menschen gestalten den Raum im Freien mit Beton. Weil es so „praktisch“ ist. Wir gestalten auch mit Holz. Weil es so angenehm ist. Das macht frei!"
-          />
-        </Link>
-      </Frame>
-      <Frame>
-        <Link to="/impressionen">
-          <LabeledImage
-            image={{ ...data.sauna, aspectRatio: 4 / 3 }}
-            label="Sauna."
-            text="Eine Sauna aus Holz zu bauen ist nicht überraschend. Eine schöne Sauna aus Holz zu bauen wird Sie überraschen. Bereit für den Design-Aufguss?"
-          />
-        </Link>
-      </Frame>
-      <Frame>
-        <Link to="/impressionen">
-          <LabeledImage
-            image={{
-              ...data.accessoires,
-              aspectRatio: 4 / 3,
-            }}
-            label="Accessoires."
-            text="Ob Küchenfunktionen oder Verarbeitungsdetails. Wenn es keine gute Lösung gibt am Markt, dann erfinden wir eine. Das ist Liebe zum Detail!"
-          />
-        </Link>
-      </Frame>
-    </ImageGrid>
-    <Hero sizes={data.hero2Image} />
-    <TopicHeader
-      title="Raumplanung"
-      text="Ein guter Plan beginnt nicht am Papier. Auch nicht im Kopf. Sondern beim Zuhören. Nur so kann Ihr Wohntraum in Erfüllung gehen. Das ist nicht Traumdeutung, sondern Gespür, Leidenschaft und ganz viel Erfahrung."
+    <FullImage image={data.plan} />
+    <Intro
+      lead="Ein guter Plan beginnt nicht am Papier. Auch nicht im Kopf. Sondern beim Zuhören. Nur so kann Ihr Wohntraum in Erfüllung gehen. Das ist nicht Traumdeutung, sondern Gespür, Leidenschaft und ganz viel Erfahrung."
+      link={<TextLink to="/kontakt">Jetzt anfragen</TextLink>}
     />
-    <CallToContact title="Kontakt" icon={HolzarchitekturIcon} />
-    <Hero sizes={data.hero3Image} />
+    <FullImage image={data.abschluss} />
   </Layout>
 )
 
-export default NotFoundPage
+export default Raumplanung
 
 export const query = graphql`
+  fragment Square on File {
+    childImageSharp {
+      gatsbyImageData(width: 800, aspectRatio: 1)
+    }
+  }
+  fragment Wide on File {
+    childImageSharp {
+      gatsbyImageData(width: 1620)
+    }
+  }
   query raumplanungQuery {
-    heroImage: file(relativePath: { eq: "jh_jungreithmayr_originell.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 1200)
-      }
-    }
-    hero2Image: file(relativePath: { eq: "raumplanung_plan.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 1200)
-      }
-    }
-    hero3Image: file(relativePath: { eq: "jh_jungreithmayr_126.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 1200)
-      }
-    }
-    schlafen: file(relativePath: { eq: "jh_jungreithmayr_081.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 480)
-      }
-    }
-    wohnen: file(relativePath: { eq: "jh_jungreithmayr_122.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 480)
-      }
-    }
-    kochen: file(relativePath: { eq: "jh_jungreithmayr_085.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 480)
-      }
-    }
-    buero: file(relativePath: { eq: "jh_jungreithmayr_079.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 480)
-      }
-    }
-    badezimmer: file(relativePath: { eq: "jh_jungreithmayr_072.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 480)
-      }
-    }
-    garderobe: file(relativePath: { eq: "raumplanung_garderobe.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 480)
-      }
-    }
-    freiraum: file(relativePath: { eq: "jh_jungreithmayr_008.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 480)
-      }
-    }
-    sauna: file(relativePath: { eq: "raumplanung_sauna.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 480)
-      }
-    }
-    accessoires: file(relativePath: { eq: "jh_jungreithmayr_048.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 480)
-      }
-    }
+    plan: file(relativePath: { eq: "raumplanung_plan.jpg" }) { ...Wide }
+    abschluss: file(relativePath: { eq: "jh_jungreithmayr_126.jpg" }) { ...Wide }
+    schlafen: file(relativePath: { eq: "jh_jungreithmayr_081.jpg" }) { ...Square }
+    wohnen: file(relativePath: { eq: "jh_jungreithmayr_122.jpg" }) { ...Square }
+    kochen: file(relativePath: { eq: "jh_jungreithmayr_085.jpg" }) { ...Square }
+    buero: file(relativePath: { eq: "jh_jungreithmayr_079.jpg" }) { ...Square }
+    badezimmer: file(relativePath: { eq: "jh_jungreithmayr_072.jpg" }) { ...Square }
+    garderobe: file(relativePath: { eq: "raumplanung_garderobe.jpg" }) { ...Square }
+    freiraum: file(relativePath: { eq: "jh_jungreithmayr_008.jpg" }) { ...Square }
+    sauna: file(relativePath: { eq: "raumplanung_sauna.jpg" }) { ...Square }
+    accessoires: file(relativePath: { eq: "jh_jungreithmayr_048.jpg" }) { ...Square }
   }
-`
-const ImageGrid = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -0.25rem;
-`
-
-const Frame = styled.div`
-  flex: 1 0 33.33%;
-  max-width: 33.33%;
-  padding: 0 0.25rem ${Typography.rhythm(1)} 0.25rem;
-
-  a {
-    text-decoration: none;
-    color: ${Theme.colors.text};
-  }
-
-  ${media.tablet`
-    flex: 1 0 50%;
-    max-width: 50%;
-  `};
-
-  ${media.mobile`
-    flex: 1 0 100%;
-    max-width: 100%;
-  `};
 `
