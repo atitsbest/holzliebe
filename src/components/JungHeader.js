@@ -66,6 +66,7 @@ const Bar = styled.header`
   z-index: 10;
   display: flex;
   align-items: center;
+  gap: 2rem;
   padding: max(20px, 5vw) ${Theme.gutter} 0;
   color: ${Theme.colors.white};
 `

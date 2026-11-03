@@ -38,6 +38,7 @@ export const Prose = styled(Section)`
   font-size: clamp(1rem, 1.15vw, 1.3rem);
   line-height: 1.5;
 
-  h2, h3 { font-weight: 700; margin: 1.6em 0 0.4em; }
+  h2, h3 { font-weight: 300; text-transform: uppercase; margin: 1.6em 0 0.4em; }
+  strong, b { font-weight: 300; text-transform: uppercase; }
   p { margin-bottom: 1em; }
 `
