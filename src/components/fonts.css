@@ -40,3 +40,20 @@
     font-style: normal;
 
 }
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('../fonts/figtree-300.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Stand-in for Riant Display Bold (Adobe Fonts) until the kit exists */
+@font-face {
+  font-family: 'League Spartan';
+  src: url('../fonts/league-spartan-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
