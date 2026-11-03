@@ -1,131 +1,52 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import Layout from '../components/layout'
-import Hero from '../components/hero'
-import TopicHeader from '../components/topicheader'
-import History from '../components/History'
-import Zitat from '../components/Zitat'
-import BulletPoint from '../components/BulletPoint'
-import { TischleierIcon } from '../components/icons'
-import { Grid, Half } from '../components/Grid'
-import besonders from '../images/besonders.png'
+import Layout from '../components/JungLayout'
+import PageHero from '../components/PageHero'
+import Intro from '../components/Intro'
+import Cards from '../components/Cards'
+import Quote from '../components/Quote'
+import History from '../components/HistoryIntro'
+import { FullImage, ImagePair } from '../components/Block'
 
-export default ({ data }) => (
+const Tischlerei = ({ data }) => (
   <Layout>
-    <Hero sizes={data.heroImage} label={besonders} />
-    <TopicHeader
-      icon={TischleierIcon}
-      title="Qualitätstischlerei"
-      text="Welches Holz passt zu Ihnen? Welches Design zu Ihrem Raum? Welche Funktion zu Ihren Bedürfnissen? Qualitätstischlerei bedeutet, für Sie diese Fragen zu lösen."
-    />
-    <Grid>
-      <Half>
-        <GatsbyImage
-          image={getImage(data.halfHeroImage)}
-          alt=""
-        />
-      </Half>
-      <Half>
-        <GatsbyImage
-          image={getImage(data.halfHero2Image)}
-          alt=""
-        />
-      </Half>
-    </Grid>
-    <Zitat
-      motto={['Baum,', 'Holz,', 'Werkstück,', 'Möbel']}
+    <PageHero bg="green" color="rose" title={['Qualitäts-', 'tischlerei']} />
+    <Intro lead="Welches Holz passt zu Ihnen? Welches Design zu Ihrem Raum? Welche Funktion zu Ihren Bedürfnissen? Qualitätstischlerei bedeutet, für Sie diese Fragen zu lösen." />
+    <ImagePair images={[data.half1, data.half2]} />
+    <Quote
       image={data.hobel}
-      text1="Ausstrahlung"
-      subtext1="Die meisten Menschen erkennen die Qualität eines Möbels an seiner großartigen Ausstrahlung, obwohl sie die nicht benennen können. Deshalb haben unsere Tischlermeister nicht einfach handwerkliches Geschick. Sondern sie wissen, wie man die Ausstrahlung von Holz zur Entfaltung bringt. Mit Wissen, Können UND Spüren."
-      text2="Joachim Jungreithmayr"
-      subtext2="Geschäftsführer"
+      text="Die meisten Menschen erkennen die Qualität eines Möbels an seiner großartigen Ausstrahlung, obwohl sie die nicht benennen können. Deshalb haben unsere Tischlermeister nicht einfach handwerkliches Geschick. Sondern sie wissen, wie man die Ausstrahlung von Holz zur Entfaltung bringt. Mit Wissen, Können UND Spüren."
+      author="Joachim Jungreithmayr, Geschäftsführer"
     />
-    <Hero
-      sizes={{ ...data.hero2Image, aspectRatio: 16 / 9 }}
-    />
-    <BulletPoint
-      odd
-      motto={['Darauf sind', 'wir stolz']}
-      number="01"
-      title="Maserungstreue"
-      text="Sie macht aus einer Holzfront eine stolze Holzfront. Wir suchen Holzrohlinge persönlich aus und fügen sie zu einem schönen Bild zusammen. So „malen“ Tischler."
-      image={{ ...data.bullet1, aspectRatio: 1 }}
-    />
-    <BulletPoint
-      number="02"
-      title="Funktionsdetails"
-      text="Wir planen elegante Massivholzhäuser mit unnachahmlicher Wohnatmosphäre. Raffinierte Innovationen und architektonisches Gespür machen es möglich. Wenn es keine gute Lösung gibt am Markt, dann erfinden wir eine. Dennoch sind wir keine „Erfinder“. Das österreichische Wort dafür ist „Tüftler“. Bei Lösungen im Detail sind wir „Holz-Tüftler“"
-      image={{ ...data.bullet2, aspectRatio: 1 }}
-    />
-    <BulletPoint
-      odd
-      number="03"
-      title="Pure Qualität"
-      text="Pures Wasser ist kristallklar. Purer Fruchtsaft intensiv und unverfälscht. Pures Design geradlinig und dem Auge wohltuend, oft überraschend einfach. Pure Qualität ist alles zusammen: klar, intensiv, unverfälscht und wohltuend."
-      image={{ ...data.bullet3, aspectRatio: 1 }}
-    />
-    <BulletPoint
-      number="04"
-      title="Koordination"
-      text="Das Zusammenspiel von allen nötigen Gewerken, wie Schlosser, Glaserer, Fliesenleger, Elektriker, auch Künstler und Baumeister und vieles mehr gehört geplant und organisiert. Auch das ist Qualität."
-      image={{ ...data.bullet4, aspectRatio: 1 }}
+    <FullImage image={data.wide} />
+    <Intro title={['Darauf sind', 'wir stolz']} />
+    <Cards
+      items={[
+        { image: data.p1, title: 'Maserungstreue', text: 'Sie macht aus einer Holzfront eine stolze Holzfront. Wir suchen Holzrohlinge persönlich aus und fügen sie zu einem schönen Bild zusammen. So „malen“ Tischler.' },
+        { image: data.p2, title: 'Funktionsdetails', text: 'Wir planen elegante Massivholzhäuser mit unnachahmlicher Wohnatmosphäre. Raffinierte Innovationen und architektonisches Gespür machen es möglich. Wenn es keine gute Lösung gibt am Markt, dann erfinden wir eine. Dennoch sind wir keine „Erfinder“. Das österreichische Wort dafür ist „Tüftler“. Bei Lösungen im Detail sind wir „Holz-Tüftler“' },
+        { image: data.p3, title: 'Pure Qualität', text: 'Pures Wasser ist kristallklar. Purer Fruchtsaft intensiv und unverfälscht. Pures Design geradlinig und dem Auge wohltuend, oft überraschend einfach. Pure Qualität ist alles zusammen: klar, intensiv, unverfälscht und wohltuend.' },
+        { image: data.p4, title: 'Koordination', text: 'Das Zusammenspiel von allen nötigen Gewerken, wie Schlosser, Glaserer, Fliesenleger, Elektriker, auch Künstler und Baumeister und vieles mehr gehört geplant und organisiert. Auch das ist Qualität.' },
+      ]}
     />
     <History />
   </Layout>
 )
 
+export default Tischlerei
+
 export const query = graphql`
   query tischlereiQuery {
-    site {
-      siteMetadata {
-        title
-      }
+    wide: file(relativePath: { eq: "jh_jungreithmayr_138.jpg" }) { ...Wide }
+    half1: file(relativePath: { eq: "jh_jungreithmayr_146.jpg" }) {
+      childImageSharp { gatsbyImageData(width: 800, aspectRatio: 1.5) }
     }
-    heroImage: file(relativePath: { eq: "jh_jungreithmayr_160.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 1280)
-      }
+    half2: file(relativePath: { eq: "jh_jungreithmayr_161.jpg" }) {
+      childImageSharp { gatsbyImageData(width: 800, aspectRatio: 1.5) }
     }
-    hero2Image: file(relativePath: { eq: "jh_jungreithmayr_138.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 1280)
-      }
-    }
-    halfHeroImage: file(relativePath: { eq: "jh_jungreithmayr_146.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 640)
-      }
-    }
-    halfHero2Image: file(relativePath: { eq: "jh_jungreithmayr_161.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 640)
-      }
-    }
-    hobel: file(relativePath: { eq: "hobel.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 480)
-      }
-    }
-    bullet1: file(relativePath: { eq: "stolz.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 640)
-      }
-    }
-    bullet2: file(relativePath: { eq: "stolz2.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 640)
-      }
-    }
-    bullet3: file(relativePath: { eq: "stolz3.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 640)
-      }
-    }
-    bullet4: file(relativePath: { eq: "stolz4.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 640)
-      }
-    }
+    hobel: file(relativePath: { eq: "hobel.jpg" }) { ...Square }
+    p1: file(relativePath: { eq: "stolz.jpg" }) { ...Square }
+    p2: file(relativePath: { eq: "stolz2.jpg" }) { ...Square }
+    p3: file(relativePath: { eq: "stolz3.jpg" }) { ...Square }
+    p4: file(relativePath: { eq: "stolz4.jpg" }) { ...Square }
   }
 `
