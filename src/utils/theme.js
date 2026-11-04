@@ -32,6 +32,7 @@ const Theme = {
     phoneHref: 'tel:+43722163016',
     facebook:
       'https://www.facebook.com/Jungreithmayr-Architektur-Tischlerei-872429343120179/',
+    instagram: 'https://www.instagram.com/jungreithmayr.tischlerei/',
   },
 }
 

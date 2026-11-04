@@ -34,6 +34,11 @@ const Footer = () => (
           Facebook
         </a>
       </li>
+      <li>
+        <a href={contact.instagram} target="_blank" rel="noopener noreferrer">
+          Instagram
+        </a>
+      </li>
     </Links>
   </Wrapper>
 )
