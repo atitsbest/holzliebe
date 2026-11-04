@@ -27,7 +27,7 @@ const Theme = {
   maxWidth: '1920px',
   contact: {
     email: 'kontakt@jung-räume.at',
-    emailHref: 'mailto:kontakt@xn--jung-rume-02a.at',
+    emailHref: 'mailto:kontakt@jung-räume.at',
     phone: 'Tel. +43 7221 630 16',
     phoneHref: 'tel:+43722163016',
     facebook:
