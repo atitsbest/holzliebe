@@ -2,11 +2,9 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import Theme from '../utils/theme'
-import { media } from '../utils/style'
 import logo from '../images/jung/logo-weiss.svg'
 
 const links = [
-  ['/holzarchitektur', 'Holzarchitektur'],
   ['/about', 'Über uns'],
   ['/kontakt', 'Kontakt'],
 ]
@@ -41,7 +39,6 @@ const Bar = styled.header`
   display: flex;
   align-items: center;
   gap: 2rem;
-  ${media.mobile`gap: 1rem;`};
   padding: max(20px, 5vw) ${Theme.gutter} 0;
   color: ${Theme.colors.white};
 `
@@ -61,11 +58,7 @@ const Nav = styled.nav`
     gap: 1.1em;
     list-style: none;
     padding: 0;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    row-gap: 0.3em;
   }
-  ${media.mobile`font-size: 0.85rem;`};
 
   a {
     text-decoration: none;
