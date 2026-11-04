@@ -31,7 +31,7 @@ Restyle the existing Gatsby 5 site to the new JUNG* brand. Home, Über uns and K
 
 **Global CSS:** body Figtree 300, about 20px, black on white. Display headings are uppercase with tight letter-spacing. The trailing `*` is a small raised asterisk. Raleway/Lora font files are deleted.
 
-**Header:** absolutely positioned over the hero. Links are white, uppercase Figtree, with the active link underlined. Below ~900px it becomes a hamburger (`react-hamburger-menu`) with a full-screen overlay. Every page except Home shows a small white JUNG* logo top-left that links to `/`. On Home the large logo sits centered in the hero.
+**Header:** absolutely positioned over the hero. Links are white, uppercase Figtree, with the active link underlined. The nav shows only "Über uns" and "Kontakt", with no hamburger on mobile. Keep `react-hamburger-menu` installed: the full nav with a mobile hamburger may be re-activated later (see git history of `JungHeader.js`). Every page except Home shows a small white JUNG* logo top-left that links to `/`. On Home the large logo sits centered in the hero.
 
 **Footer:** left side has "JUNGREITHMAYR / INTERIOR DESIGN & TISCHLEREI", then "Tischlerstraße 6, A-4062 Thening", phone as a `tel:` link and email as a `mailto:` link. Right side has Impressum, Datenschutz and Facebook.
 
