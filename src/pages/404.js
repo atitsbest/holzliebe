@@ -1,10 +1,15 @@
 import React from 'react'
-import Layout from '../components/layout'
+import Layout from '../components/JungLayout'
+import PageHero from '../components/PageHero'
+import TextLink from '../components/TextLink'
+import { Section } from '../components/Block'
 
 const NotFoundPage = () => (
   <Layout>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <PageHero title={['Seite nicht', 'gefunden']} />
+    <Section>
+      <TextLink to="/">Zur Startseite</TextLink>
+    </Section>
   </Layout>
 )
 

@@ -3,7 +3,6 @@ import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
 import Lightbox from 'yet-another-react-lightbox'
 import 'yet-another-react-lightbox/styles.css'
 import styled from 'styled-components'
-import Typography from '../utils/typography'
 import { media } from '../utils/style'
 import play from '../images/play.png'
 import ReactPlayer from 'react-player'
@@ -127,7 +126,7 @@ const ImageGrid = styled.div`
 const Frame = styled.div`
   flex: 1 0 25%;
   max-width: 25%;
-  padding: 0 0.2rem ${Typography.rhythm(0.25)} 0.2rem;
+  padding: 0 0.2rem 0.4rem 0.2rem;
 
   ${media.tablet`
     flex: 1 0 33.33%;

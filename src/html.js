@@ -39,7 +39,8 @@ export default class HTML extends React.Component {
             dangerouslySetInnerHTML={{
               __html: `
             window.addEventListener("load", function()
-            {window.cookieconsent.initialise({
+            {if (!window.cookieconsent) return;
+            window.cookieconsent.initialise({
               palette: {
                 popup: {
                   background: '#cad3ce',

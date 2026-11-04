@@ -1,5 +1,14 @@
 import { css } from 'styled-components'
+import Theme from './theme'
 import holz_bg from '../images/holz_bg.gif'
+
+export const displayFont = css`
+  font-family: ${Theme.fonts.display};
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  line-height: 0.92;
+`
 
 const sizes = {
   giant: 90,

@@ -1,10 +1,12 @@
 import React from 'react'
-import Layout from '../components/layout'
+import Layout from '../components/JungLayout'
+import PageHero from '../components/PageHero'
+import { Prose } from '../components/Block'
 
 const Datenschutz = () => (
   <Layout>
-    <div style={{ padding: '16px' }}>
-      <h1>Datenschutzerklärung</h1>
+    <PageHero title={['Datenschutz']} />
+    <Prose>
       <p>
         Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck
         der Verarbeitung von personenbezogenen Daten (nachfolgend kurz „Daten“)
@@ -945,7 +947,7 @@ const Datenschutz = () => (
       </a>
       <br />
       <br />
-    </div>
+    </Prose>
   </Layout>
 )
 

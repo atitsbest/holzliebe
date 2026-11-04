@@ -1,20 +1,13 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
+// Gatsby SSR APIs: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/
+import React from 'react'
 
-import React from "react";
+// Adobe Fonts kit: Riant Display 700, Figtree 300
+const FONT_KIT = 'https://use.typekit.net/zph7icy.css'
 
-export const onRenderBody = ({ setHeadComponents}) => {
-    setHeadComponents([
-        <link
-            key="lobster"
-            rel="preload"
-            href="/fonts/Lobster-Regular.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-        /> 
-    ]);
-};
+export const onRenderBody = ({ setHtmlAttributes, setHeadComponents }) => {
+  setHtmlAttributes({ lang: 'de' })
+  setHeadComponents([
+    <link key="typekit-preconnect" rel="preconnect" href="https://use.typekit.net" crossOrigin="anonymous" />,
+    <link key="typekit" rel="stylesheet" href={FONT_KIT} />,
+  ])
+}

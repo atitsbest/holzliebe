@@ -1,12 +1,12 @@
 import React from 'react'
-
-import { Link } from 'gatsby'
-import Layout from '../components/layout'
+import Layout from '../components/JungLayout'
+import PageHero from '../components/PageHero'
+import { Prose } from '../components/Block'
 
 const Impressum = () => (
   <Layout>
-    <div style={{ padding: '16px' }}>
-      <h1>Impressum</h1>
+    <PageHero title={['Impressum']} />
+    <Prose>
       <p>
         Jungreithmayr Tischlerei GmbH
         <br />
@@ -24,8 +24,7 @@ const Impressum = () => (
         <br />
         ATU 81099534
       </p>
-      <Link to="/datenschutz">Datenschutz</Link>
-    </div>
+    </Prose>
   </Layout>
 )
 

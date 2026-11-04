@@ -1,123 +1,28 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import styled from 'styled-components'
-import Layout from '../components/layout'
-import Hero from '../components/hero'
-import ImageSlider from '../components/ImageSlider'
-import SectionTopics from '../components/sectiontopics'
-import CallToContact from '../components/CallToContact'
-import Team from '../components/Team'
-import History from '../components/History'
-import Article from '../components/Article'
-import { HolzarchitekturIcon } from '../components/icons'
-import play from '../images/play.png'
+import Layout from '../components/JungLayout'
+import PageHero from '../components/PageHero'
+import History from '../components/HistoryIntro'
+import Team from '../components/TeamCards'
+import { FullImage } from '../components/Block'
 
-export default class About extends React.Component {
-  state = {
-    showVideo: false,
-  }
-  render() {
-    const { data } = this.props
-    return (
-      <Layout>
-        {this.state.showVideo ? (
-          <VideoContainer>
-            <EmbededVideo
-              src="https://www.youtube-nocookie.com/embed/bCeBSIXRKCI?color=white&modestbranding=1&rel=0&feature=oembed&showinfo=0&autoplay=1"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            />
-          </VideoContainer>
-        ) : (
-          <HeroContainer onClick={() => this.setState({ showVideo: true })}>
-            <Hero sizes={data.heroImage} label={play} />
-          </HeroContainer>
-        )}
-        <Article
-          image={data.joImage}
-          headline={
-            <span>
-              Joachim <br />
-              Jungreithmayr
-            </span>
-          }
-          intro="Was haben Graz, Thening und Hallstatt gemeinsam?"
-          body="Es sind meine wichtigsten Ausbildungsstätten, vom elterlichen Betrieb über die HTL für Möbelbau bis hin zum Architekturstudium. Diese Vielseitigkeit von der handwerklichen Selbstverständlichkeit bis zur raffinierten Planungskompetenz weiß ich heute sehr zu schätzen und macht mir an meinem Beruf am meisten Freude. Fordern Sie mich heraus! Die Lösungen werden uns beiden gefallen"
-        />
-        <ImageSlider
-          images={[
-            data.sliderImage1,
-            data.sliderImage2,
-            data.sliderImage3,
-            data.sliderImage4,
-          ]}
-        />
-        <History />
-        <Team />
-        <CallToContact title="Kontakt" icon={HolzarchitekturIcon} />
-        <SectionTopics />
-      </Layout>
-    )
-  }
-}
+const About = ({ data }) => (
+  <Layout>
+    <PageHero bg="grey" color="lime" title={['Brillant ist', 'selten laut']} />
+    <History />
+    <FullImage image={data.kueche} />
+    <Team />
+  </Layout>
+)
+
+export default About
 
 export const query = graphql`
   query aboutQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    heroImage: file(relativePath: { eq: "jh_jungreithmayr_006.jpg" }) {
+    kueche: file(relativePath: { eq: "jung/kueche.jpg" }) {
       childImageSharp {
-        gatsbyImageData(width: 1280)
-      }
-    }
-    sliderImage1: file(relativePath: { eq: "jh_jungreithmayr_145.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 1280)
-      }
-    }
-    sliderImage2: file(relativePath: { eq: "jh_jungreithmayr_163.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 1280)
-      }
-    }
-    sliderImage3: file(relativePath: { eq: "jh_jungreithmayr_165.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 1280)
-      }
-    }
-    sliderImage4: file(relativePath: { eq: "jh_jungreithmayr_181.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 1280)
-      }
-    }
-    joImage: file(relativePath: { eq: "mitarbeiter/derjo.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 960)
+        gatsbyImageData(width: 1620)
       }
     }
   }
-`
-
-const VideoContainer = styled.div`
-  position: relative;
-  padding: 0 10% 56.25% 10%;
-  height: 0;
-  overflow: hidden;
-  background: #f1f1f1;
-`
-
-const EmbededVideo = styled.iframe`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-`
-
-const HeroContainer = styled.div`
-  cursor: pointer;
 `
