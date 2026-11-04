@@ -18,9 +18,9 @@ const Theme = {
     // old pages (remove in cleanup)
     primary: 'Raleway',
     secondary: 'Lora',
-    // JUNG*: swap to 'riant-display' once the Adobe Fonts kit exists
-    display: "'League Spartan', 'Helvetica Neue', Arial, sans-serif",
-    body: "'Figtree', 'Helvetica Neue', Arial, sans-serif",
+    // JUNG*: Adobe Fonts kit, loaded in gatsby-ssr.js
+    display: "'riant-display', 'Helvetica Neue', Arial, sans-serif",
+    body: "'figtree', 'Helvetica Neue', Arial, sans-serif",
   },
   gutter: 'max(16px, 7.8vw)',
   gap: 'max(16px, 3.3vw)',

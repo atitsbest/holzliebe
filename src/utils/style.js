@@ -6,7 +6,7 @@ export const displayFont = css`
   font-family: ${Theme.fonts.display};
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
   line-height: 0.92;
 `
 
