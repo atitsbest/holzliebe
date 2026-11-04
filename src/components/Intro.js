@@ -8,7 +8,7 @@ import DisplayTitle from './DisplayTitle'
 
 const Intro = ({ title, lead, image, link }) => (
   <Grid>
-    {image && <GatsbyImage image={getImage(image)} alt="" />}
+    {image && <Image image={getImage(image)} alt="" objectPosition="top" />}
     <Text $withImage={Boolean(image)}>
       {title && <Headline forwardedAs="h2" lines={title} />}
       {lead && <Lead>{lead}</Lead>}
@@ -24,6 +24,11 @@ const Grid = styled(Section)`
   align-items: start;
 
   ${media.mobile`grid-template-columns: 1fr;`};
+`
+
+// mobile: square crop showing the upper part
+const Image = styled(GatsbyImage)`
+  ${media.mobile`aspect-ratio: 1;`};
 `
 
 const Text = styled.div`
