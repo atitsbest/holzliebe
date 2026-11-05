@@ -53,7 +53,7 @@ export const query = graphql`
   query indexQuery {
     hero: file(relativePath: { eq: "jung/header.jpg" }) {
       childImageSharp {
-        gatsbyImageData(width: 1920)
+        gatsbyImageData(width: 3840)
       }
     }
     interior: file(relativePath: { eq: "jung/interior.jpg" }) {
